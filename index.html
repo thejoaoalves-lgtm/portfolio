@@ -68,7 +68,7 @@
       <path d="M340 60 L325 60 M340 60 L340 75" stroke="#4a9eff" stroke-width="1"/>
       <path d="M40 420 L55 420 M40 420 L40 405" stroke="#4a9eff" stroke-width="1"/>
       <path d="M340 420 L325 420 M340 420 L340 405" stroke="#4a9eff" stroke-width="1"/>
-
+<! photo in the box>
     <svg class="schematic" viewBox="0 0 380 480" xmlns="http://www.w3.org/2000/svg" fill="none">
       <defs>
         <pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -78,10 +78,6 @@
         <clipPath id="photo-clip">
           <rect x="80" y="90" width="220" height="180" rx="1" />
         </clipPath>
-
-        <filter id="blueprint-filter">
-          <feColorMatrix type="matrix" values="0.2 0 0 0 0.1  0 0.5 0 0 0.4  0 0 0.9 0 0.8  0 0 0 1 0" />
-        </filter>
       </defs>
 
       <rect width="380" height="480" fill="url(#g)" opacity="0.5"/>
@@ -98,10 +94,7 @@
                href="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400" 
                preserveAspectRatio="xMidYMid slice" 
                clip-path="url(#photo-clip)"
-               filter="url(#blueprint-filter)" 
-               opacity="0.8" />
-        <line x1="80" y1="90" x2="300" y2="270" stroke="#1a4080" stroke-width="0.3" opacity="0.5"/>
-        <line x1="300" y1="90" x2="80" y2="270" stroke="#1a4080" stroke-width="0.3" opacity="0.5"/>
+               opacity="1" />
         <circle cx="190" cy="190" r="2" fill="#4a9eff" opacity="0.6"/>
       </g>
 
