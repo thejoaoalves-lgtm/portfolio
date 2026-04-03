@@ -3,52 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio — Your Name</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono&display=swap" rel="stylesheet">
+    <title>Portfolio — Social Media · Blueprint</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="nav-logo">SMC-LIS-001</a>
-        <ul class="nav-links">
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <header class="hero">
-        <div class="hero-left">
-            <p class="spec-label">Personnel File // Social Media Manager</p>
-            <h1 class="hero-name">Portfolio<br><span class="annotated">Archive</span></h1>
-            <p class="hero-subtitle">Strategic communication for cinema & cultural events. Lisbon-based.</p>
+<nav>
+  <a href="index.html" class="nav-logo">Your Name</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#content">Content</a></li>
+    <li><a href="#photography">AV</a></li>
+    <li><a href="#about">Specs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <span class="nav-ref">REF-2026 · PORTFOLIO v1.0</span>
+</nav>
+
+<div class="hero">
+  <div class="hero-left">
+    <p class="spec-label">Document ref: SMC-LIS-001 · Social Media Coordinator</p>
+    <h1 class="hero-name">Your<br><span class="annotated">Name</span><br>Here</h1>
+    <p class="hero-subtitle">
+        <span class="hl">4+ years</span> building digital audiences for international cultural events.<br>
+        <span class="hl">Lisbon-based.</span> Platform-native. Fluent EN/PT.
+    </p>
+    <div class="callout-box">
+      <p>Strategy and content for <span class="hl">DocLisboa</span>, <span class="hl">Monstra</span>, and <span class="hl">Festa do Cinema Italiano</span>.</p>
+    </div>
+    <a href="#work" class="hero-cta">View case studies →</a>
+  </div>
+  <div class="hero-right">
+    </div>
+</div>
+
+<div class="stats">
+  <div class="stat" data-ref="DATA-01">
+    <div class="stat-num">4.3<span class="unit">M+</span></div>
+    <div class="stat-label">Impressions driven</div>
+  </div>
+  <div class="stat" data-ref="DATA-02">
+    <div class="stat-num">9.8<span class="unit">k</span></div>
+    <div class="stat-label">Followers grown</div>
+  </div>
+  <div class="stat" data-ref="DATA-03">
+    <div class="stat-num">€600</div>
+    <div class="stat-label">Total ad spend</div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="sec-eyebrow"><span class="ref-num">SEC.01</span> Case studies</div>
+  <h2 class="sec-heading reveal">Campaigns that<br>moved the needle.</h2>
+  <div class="case-grid">
+    <div class="case-card reveal" onclick="window.location.href='case-doclisboa.html'">
+      <div class="case-ref">REF-001 · DOCLISBOA</div>
+      <h3 class="case-title">DocLisboa</h3>
+      <div class="case-arrow">VIEW SPECS →</div>
+    </div>
+    <div class="case-card reveal" onclick="window.location.href='case-monstra.html'">
+      <div class="case-ref">REF-002 · MONSTRA</div>
+      <h3 class="case-title">Monstra Festival</h3>
+      <div class="case-arrow">VIEW SPECS →</div>
+    </div>
+  </div>
+</section>
+
+<section id="content">
+    <div class="sec-eyebrow"><span class="ref-num">SEC.02</span> Content</div>
+    <div class="content-grid">
+        <div class="content-card reveal">
+            <div class="content-card-img" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800'); background-size: cover;"></div>
+            <div class="content-card-body">
+                <div class="content-card-title">Opening Night Reel</div>
+                <div class="content-card-meta">48k views · Instagram</div>
+            </div>
         </div>
-        <div class="hero-right" style="border-left: 0.5px solid var(--line); background: rgba(13,42,92,0.5);"></div>
-    </header>
-
-    <section id="work">
-        <div class="sec-eyebrow"><span class="ref-num">SEC.01</span> Case Archive</div>
-        <div class="case-grid reveal">
-            <a href="work/doclisboa.html" class="case-card">
-                <p class="spec-label">REF-001</p>
-                <h3 class="case-title">DocLisboa</h3>
-                <p class="hero-subtitle">Community growth & paid social strategy.</p>
-                <div class="case-arrow">VIEW SPEC →</div>
-            </a>
-            <a href="work/monstra.html" class="case-card">
-                <p class="spec-label">REF-002</p>
-                <h3 class="case-title">Monstra</h3>
-                <p class="hero-subtitle">Platform-native video and live coverage.</p>
-                <div class="case-arrow">VIEW SPEC →</div>
-            </a>
-            <a href="work/festa.html" class="case-card">
-                <p class="spec-label">REF-003</p>
-                <h3 class="case-title">Festa do Cinema</h3>
-                <p class="hero-subtitle">Branding & multi-platform engagement.</p>
-                <div class="case-arrow">VIEW SPEC →</div>
-            </a>
+        <div class="content-card reveal">
+            <div class="content-card-img">
+                <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-clapperboard-in-front-of-a-theatre-screen-4054-large.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="content-card-body">
+                <div class="content-card-title">Behind the Scenes</div>
+                <div class="content-card-meta">TikTok · Native Format</div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<section id="photography">
+    <div class="sec-eyebrow"><span class="ref-num">SEC.03</span> Photography</div>
+    <div class="photo-strip reveal">
+        <div class="photo-cell" style="background-image: url('https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1000');" data-label="FIG.A"></div>
+        <div class="photo-cell" style="background-image: url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=1000');" data-label="FIG.B"></div>
+    </div>
+</section>
+
+<footer>
+  <span>REF-2026 · PORTFOLIO v1.0</span>
+  <span>© 2026 · ALL RIGHTS RESERVED</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
