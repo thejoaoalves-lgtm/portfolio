@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio — Social Media · Blueprint</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
 </head>
@@ -17,7 +17,6 @@
     <li><a href="#content">Content</a></li>
     <li><a href="#photography">AV</a></li>
     <li><a href="#about">Specs</a></li>
-    <li><a href="#contact">Contact</a></li>
   </ul>
   <span class="nav-ref">REF-2026 · PORTFOLIO v1.0</span>
 </nav>
@@ -35,7 +34,8 @@
     </div>
     <a href="#work" class="hero-cta">View case studies →</a>
   </div>
- <div class="hero-right">
+  
+  <div class="hero-right">
     <svg class="schematic" viewBox="0 0 380 480" xmlns="http://www.w3.org/2000/svg" fill="none">
       <defs>
         <pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -70,77 +70,39 @@
       <line x1="40" y1="50" x2="340" y2="50" stroke="#1a4080" stroke-width="0.4"/>
       <text x="190" y="47" text-anchor="middle" fill="#2e6fcc" font-family="Space Mono" font-size="7">300px · FULL CAMPAIGN VIEW</text>
     </svg>
-</div>
-</div>
-
-<div class="stats">
-  <div class="stat" data-ref="DATA-01">
-    <div class="stat-num">4.3<span class="unit">M+</span></div>
-    <div class="stat-label">Impressions driven</div>
-  </div>
-  <div class="stat" data-ref="DATA-02">
-    <div class="stat-num">9.8<span class="unit">k</span></div>
-    <div class="stat-label">Followers grown</div>
-  </div>
-  <div class="stat" data-ref="DATA-03">
-    <div class="stat-num">€600</div>
-    <div class="stat-label">Total ad spend</div>
   </div>
 </div>
 
 <section id="work">
   <div class="sec-eyebrow"><span class="ref-num">SEC.01</span> Case studies</div>
-  <h2 class="sec-heading reveal">Campaigns that<br>moved the needle.</h2>
   <div class="case-grid">
     <div class="case-card reveal" onclick="window.location.href='case-doclisboa.html'">
-      <div class="case-ref">REF-001 · DOCLISBOA</div>
+      <div class="case-ref">REF-001 · 2022–2025</div>
       <h3 class="case-title">DocLisboa</h3>
       <div class="case-arrow">VIEW SPECS →</div>
     </div>
     <div class="case-card reveal" onclick="window.location.href='case-monstra.html'">
-      <div class="case-ref">REF-002 · MONSTRA</div>
-      <h3 class="case-title">Monstra Festival</h3>
+      <div class="case-ref">REF-002 · 2025–2026</div>
+      <h3 class="case-title">Monstra</h3>
       <div class="case-arrow">VIEW SPECS →</div>
     </div>
   </div>
 </section>
 
 <section id="content">
-    <div class="sec-eyebrow"><span class="ref-num">SEC.02</span> Content</div>
-    <div class="content-grid">
-        <div class="content-card reveal">
-            <div class="content-card-img" style="background-image: url('https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800'); background-size: cover;"></div>
-            <div class="content-card-body">
-                <div class="content-card-title">Opening Night Reel</div>
-                <div class="content-card-meta">48k views · Instagram</div>
-            </div>
-        </div>
-        <div class="content-card reveal">
-            <div class="content-card-img">
-                <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
-                    <source src="https://assets.mixkit.co/videos/preview/mixkit-clapperboard-in-front-of-a-theatre-screen-4054-large.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="content-card-body">
-                <div class="content-card-title">Behind the Scenes</div>
-                <div class="content-card-meta">TikTok · Native Format</div>
-            </div>
-        </div>
+  <div class="sec-eyebrow"><span class="ref-num">SEC.02</span> Digital showcase</div>
+  <div class="content-grid">
+    <div class="content-card reveal">
+      <div class="content-card-img" style="background-image: url('your-image.jpg');">
+        <div class="img-center-cross"></div>
+      </div>
+      <div class="content-card-body">
+        <div class="content-card-title">Programme announcement</div>
+        <div class="content-card-meta">LinkedIn · editorial tone</div>
+      </div>
     </div>
+  </div>
 </section>
-
-<section id="photography">
-    <div class="sec-eyebrow"><span class="ref-num">SEC.03</span> Photography</div>
-    <div class="photo-strip reveal">
-        <div class="photo-cell" style="background-image: url('https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1000');" data-label="FIG.A"></div>
-        <div class="photo-cell" style="background-image: url('https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=1000');" data-label="FIG.B"></div>
-    </div>
-</section>
-
-<footer>
-  <span>REF-2026 · PORTFOLIO v1.0</span>
-  <span>© 2026 · ALL RIGHTS RESERVED</span>
-</footer>
 
 <script src="script.js"></script>
 </body>
