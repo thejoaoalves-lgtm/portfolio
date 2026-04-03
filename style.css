@@ -1,15 +1,28 @@
 :root {
-  --blue: #0a1f44; --blue-mid:#0d2a5c; --line:#1a4080;
-  --grid: rgba(30,80,160,0.18); --cyan:#4a9eff; --cyan-dim:#2e6fcc;
-  --paper:#e8f0ff; --white:#f0f6ff; --muted:#6a8cbc;
-  --mono:'Space Mono', monospace; --sans:'Space Grotesk', sans-serif;
-  --stroke:0.5px;
+  --blue: #0a1f44;
+  --blue-mid: #0d2a5c;
+  --line: #1a4080;
+  --grid: rgba(30,80,160,0.18);
+  --cyan: #4a9eff;
+  --cyan-dim: #2e6fcc;
+  --paper: #e8f0ff;
+  --white: #f0f6ff;
+  --muted: #6a8cbc;
+  --mono: 'Space Mono', monospace;
+  --sans: 'Space Grotesk', sans-serif;
+  --stroke: 0.5px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: var(--blue); color: var(--paper); font-family: var(--sans); overflow-x: hidden; }
 
-/* Grid Background */
+body {
+  background: var(--blue);
+  color: var(--paper);
+  font-family: var(--sans);
+  overflow-x: hidden;
+}
+
+/* Restored Dual Grid Background */
 body::before {
   content: '';
   position: fixed;
@@ -19,70 +32,54 @@ body::before {
     linear-gradient(90deg, var(--grid) 1px, transparent 1px),
     linear-gradient(rgba(30,80,160,0.07) 1px, transparent 1px),
     linear-gradient(90deg, rgba(30,80,160,0.07) 1px, transparent 1px);
-  background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px; /* Restored dual-grid */
+  background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
   pointer-events: none;
   z-index: 0;
 }
 
-/* Restored Scan Line */
+/* Restored Scan Lines */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0,0,0,0.04) 2px,
-    rgba(0,0,0,0.04) 4px
-  );
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.04) 2px, rgba(0,0,0,0.04) 4px);
   pointer-events: none;
   z-index: 1;
 }
+
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 100;
+  display: flex; justify-content: space-between; padding: 1rem 3rem;
+  background: rgba(10,31,68,0.92); border-bottom: var(--stroke) solid var(--line);
+  backdrop-filter: blur(8px);
+}
+
 .hero {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 480px; /* Exact original ratio */
-  padding-top: 60px;
+  grid-template-columns: 1fr 480px; /* Restored exact original ratio */
   border-bottom: var(--stroke) solid var(--line);
 }
 
 .hero-left {
-  padding: 6rem 4rem 4rem; /* Restored specific padding */
+  padding: 8rem 4rem 4rem;
   border-right: var(--stroke) solid var(--line);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: flex; flex-direction: column; justify-content: center;
 }
 
-.hero-name .annotated::after {
+.hero-name {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 0.9; color: var(--white);
+  margin: 1.5rem 0; font-weight: 700; text-transform: uppercase;
+}
+
+.annotated { position: relative; color: var(--cyan); }
+.annotated::after {
   content: '▸ social media manager';
-  position: absolute;
-  bottom: -1.4rem;
-  left: 0;
-  font-family: var(--mono);
-  font-size: 0.6rem;
-  color: var(--muted);
+  position: absolute; bottom: -1.4rem; left: 0;
+  font-family: var(--mono); font-size: 0.6rem; color: var(--muted);
   letter-spacing: 0.1em;
-  white-space: nowrap;
 }
-nav { position: fixed; top: 0; width: 100%; z-index: 100; display: flex; justify-content: space-between; padding: 1rem 3rem; background: rgba(10,31,68,0.9); border-bottom: var(--stroke) solid var(--line); backdrop-filter: blur(8px); }
-.nav-logo { font-family: var(--mono); color: var(--cyan); text-decoration: none; text-transform: uppercase; font-size: 0.8rem; }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); text-decoration: none; text-transform: uppercase; }
 
-section { padding: 6rem 4rem; border-bottom: var(--stroke) solid var(--line); position: relative; z-index: 2; }
-.sec-heading { font-size: 3rem; color: var(--white); margin-bottom: 2rem; line-height: 1.1; }
-.hl { color: var(--cyan); }
-
-.reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+.reveal { opacity: 0; transform: translateY(20px); transition: 0.8s ease-out; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
-
-/* Case Cards */
-.case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); margin-top: 2rem; }
-.case-card { background: var(--blue-mid); padding: 3rem; cursor: pointer; transition: 0.3s; position: relative; }
-.case-card:hover { background: #14326e; }
-.case-title { font-size: 1.5rem; color: var(--white); }
-.case-ref { font-family: var(--mono); font-size: 0.6rem; color: var(--cyan); margin-bottom: 1rem; }
-
-footer { padding: 2rem 3rem; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.6rem; color: var(--muted); border-top: var(--stroke) solid var(--line); }
