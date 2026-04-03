@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Social Media · Blueprint</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue:    #0a1f44;
+  --blue-mid:#0d2a5c;
+  --line:    #1a4080;
+  --grid:    rgba(30,80,160,0.18);
+  --cyan:    #4a9eff;
+  --cyan-dim:#2e6fcc;
+  --paper:   #e8f0ff;
+  --white:   #f0f6ff;
+  --muted:   #6a8cbc;
+  --mono:    'Space Mono', monospace;
+  --sans:    'Space Grotesk', sans-serif;
+  --stroke:  0.5px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--blue);
+  color: var(--paper);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ── GRID PAPER BACKGROUND ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(rgba(30,80,160,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30,80,160,0.07) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── SCAN LINE ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.04) 2px,
+    rgba(0,0,0,0.04) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+* { position: relative; z-index: 2; }
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background: rgba(10,31,68,0.92);
+  border-bottom: var(--stroke) solid var(--line);
+  backdrop-filter: blur(8px);
+}
+
+.nav-logo {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--cyan);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-logo::before { content: '[ '; opacity: 0.5; }
+.nav-logo::after  { content: ' ]'; opacity: 0.5; }
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .15s;
+}
+.nav-links a::before { content: '— '; opacity: 0.4; }
+.nav-links a:hover { color: var(--cyan); }
+
+.nav-ref {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  padding-top: 60px;
+  border-bottom: var(--stroke) solid var(--line);
+}
+
+.hero-left {
+  padding: 6rem 4rem 4rem;
+  border-right: var(--stroke) solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeIn .8s ease .1s forwards;
+}
+
+.spec-label {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.spec-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: var(--stroke);
+  background: var(--cyan);
+}
+
+.hero-name {
+  font-family: var(--sans);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+
+.hero-name .annotated {
+  color: var(--cyan);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-name .annotated::after {
+  content: '▸ social media manager';
+  position: absolute;
+  bottom: -1.4rem;
+  left: 0;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.hero-subtitle {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.04em;
+  max-width: 440px;
+  line-height: 1.9;
+}
+
+.hero-subtitle .hl { color: var(--paper); }
+
+/* Blueprint callout box */
+.callout-box {
+  border: var(--stroke) solid var(--line);
+  padding: 1.5rem;
+  max-width: 440px;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.callout-box::before {
+  content: 'CANDIDATE BRIEF';
+  position: absolute;
+  top: -0.55rem;
+  left: 1rem;
+  background: var(--blue);
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: var(--cyan);
+  padding: 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.callout-box p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.callout-box p .hl { color: var(--paper); }
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  color: var(--cyan);
+  border: var(--stroke) solid var(--cyan);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.6rem;
+  transition: background .2s, color .2s;
+  width: fit-content;
+}
+.hero-cta:hover { background: var(--cyan); color: var(--blue); }
+
+/* HERO RIGHT — schematic diagram */
+.hero-right {
+  padding: 6rem 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s ease .4s forwards;
+}
+
+.schematic {
+  width: 100%;
+  max-width: 380px;
+}
+
+/* ── STATS ── */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: var(--stroke) solid var(--line);
+}
+
+.stat {
+  padding: 3rem;
+  border-right: var(--stroke) solid var(--line);
+  position: relative;
+  opacity: 0;
+  animation: fadeIn .6s ease forwards;
+}
+.stat:nth-child(1) { animation-delay: .5s; }
+.stat:nth-child(2) { animation-delay: .65s; }
+.stat:nth-child(3) { animation-delay: .8s; animation: fadeIn .6s ease .8s forwards; border-right: none; }
+
+.stat::before {
+  content: attr(data-ref);
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+.stat-num {
+  font-family: var(--mono);
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--white);
+  letter-spacing: -0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.stat-num .unit { color: var(--cyan); font-size: 1.6rem; }
+
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.stat-detail {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+/* ── SECTION COMMONS ── */
+section { padding: 6rem 4rem; border-bottom: var(--stroke) solid var(--line); }
+
+.sec-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.sec-eyebrow .ref-num {
+  border: var(--stroke) solid var(--line);
+  padding: 0.1rem 0.5rem;
+  font-size: 0.55rem;
+  color: var(--muted);
+}
+
+.sec-heading {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+/* ── CASE STUDIES ── */
+.case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--stroke);
+  margin-top: 3rem;
+  background: var(--line);
+}
+
+.case-card {
+  background: var(--blue-mid);
+  padding: 2.5rem;
+  cursor: pointer;
+  transition: background .2s;
+  position: relative;
+  overflow: hidden;
+}
+.case-card:hover { background: rgba(20,50,110,0.95); }
+
+/* Crosshair corner decoration */
+.case-card::before, .case-card::after {
+  content: '';
+  position: absolute;
+  width: 16px; height: 16px;
+  border-color: var(--cyan);
+  border-style: solid;
+  opacity: 0.4;
+  transition: opacity .2s;
+}
+.case-card::before { top: 1rem; left: 1rem; border-width: 1px 0 0 1px; }
+.case-card::after  { bottom: 1rem; right: 1rem; border-width: 0 1px 1px 0; }
+.case-card:hover::before, .case-card:hover::after { opacity: 1; }
+
+.case-ref {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  color: var(--cyan);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  opacity: 0.8;
+}
+
+.case-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.02em;
+}
+
+.case-sub {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.04em;
+}
+
+.case-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  margin-bottom: 1.5rem;
+}
+
+.case-metric {
+  background: var(--blue-mid);
+  padding: 0.75rem;
+}
+.case-card:hover .case-metric { background: rgba(20,50,110,0.95); }
+
+.metric-val {
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cyan);
+  display: block;
+  letter-spacing: -0.02em;
+}
+
+.metric-lbl {
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.case-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.case-tag {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: var(--stroke) solid var(--line);
+  padding: 0.2rem 0.6rem;
+  color: var(--muted);
+}
+
+.case-arrow {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  transition: color .2s;
+}
+.case-card:hover .case-arrow { color: var(--cyan); }
+
+/* ── CONTENT GRID ── */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--stroke);
+  background: var(--line);
+  margin-top: 3rem;
+}
+
+.content-card {
+  background: var(--blue-mid);
+  overflow: hidden;
+  transition: background .2s;
+  position: relative;
+}
+.content-card:hover { background: rgba(20,50,110,0.95); }
+
+.content-card-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: rgba(10,31,68,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: var(--stroke) solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blueprint crosshair inside image placeholder */
+.content-card-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.content-card-img::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 0; right: 0;
+  height: var(--stroke);
+  background: var(--line);
+  transform: translateY(-50%);
+}
+
+.img-center-cross {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px; height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-center-cross::before {
+  content: '';
+  position: absolute;
+  width: 100%; height: var(--stroke);
+  background: var(--cyan);
+  opacity: 0.5;
+}
+.img-center-cross::after {
+  content: '';
+  position: absolute;
+  width: var(--stroke); height: 100%;
+  background: var(--cyan);
+  opacity: 0.5;
+}
+
+.platform-badge {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  background: var(--blue);
+  border: var(--stroke) solid var(--line);
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  color: var(--cyan);
+  z-index: 3;
+}
+
+.img-placeholder-text {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  z-index: 3;
+}
+
+.content-card-body {
+  padding: 1rem 1.25rem;
+}
+
+.content-card-title {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--paper);
+  margin-bottom: 0.25rem;
+}
+
+.content-card-meta {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+/* ── PHOTOGRAPHY ── */
+.photo-section { background: var(--blue-mid); }
+
+.photo-strip {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--stroke);
+  background: var(--line);
+  margin-top: 3rem;
+}
+
+.photo-cell {
+  min-height: 300px;
+  background: var(--blue);
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-cell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.5;
+}
+
+/* corner marks on photo cells */
+.photo-cell::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 1rem; left: 1rem;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  opacity: 0.7;
+}
+
+.photo-label {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(10,31,68,0.85);
+  border: var(--stroke) solid var(--line);
+  padding: 0.3rem 0.6rem;
+  z-index: 3;
+}
+
+/* ── ABOUT ── */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 0;
+}
+
+.about-left, .about-right {
+  padding: 6rem 4rem;
+}
+
+.about-left { border-right: var(--stroke) solid var(--line); }
+
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-family: var(--mono);
+}
+
+.skills-table tr { border-bottom: var(--stroke) solid var(--line); }
+.skills-table tr:first-child { border-top: var(--stroke) solid var(--line); }
+
+.skills-table td {
+  padding: 0.85rem 0;
+  font-size: 0.78rem;
+}
+
+.skills-table td:first-child { color: var(--paper); }
+.skills-table td:last-child { text-align: right; color: var(--cyan); letter-spacing: 0.06em; }
+
+.skills-table td .level-bar {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.level-pip {
+  width: 10px; height: 2px;
+  background: var(--line);
+}
+.level-pip.on { background: var(--cyan); }
+
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 2rem;
+}
+
+.tool {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: var(--stroke) solid var(--line);
+  padding: 0.3rem 0.75rem;
+  color: var(--muted);
+  transition: border-color .15s, color .15s;
+}
+.tool:hover { border-color: var(--cyan); color: var(--cyan); }
+
+.about-desc {
+  font-size: 0.88rem;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+.about-desc .hl { color: var(--paper); }
+
+/* annotated diagram in about */
+.spec-diagram {
+  border: var(--stroke) solid var(--line);
+  padding: 2rem;
+  margin-top: 2.5rem;
+  position: relative;
+}
+
+.spec-diagram::before {
+  content: 'ROLE · FIG.02';
+  position: absolute;
+  top: -0.55rem;
+  left: 1rem;
+  background: var(--blue);
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  color: var(--cyan);
+  padding: 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.spec-row {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: var(--stroke) solid var(--line);
+  gap: 1rem;
+}
+.spec-row:last-child { border-bottom: none; }
+
+.spec-key {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  width: 130px;
+  flex-shrink: 0;
+}
+
+.spec-val {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--paper);
+  letter-spacing: 0.04em;
+}
+
+/* ── CONTACT ── */
+.contact-section {
+  padding: 8rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-bg-text {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: clamp(6rem, 18vw, 16rem);
+  font-weight: 700;
+  color: rgba(26,64,128,0.25);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.contact-email-link {
+  font-family: var(--mono);
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: var(--stroke) solid var(--line);
+  padding-bottom: 0.3rem;
+  letter-spacing: 0.02em;
+  transition: color .2s, border-color .2s;
+}
+.contact-email-link:hover { color: var(--cyan); border-color: var(--cyan); }
+
+.contact-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.contact-link {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .15s;
+}
+.contact-link::before { content: '→ '; opacity: 0.4; }
+.contact-link:hover { color: var(--cyan); }
+
+/* ── FOOTER ── */
+footer {
+  border-top: var(--stroke) solid var(--line);
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer span {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--blue); }
+::-webkit-scrollbar-thumb { background: var(--line); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links, .nav-ref { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-left { padding: 5rem 2rem 3rem; border-right: none; }
+  .stats { grid-template-columns: 1fr; }
+  .stat { border-right: none; }
+  section { padding: 4rem 2rem; }
+  .case-grid, .content-grid { grid-template-columns: 1fr; }
+  .photo-strip { grid-template-columns: 1fr 1fr; }
+  .about { grid-template-columns: 1fr; }
+  .about-left { border-right: none; border-bottom: var(--stroke) solid var(--line); padding: 4rem 2rem; }
+  .about-right { padding: 4rem 2rem; }
+  .contact-section { padding: 5rem 2rem; }
+  footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="#" class="nav-logo">Your Name</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#content">Content</a></li>
+    <li><a href="#photography">AV</a></li>
+    <li><a href="#about">Specs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <span class="nav-ref">REF-2026 · PORTFOLIO v1.0</span>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-left">
+    <p class="spec-label">Document ref: SMC-LIS-001 · Social Media Coordinator</p>
+
+    <h1 class="hero-name">
+      Your<br>
+      <span class="annotated">Name</span><br>
+      Here
+    </h1>
+
+    <p class="hero-subtitle" style="margin-top: 3rem;">
+      <span class="hl">4+ years</span> building digital audiences<br>
+      for international cultural events.<br>
+      <span class="hl">Lisbon-based.</span> Platform-native. Fluent EN/PT.
+    </p>
+
+    <div class="callout-box">
+      <p>
+        Responsible for social strategy, content creation, paid campaigns, and audiovisual briefings across <span class="hl">DocLisboa</span>, <span class="hl">Monstra</span>, <span class="hl">Festa do Cinema Italiano</span>, and <span class="hl">Cinema Fernando Lopes</span> — managing full-cycle communication from editorial planning to live coverage.
+      </p>
+    </div>
+
+    <a href="#work" class="hero-cta">
+      View case studies →
+    </a>
+  </div>
+
+  <div class="hero-right">
+    <!-- Blueprint schematic of skill set -->
+    <svg class="schematic" viewBox="0 0 380 480" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <!-- grid lines -->
+      <defs>
+        <pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse">
+          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1a4080" stroke-width="0.3"/>
+        </pattern>
+      </defs>
+      <rect width="380" height="480" fill="url(#g)" opacity="0.5"/>
+
+      <!-- main box -->
+      <rect x="40" y="60" width="300" height="360" stroke="#1a4080" stroke-width="0.8"/>
+
+      <!-- corner marks -->
+      <path d="M40 60 L55 60 M40 60 L40 75" stroke="#4a9eff" stroke-width="1"/>
+      <path d="M340 60 L325 60 M340 60 L340 75" stroke="#4a9eff" stroke-width="1"/>
+      <path d="M40 420 L55 420 M40 420 L40 405" stroke="#4a9eff" stroke-width="1"/>
+      <path d="M340 420 L325 420 M340 420 L340 405" stroke="#4a9eff" stroke-width="1"/>
+
+      <!-- photo placeholder box -->
+      <rect x="80" y="90" width="220" height="180" stroke="#1a4080" stroke-width="0.6" rx="1"/>
+      <line x1="80" y1="90" x2="300" y2="270" stroke="#1a4080" stroke-width="0.4"/>
+      <line x1="300" y1="90" x2="80" y2="270" stroke="#1a4080" stroke-width="0.4"/>
+      <text x="190" y="175" text-anchor="middle" fill="#4a9eff" font-family="Space Mono" font-size="8" letter-spacing="2" opacity="0.7">PHOTO</text>
+      <circle cx="190" cy="190" r="2" fill="#4a9eff" opacity="0.6"/>
+
+      <!-- annotation lines -->
+      <line x1="300" y1="180" x2="345" y2="155" stroke="#2e6fcc" stroke-width="0.6" stroke-dasharray="3,2"/>
+      <text x="348" y="153" fill="#6a8cbc" font-family="Space Mono" font-size="7" letter-spacing="1">PROFILE</text>
+      <text x="348" y="163" fill="#6a8cbc" font-family="Space Mono" font-size="7" letter-spacing="1">IMAGE</text>
+
+      <!-- metrics band -->
+      <rect x="60" y="290" width="260" height="60" stroke="#1a4080" stroke-width="0.6"/>
+      <line x1="148" y1="290" x2="148" y2="350" stroke="#1a4080" stroke-width="0.6"/>
+      <line x1="232" y1="290" x2="232" y2="350" stroke="#1a4080" stroke-width="0.6"/>
+
+      <text x="104" y="318" text-anchor="middle" fill="#4a9eff" font-family="Space Mono" font-size="11" font-weight="700">4.3M+</text>
+      <text x="104" y="333" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1.5">IMPRESSIONS</text>
+      <text x="104" y="343" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1.5">DRIVEN</text>
+
+      <text x="190" y="318" text-anchor="middle" fill="#4a9eff" font-family="Space Mono" font-size="11" font-weight="700">9.8k</text>
+      <text x="190" y="333" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1.5">FOLLOWERS</text>
+      <text x="190" y="343" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1.5">GAINED</text>
+
+      <text x="276" y="318" text-anchor="middle" fill="#4a9eff" font-family="Space Mono" font-size="11" font-weight="700">€600</text>
+      <text x="276" y="333" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1.5">TOTAL AD</text>
+      <text x="276" y="343" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1.5">SPEND</text>
+
+      <!-- annotation lines metrics -->
+      <line x1="60" y1="350" x2="30" y2="375" stroke="#2e6fcc" stroke-width="0.6" stroke-dasharray="3,2"/>
+      <text x="6" y="371" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1">KEY</text>
+      <text x="6" y="381" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1">METRICS</text>
+
+      <!-- tag row -->
+      <rect x="60" y="370" width="62" height="16" stroke="#1a4080" stroke-width="0.6"/>
+      <text x="91" y="381" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1">INSTAGRAM</text>
+      <rect x="126" y="370" width="50" height="16" stroke="#1a4080" stroke-width="0.6"/>
+      <text x="151" y="381" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1">TIKTOK</text>
+      <rect x="180" y="370" width="56" height="16" stroke="#1a4080" stroke-width="0.6"/>
+      <text x="208" y="381" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1">LINKEDIN</text>
+      <rect x="240" y="370" width="60" height="16" stroke="#1a4080" stroke-width="0.6"/>
+      <text x="270" y="381" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1">META ADS</text>
+
+      <!-- label top -->
+      <rect x="120" y="52" width="140" height="16" fill="#0a1f44" stroke="#1a4080" stroke-width="0.8"/>
+      <text x="190" y="63" text-anchor="middle" fill="#4a9eff" font-family="Space Mono" font-size="7" letter-spacing="2">SMC-LIS-001</text>
+
+      <!-- dimension lines -->
+      <line x1="40" y1="50" x2="340" y2="50" stroke="#1a4080" stroke-width="0.4"/>
+      <line x1="40" y1="46" x2="40" y2="54" stroke="#1a4080" stroke-width="0.8"/>
+      <line x1="340" y1="46" x2="340" y2="54" stroke="#1a4080" stroke-width="0.8"/>
+      <text x="190" y="47" text-anchor="middle" fill="#2e6fcc" font-family="Space Mono" font-size="7">300px · FULL CAMPAIGN VIEW</text>
+    </svg>
+  </div>
+</div>
+
+<!-- ── STATS ── -->
+<div class="stats">
+  <div class="stat" data-ref="DATA-01">
+    <div class="stat-num">4.3<span class="unit">M+</span></div>
+    <div class="stat-label">Impressions driven</div>
+    <div class="stat-detail">DocLisboa + Monstra · 2025–26</div>
+  </div>
+  <div class="stat" data-ref="DATA-02">
+    <div class="stat-num">10k<span class="unit">→</span>19.8k</div>
+    <div class="stat-label">Followers grown</div>
+    <div class="stat-detail">DocLisboa Instagram · 4 years</div>
+  </div>
+  <div class="stat" data-ref="DATA-03">
+    <div class="stat-num">€600</div>
+    <div class="stat-label">Total ad spend</div>
+    <div class="stat-detail">Across two festival campaigns</div>
+  </div>
+</div>
+
+<!-- ── CASE STUDIES ── -->
+<section id="work">
+  <div class="sec-eyebrow">
+    <span class="ref-num">SEC.01</span>
+    Case studies
+  </div>
+  <h2 class="sec-heading reveal">Campaigns that<br>moved the needle.</h2>
+
+  <div class="case-grid reveal">
+    <!-- DocLisboa -->
+    <div class="case-card">
+      <div class="case-ref">REF-001 · 2022 – 2025 · 4 editions</div>
+      <h3 class="case-title">DocLisboa<br>International Film Festival</h3>
+      <p class="case-sub">Social strategy · community growth · paid social</p>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <span class="metric-val">+9.8k</span>
+          <span class="metric-lbl">Followers</span>
+        </div>
+        <div class="case-metric">
+          <span class="metric-val">1.8M+</span>
+          <span class="metric-lbl">Views '25</span>
+        </div>
+        <div class="case-metric">
+          <span class="metric-val">€300</span>
+          <span class="metric-lbl">Ad spend</span>
+        </div>
+      </div>
+      <div class="case-tags">
+        <span class="case-tag">Instagram</span>
+        <span class="case-tag">Facebook</span>
+        <span class="case-tag">LinkedIn</span>
+        <span class="case-tag">Meta Ads</span>
+        <span class="case-tag">MailChimp</span>
+        <span class="case-tag">WordPress</span>
+      </div>
+      <div class="case-arrow">VIEW CASE STUDY →</div>
+    </div>
+
+    <!-- Monstra -->
+    <div class="case-card">
+      <div class="case-ref">REF-002 · 2025 – 2026 · 2 editions</div>
+      <h3 class="case-title">Monstra<br>Animation Festival</h3>
+      <p class="case-sub">Campaign management · paid social · growth</p>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <span class="metric-val">2.5M+</span>
+          <span class="metric-lbl">Views</span>
+        </div>
+        <div class="case-metric">
+          <span class="metric-val">+3.5k</span>
+          <span class="metric-lbl">Followers</span>
+        </div>
+        <div class="case-metric">
+          <span class="metric-val">€300</span>
+          <span class="metric-lbl">Ad spend</span>
+        </div>
+      </div>
+      <div class="case-tags">
+        <span class="case-tag">Instagram</span>
+        <span class="case-tag">Meta Suite</span>
+        <span class="case-tag">Paid Ads</span>
+        <span class="case-tag">Kit</span>
+        <span class="case-tag">WordPress</span>
+      </div>
+      <div class="case-arrow">VIEW CASE STUDY →</div>
+    </div>
+
+    <!-- Festa -->
+    <div class="case-card">
+      <div class="case-ref">REF-003 · Jan – Apr 2024</div>
+      <h3 class="case-title">Festa do<br>Cinema Italiano</h3>
+      <p class="case-sub">Multi-platform content · TikTok · design</p>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <span class="metric-val">5</span>
+          <span class="metric-lbl">Platforms</span>
+        </div>
+        <div class="case-metric">
+          <span class="metric-val">100%</span>
+          <span class="metric-lbl">Content owned</span>
+        </div>
+        <div class="case-metric">
+          <span class="metric-val">4mo</span>
+          <span class="metric-lbl">Duration</span>
+        </div>
+      </div>
+      <div class="case-tags">
+        <span class="case-tag">TikTok</span>
+        <span class="case-tag">Instagram</span>
+        <span class="case-tag">Video editing</span>
+        <span class="case-tag">Graphic design</span>
+      </div>
+      <div class="case-arrow">VIEW CASE STUDY →</div>
+    </div>
+
+    <!-- Cinema Fernando Lopes -->
+    <div class="case-card">
+      <div class="case-ref">REF-004 · Sep – Dec 2024</div>
+      <h3 class="case-title">Cinema<br>Fernando Lopes</h3>
+      <p class="case-sub">Film release campaign · PR · brand identity</p>
+      <div class="case-metrics">
+        <div class="case-metric">
+          <span class="metric-val">1</span>
+          <span class="metric-lbl">Film launch</span>
+        </div>
+        <div class="case-metric">
+          <span class="metric-val">3</span>
+          <span class="metric-lbl">Channels</span>
+        </div>
+        <div class="case-metric">
+          <span class="metric-val">1</span>
+          <span class="metric-lbl">Brand kit</span>
+        </div>
+      </div>
+      <div class="case-tags">
+        <span class="case-tag">PR</span>
+        <span class="case-tag">Campaign</span>
+        <span class="case-tag">Brand identity</span>
+      </div>
+      <div class="case-arrow">VIEW CASE STUDY →</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTENT ── -->
+<section id="content" style="background: var(--blue-mid);">
+  <div class="sec-eyebrow">
+    <span class="ref-num">SEC.02</span>
+    Content showcase
+  </div>
+  <h2 class="sec-heading reveal">Platform-native<br>storytelling.</h2>
+
+  <div class="content-grid reveal">
+    <div class="content-card">
+      <div class="content-card-img">
+        <span class="platform-badge">Instagram</span>
+        <div class="img-center-cross"></div>
+        <span class="img-placeholder-text">Your post</span>
+      </div>
+      <div class="content-card-body">
+        <div class="content-card-title">Opening night — DocLisboa 2025</div>
+        <div class="content-card-meta">Reel · 48k views · 3.2% engagement</div>
+      </div>
+    </div>
+    <div class="content-card">
+      <div class="content-card-img">
+        <span class="platform-badge">TikTok</span>
+        <div class="img-center-cross"></div>
+        <span class="img-placeholder-text">Your video</span>
+      </div>
+      <div class="content-card-body">
+        <div class="content-card-title">Behind the screen — Festa do Cinema</div>
+        <div class="content-card-meta">TikTok · native format · trend adaptation</div>
+      </div>
+    </div>
+    <div class="content-card">
+      <div class="content-card-img">
+        <span class="platform-badge">LinkedIn</span>
+        <div class="img-center-cross"></div>
+        <span class="img-placeholder-text">Your post</span>
+      </div>
+      <div class="content-card-body">
+        <div class="content-card-title">Programme announcement — Monstra</div>
+        <div class="content-card-meta">LinkedIn · editorial tone · 2.1k impressions</div>
+      </div>
+    </div>
+    <div class="content-card">
+      <div class="content-card-img">
+        <span class="platform-badge">Instagram</span>
+        <div class="img-center-cross"></div>
+        <span class="img-placeholder-text">Your post</span>
+      </div>
+      <div class="content-card-body">
+        <div class="content-card-title">Partner spotlight — DocLisboa 2024</div>
+        <div class="content-card-meta">Carousel · partner visibility management</div>
+      </div>
+    </div>
+    <div class="content-card">
+      <div class="content-card-img">
+        <span class="platform-badge">TikTok</span>
+        <div class="img-center-cross"></div>
+        <span class="img-placeholder-text">Your video</span>
+      </div>
+      <div class="content-card-body">
+        <div class="content-card-title">Festival atmosphere — Monstra 2026</div>
+        <div class="content-card-meta">TikTok · 60s format · editorial coverage</div>
+      </div>
+    </div>
+    <div class="content-card">
+      <div class="content-card-img">
+        <span class="platform-badge">Newsletter</span>
+        <div class="img-center-cross"></div>
+        <span class="img-placeholder-text">Your edition</span>
+      </div>
+      <div class="content-card-body">
+        <div class="content-card-title">Weekly digest — DocLisboa</div>
+        <div class="content-card-meta">MailChimp · open rate · curated copy</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PHOTOGRAPHY ── -->
+<section class="photo-section" id="photography">
+  <div class="sec-eyebrow">
+    <span class="ref-num">SEC.03</span>
+    Photography & AV direction
+  </div>
+  <h2 class="sec-heading reveal">The eye behind<br>the briefing.</h2>
+  <p class="reveal" style="font-family: var(--mono); font-size: 0.78rem; color: var(--muted); max-width: 520px; line-height: 1.9; margin-bottom: 0;">
+    Trained photographer. I draft AV briefings, map sessions to cover, and align partner visibility with sponsorship agreements — from both sides of the lens.
+  </p>
+
+  <div class="photo-strip reveal">
+    <div class="photo-cell" data-label="FIG.A · ESTABLISHING">
+      <span class="photo-label">Your hero photo — DocLisboa 2025 · opening night</span>
+    </div>
+    <div class="photo-cell" data-label="FIG.B · PORTRAIT">
+      <span class="photo-label">Monstra 2026</span>
+    </div>
+    <div class="photo-cell" data-label="FIG.C · DETAIL">
+      <span class="photo-label">Cinema Fernando Lopes</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section class="about" id="about">
+  <div class="about-left">
+    <div class="sec-eyebrow">
+      <span class="ref-num">SEC.04</span>
+      Technical specs
+    </div>
+    <h2 class="sec-heading reveal" style="font-size: 1.8rem;">Skills &<br>tools</h2>
+
+    <table class="skills-table reveal">
+      <tr>
+        <td>Content strategy</td>
+        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span></span></td>
+      </tr>
+      <tr>
+        <td>Instagram / Meta</td>
+        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span></span></td>
+      </tr>
+      <tr>
+        <td>TikTok</td>
+        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span><span class="level-pip"></span></span></td>
+      </tr>
+      <tr>
+        <td>Paid social (Meta Ads)</td>
+        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span><span class="level-pip"></span></span></td>
+      </tr>
+      <tr>
+        <td>Copywriting (PT / EN)</td>
+        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span></span></td>
+      </tr>
+      <tr>
+        <td>Analytics & reporting</td>
+        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span><span class="level-pip"></span></span></td>
+      </tr>
+      <tr>
+        <td>Photography / AV direction</td>
+        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span></span></td>
+      </tr>
+      <tr>
+        <td>Video editing</td>
+        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span><span class="level-pip"></span></span></td>
+      </tr>
+    </table>
+
+    <div class="tools-list reveal">
+      <span class="tool">Meta Suite</span>
+      <span class="tool">MailChimp</span>
+      <span class="tool">WordPress</span>
+      <span class="tool">Kit</span>
+      <span class="tool">MailerLite</span>
+      <span class="tool">Canva</span>
+      <span class="tool">Letterboxd</span>
+      <span class="tool">LinkedIn</span>
+    </div>
+  </div>
+
+  <div class="about-right">
+    <div class="sec-eyebrow">
+      <span class="ref-num">SEC.05</span>
+      Background
+    </div>
+    <h2 class="sec-heading reveal" style="font-size: 1.8rem;">The person<br>behind it.</h2>
+
+    <p class="about-desc reveal">
+      Four years at the intersection of <span class="hl">culture, storytelling, and social media</span> — managing the digital presence of Lisbon's most respected international film festivals.
+    </p>
+    <p class="about-desc reveal">
+      Background as a <span class="hl">photographer</span> shapes everything: how I brief creative teams, how I think about partner visibility, and how I approach content that needs to feel real rather than manufactured.
+    </p>
+    <p class="about-desc reveal">
+      Drawn to organisations with a <span class="hl">global community</span> at their core — where the content has real stakes and the audience is genuinely paying attention.
+    </p>
+
+    <div class="spec-diagram reveal">
+      <div class="spec-row">
+        <span class="spec-key">LOCATION</span>
+        <span class="spec-val">Lisbon, Portugal</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">LANGUAGES</span>
+        <span class="spec-val">Portuguese (native) · English (fluent)</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">EXPERIENCE</span>
+        <span class="spec-val">4+ years · cultural events</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">AVAILABILITY</span>
+        <span class="spec-val">Immediate</span>
+      </div>
+      <div class="spec-row">
+        <span class="spec-key">CV</span>
+        <span class="spec-val"><a href="#" style="color: var(--cyan); text-decoration: none; font-family: var(--mono); font-size: 0.72rem;">DOWNLOAD PDF →</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="contact-section" id="contact">
+  <div class="contact-bg-text">CONTACT</div>
+
+  <div class="sec-eyebrow" style="justify-content: center;">
+    <span class="ref-num">SEC.06</span>
+    Get in touch
+  </div>
+
+  <h2 class="sec-heading reveal" style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem;">
+    Let's make<br>something great.
+  </h2>
+  <p class="reveal" style="font-family: var(--mono); font-size: 0.7rem; color: var(--muted); letter-spacing: 0.08em; margin-bottom: 3rem;">
+    Available for full-time roles · Based in Lisbon
+  </p>
+
+  <a href="mailto:your@email.com" class="contact-email-link reveal">your@email.com</a>
+
+  <div class="contact-links reveal">
+    <a href="#" class="contact-link">LinkedIn</a>
+    <a href="#" class="contact-link">Instagram</a>
+    <a href="#" class="contact-link">Download CV</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span>REF-2026 · PORTFOLIO v1.0 · SMC-LIS-001</span>
+  <span>Your Name · Social Media Coordinator · Lisbon PT</span>
+  <span>© 2026 · ALL RIGHTS RESERVED</span>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
