@@ -11,11 +11,61 @@ body { background: var(--blue); color: var(--paper); font-family: var(--sans); o
 
 /* Grid Background */
 body::before {
-  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
-  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 80px 80px;
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(rgba(30,80,160,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30,80,160,0.07) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px; /* Restored dual-grid */
+  pointer-events: none;
+  z-index: 0;
 }
 
+/* Restored Scan Line */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.04) 2px,
+    rgba(0,0,0,0.04) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 480px; /* Exact original ratio */
+  padding-top: 60px;
+  border-bottom: var(--stroke) solid var(--line);
+}
+
+.hero-left {
+  padding: 6rem 4rem 4rem; /* Restored specific padding */
+  border-right: var(--stroke) solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-name .annotated::after {
+  content: '▸ social media manager';
+  position: absolute;
+  bottom: -1.4rem;
+  left: 0;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
 nav { position: fixed; top: 0; width: 100%; z-index: 100; display: flex; justify-content: space-between; padding: 1rem 3rem; background: rgba(10,31,68,0.9); border-bottom: var(--stroke) solid var(--line); backdrop-filter: blur(8px); }
 .nav-logo { font-family: var(--mono); color: var(--cyan); text-decoration: none; text-transform: uppercase; font-size: 0.8rem; }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
