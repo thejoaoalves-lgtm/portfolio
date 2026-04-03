@@ -17,3 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// 2. SOCIAL MEDIA EMBED LOADERS
+// This dynamically loads the Instagram and TikTok SDKs only when needed
+function initSocialEmbeds() {
+    // Instagram
+    if (document.querySelector('.instagram-media')) {
+        const igScript = document.createElement('script');
+        igScript.async = true;
+        igScript.src = "//www.instagram.com/embed.js";
+        document.body.appendChild(igScript);
+    }
+
+    // TikTok
+    if (document.querySelector('.tiktok-embed')) {
+        const ttScript = document.createElement('script');
+        ttScript.async = true;
+        ttScript.src = "https://www.tiktok.com/embed.js";
+        document.body.appendChild(ttScript);
