@@ -563,61 +563,84 @@
   min-width: 0;
 }
 
-/* ── DESTAQUE DE POSTS COM COPY ── */
-.embed-wrap.highlight-copy {
-  position: relative;
+/* ── GRUPOS DE POSTS: LAYOUT DESTAQUE + SECUNDÁRIOS ── */
+.featured-post-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--stroke);
+  margin-bottom: 2rem;
+  background: transparent;
+}
+
+.featured-post {
+  background: var(--blue-mid);
+  padding: 0.5rem;
   border: 2px solid var(--cyan);
-  background: rgba(74, 158, 255, 0.08);
-  transition: all 0.2s ease;
 }
 
-.embed-wrap.highlight-copy:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(74, 158, 255, 0.2);
+.featured-post .instagram-media {
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
-.embed-wrap.highlight-copy::before {
-  content: '⭐ COPY DESTAQUE';
-  position: absolute;
-  top: -12px;
-  left: 12px;
-  background: var(--cyan);
-  color: var(--blue);
+.featured-copy {
+  background: rgba(74, 158, 255, 0.05);
+  border: var(--stroke) solid var(--line);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
   font-family: var(--mono);
-  font-size: 0.55rem;
-  letter-spacing: 0.08em;
-  padding: 0.2rem 0.6rem;
-  z-index: 10;
-  font-weight: 700;
-  white-space: nowrap;
-  border: none;
-}
-
-.highlight-quote {
-  margin-top: 0.75rem;
-  padding: 0.6rem 0.8rem;
-  border-left: 3px solid var(--cyan);
-  background: rgba(74, 158, 255, 0.08);
-  font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
   color: var(--paper);
-  line-height: 1.5;
   font-style: italic;
 }
 
-.highlight-quote::before {
+.featured-copy::before {
   content: '“';
-  font-size: 1.1rem;
-  margin-right: 0.25rem;
+  font-size: 2rem;
+  margin-right: 0.5rem;
   color: var(--cyan);
+  align-self: flex-start;
 }
 
-.highlight-quote::after {
+.featured-copy::after {
   content: '”';
-  font-size: 1.1rem;
-  margin-left: 0.25rem;
+  font-size: 2rem;
+  margin-left: 0.5rem;
   color: var(--cyan);
-  vertical-align: top;
+  align-self: flex-end;
+}
+
+.secondary-posts-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--stroke);
+  background: transparent;
+  margin-bottom: 3rem;
+}
+
+.secondary-post {
+  background: var(--blue-mid);
+  overflow: hidden;
+}
+
+.secondary-post .instagram-media {
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.post-description {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0.6rem 0.75rem;
+  border-top: var(--stroke) solid var(--line);
+  text-align: center;
 }
 
 /* ── BOTÃO BACK TO TOP ── */
@@ -670,6 +693,17 @@
   }
   .embed-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .featured-post-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .secondary-posts-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
