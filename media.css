@@ -1,8 +1,7 @@
-/* ============================================================
+/* ═══════════════════════════════════════════════
    PORTFOLIO — MEDIA.CSS
-   Responsive breakpoints for index.html
-   Case study responsive rules live in cases/case-study.css
-   ============================================================ */
+   Responsive breakpoints only
+   ═══════════════════════════════════════════════ */
 
 @media (max-width: 900px) {
 
@@ -26,7 +25,7 @@
   /* SECTIONS */
   section { padding: 4rem 2rem; }
 
-  /* CASE GRID & CONTENT GRID */
+  /* GRIDS */
   .case-grid,
   .content-grid { grid-template-columns: 1fr; }
 
@@ -52,4 +51,40 @@
     gap: 0.5rem;
     text-align: center;
   }
+
+  /* CASE STUDY PAGES */
+  .case-hero {
+    grid-template-columns: 1fr;
+    padding: 6rem 2rem 3rem;
+  }
+  .metrics-panel {
+    position: static;
+    margin-top: 2rem;
+  }
+  .case-body { padding: 3rem 2rem; }
+  .results-grid { grid-template-columns: 1fr 1fr; }
+  .embed-grid { grid-template-columns: 1fr; }
+  .asset-grid { grid-template-columns: 1fr 1fr; }
+  .asset-grid.cols-3 { grid-template-columns: 1fr 1fr; }
+
+
+  /* ── CASE STUDY PAGES ── */
+  .case-breadcrumb { padding: 0.75rem 1.5rem; }
+  .case-hero { grid-template-columns: 1fr; min-height: auto; }
+  .case-hero-left { padding: 5rem 2rem 2.5rem; border-right: none; border-bottom: var(--stroke) solid var(--line); }
+  .case-hero-right { padding: 2rem; flex-direction: row; flex-wrap: wrap; gap: 1.5rem; }
+  .metrics-panel { flex: 1; min-width: 240px; }
+  .hero-section-nav { flex: 1; min-width: 200px; }
+  .case-section { grid-template-columns: 1fr; }
+  .case-section-label { position: static; padding: 2.5rem 2rem 1rem; border-right: none; border-bottom: var(--stroke) solid var(--line); }
+  .case-section-body { padding: 2rem; }
+  .sec-dot { display: none; }
+  .results-grid { grid-template-columns: 1fr 1fr; }
+  .embed-grid { grid-template-columns: 1fr; }
+  .asset-grid { grid-template-columns: 1fr 1fr; }
+  .asset-grid.cols-3 { grid-template-columns: 1fr 1fr; }
+  .asset-grid.cols-4 { grid-template-columns: 1fr 1fr; }
+  .video-pair { grid-template-columns: 1fr; }
+  .case-footer { padding: 1.25rem 1.5rem; flex-direction: column; gap: 0.4rem; text-align: center; }
+
 }
