@@ -58,10 +58,15 @@
         <pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse">
           <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1a4080" stroke-width="0.3"/>
         </pattern>
-        <clipPath id="photo-clip">
-          <rect x="80" y="90" width="220" height="180" rx="1"/>
-        </clipPath>
-      </defs>
+    <clipPath id="photo-clip">
+  <rect x="80" y="90" width="220" height="180" rx="1"/>
+</clipPath>
+
+<image
+  x="80" y="60" width="220" height="240"
+  href="assets/photo.jpeg"
+  preserveAspectRatio="xMidYMin slice"
+  clip-path="url(#photo-clip)"/>
 
       <!-- Blueprint grid -->
       <rect width="380" height="480" fill="url(#g)" opacity="0.5"/>
