@@ -870,3 +870,106 @@ footer span {
   opacity: 1;
   transform: none;
 }
+/* ============================================ */
+/* NOVAS REGRAS PARA BOTÃO VOLTAR AO TOPO E AJUSTES DA HOMEPAGE */
+/* ============================================ */
+
+/* Botão voltar ao topo */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.2s;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Ajuste do bloco de imagem about para maior destaque */
+.about-container {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.about-image {
+    flex: 1.2;
+    max-width: 450px;
+}
+
+.about-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: top 20%;
+    aspect-ratio: 1 / 1.2;
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    flex: 1;
+}
+
+/* Redução de padding geral para encurtar a página (max 4 scrolls) */
+.hero {
+    padding: 4rem 2rem 3rem !important;
+}
+.stats {
+    padding: 2rem 2rem !important;
+}
+.cases {
+    padding: 3rem 2rem !important;
+}
+.about {
+    padding: 3rem 2rem !important;
+}
+.contact {
+    padding: 3rem 2rem 4rem !important;
+}
+footer {
+    padding: 1.5rem !important;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .about-image {
+        max-width: 280px;
+    }
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
