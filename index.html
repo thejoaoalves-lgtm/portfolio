@@ -75,12 +75,12 @@
       <path d="M40 420 L55 420 M40 420 L40 405"  stroke="#4a9eff" stroke-width="1"/>
       <path d="M340 420 L325 420 M340 420 L340 405" stroke="#4a9eff" stroke-width="1"/>
 
-      <!-- Profile photo clipped inside frame -->
+      <!-- Profile photo clipped inside frame - ajustado para mostrar rosto (xMidYMin) -->
       <rect x="80" y="90" width="220" height="180" stroke="#1a4080" stroke-width="0.6" rx="1" fill="#0a1f44"/>
       <image
         x="80" y="90" width="220" height="180"
         href="assets/photo.jpeg"
-        preserveAspectRatio="xMidYMid slice"
+        preserveAspectRatio="xMidYMin slice"
         clip-path="url(#photo-clip)"/>
 
       <!-- Annotation line — profile -->
@@ -434,11 +434,9 @@
     Available for full-time roles · Based in Lisbon
   </p>
 
-  <!-- ✏️ Replace with your email -->
   <a href="mailto:your@email.com" class="contact-email-link reveal">your@email.com</a>
 
   <div class="contact-links reveal">
-    <!-- ✏️ Replace with your URLs -->
     <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank">LinkedIn</a>
     <a href="https://instagram.com/yourhandle" class="contact-link" target="_blank">Instagram</a>
     <a href="cv.pdf" class="contact-link" target="_blank">Download CV</a>
@@ -451,6 +449,8 @@
   <span>João Alves · Social Media Coordinator · Lisbon PT</span>
   <span>© 2026 · ALL RIGHTS RESERVED</span>
 </footer>
+
+<button id="backToTop" class="back-to-top">↑ back to the top</button>
 
 <script src="script.js"></script>
 </body>
