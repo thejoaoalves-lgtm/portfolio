@@ -131,15 +131,14 @@ nav {
 .hero {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 480px;
+  grid-template-columns: 60% 40%; /* Antes: 1fr 480px */
   padding-top: 60px;
   border-bottom: var(--stroke) solid var(--line);
-  /* redução de padding para encurtar página */
   padding-bottom: 3rem;
 }
 
 .hero-left {
-  padding: 4rem 4rem 2rem;
+  padding: 4rem 3rem 2rem 4rem;
   border-right: var(--stroke) solid var(--line);
   display: flex;
   flex-direction: column;
@@ -147,6 +146,19 @@ nav {
   opacity: 0;
   animation: fadeIn 0.8s ease 0.1s forwards;
 }
+
+.hero-right {
+  padding: 4rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 1s ease 0.4s forwards;
+  background: rgba(74, 158, 255, 0.02); /* Fundo muito sutil para destacar */
+  border-left: var(--stroke) solid var(--line);
+}
+
 
 .spec-label {
   font-family: var(--mono);
@@ -264,7 +276,8 @@ nav {
 
 .schematic {
   width: 100%;
-  max-width: 380px;
+  max-width: 100%; /* Antes: 380px - agora ocupa toda a largura disponível */
+  height: auto;
 }
 
 /* ── STATS (padding reduzido) ── */
