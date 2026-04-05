@@ -514,8 +514,50 @@
   margin: 0 auto;
   padding: 2rem 4rem;
   position: relative;
+  align-items: flex-start;
+  overflow: visible; /* Garante que o sticky funciona */
+}
+/* STICKY MENU - versão corrigida e testada */
+.case-sticky-nav {
+  position: sticky;
+  top: 100px;
+  width: 240px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  border: var(--stroke) solid var(--line);
+  background: rgba(10, 31, 68, 0.95);
+  backdrop-filter: blur(8px);
+  margin: 0;
+  padding: 0;
+  height: auto;
+  z-index: 100;
 }
 
+.case-sticky-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  border-bottom: var(--stroke) solid var(--line);
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}
+.case-sticky-nav a:last-child { border-bottom: none; }
+.case-sticky-nav a:hover { 
+  color: var(--cyan); 
+  background: rgba(74, 158, 255, 0.08);
+}
+.case-sticky-nav a .nav-arrow { 
+  opacity: 0.5; 
+  font-size: 0.7rem;
+  transition: opacity 0.15s;
+}
+.case-sticky-nav a:hover .nav-arrow { opacity: 1; }
 .case-main-content {
   flex: 1;
   min-width: 0;
