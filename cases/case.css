@@ -570,12 +570,13 @@
   gap: var(--stroke);
   margin-bottom: 2rem;
   background: transparent;
+  align-items: center;
 }
 
 .featured-post {
   background: var(--blue-mid);
   padding: 0.5rem;
-  border: 2px solid var(--cyan);
+  /* sem borda */
 }
 
 .featured-post .instagram-media {
@@ -585,32 +586,32 @@
 }
 
 .featured-copy {
-  background: rgba(74, 158, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05); /* branco com transparência azulada */
   border: var(--stroke) solid var(--line);
   padding: 1.5rem;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   font-family: var(--mono);
   font-size: 0.8rem;
   line-height: 1.6;
   color: var(--paper);
-  font-style: italic;
+  height: 100%;
 }
 
-.featured-copy::before {
-  content: '“';
-  font-size: 2rem;
-  margin-right: 0.5rem;
-  color: var(--cyan);
-  align-self: flex-start;
+.featured-copy-text {
+  margin-bottom: 1rem;
 }
 
-.featured-copy::after {
-  content: '”';
-  font-size: 2rem;
-  margin-left: 0.5rem;
+.featured-copy .post-description {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: var(--stroke) solid var(--line);
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: var(--cyan);
-  align-self: flex-end;
+  text-align: left;
 }
 
 .secondary-posts-row {
@@ -624,6 +625,9 @@
 .secondary-post {
   background: var(--blue-mid);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .secondary-post .instagram-media {
@@ -641,6 +645,18 @@
   padding: 0.6rem 0.75rem;
   border-top: var(--stroke) solid var(--line);
   text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .featured-post-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .secondary-posts-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 /* ── BOTÃO BACK TO TOP ── */
