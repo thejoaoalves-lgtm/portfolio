@@ -563,30 +563,24 @@
   min-width: 0;
 }
 
-/* ── GRUPOS DE POSTS: LAYOUT DESTAQUE + SECUNDÁRIOS ── */
 .featured-post-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--stroke);
   margin-bottom: 2rem;
   background: transparent;
-  align-items: stretch; /* Alterado de 'center' para 'stretch' - força mesma altura */
+  align-items: center; /* Alinha pelo topo - mais seguro */
 }
 
 .featured-post {
   background: var(--blue-mid);
   padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* Ocupa toda a altura do grid */
 }
 
 .featured-post .instagram-media {
   min-width: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
-  height: 100% !important;
-  flex: 1; /* Ocupa espaço disponível */
 }
 
 .featured-copy {
@@ -595,17 +589,15 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   font-family: var(--mono);
   font-size: 0.8rem;
   line-height: 1.6;
   color: var(--paper);
-  height: 100%; /* Ocupa toda a altura do grid */
 }
 
 .featured-copy-text {
   margin-bottom: 1rem;
-  flex: 1;
 }
 
 .featured-copy .post-description {
@@ -619,14 +611,14 @@
   text-align: left;
 }
 
-/* Posts secundários - alinhamento das descrições */
+/* Posts secundários */
 .secondary-posts-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--stroke);
   background: transparent;
   margin-bottom: 3rem;
-  align-items: stretch; /* Garante mesma altura entre os dois posts */
+  align-items: center;
 }
 
 .secondary-post {
@@ -634,14 +626,12 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ocupa toda a altura do grid */
 }
 
 .secondary-post .instagram-media {
   min-width: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
-  flex: 1; /* Ocupa espaço disponível, empurrando descrição para baixo */
 }
 
 .post-description {
@@ -653,7 +643,7 @@
   padding: 0.6rem 0.75rem;
   border-top: var(--stroke) solid var(--line);
   text-align: center;
-  margin-top: auto; /* Garante que fica no fundo */
+  background: var(--blue-mid);
 }
 
 /* ── BOTÃO BACK TO TOP ── */
