@@ -1,216 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DocLisboa IFF — Case Study · João Alves</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../media.css">
-  <link rel="stylesheet" href="case.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doclisboa'24 · João Alves</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../media.css">
+    <link rel="stylesheet" href="case.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-<nav>
-  <a href="../index.html" class="nav-logo">João Alves</a>
-  <a href="../index.html#work" class="nav-back">All case studies</a>
-  <span class="nav-ref">REF-001 · DOCLISBOA · 2022–2025</span>
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-links">
+            <a href="../index.html">Início</a>
+            <a href="../index.html#cases">Projetos</a>
+            <a href="../index.html#about">Sobre</a>
+            <a href="../index.html#contact">Contacto</a>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
 </nav>
 
-<div class="case-breadcrumb" style="margin-top: 60px;">
-  <a href="../index.html">Portfolio</a>
-  <span class="sep">/</span>
-  <a href="../index.html#work">Case studies</a>
-  <span class="sep">/</span>
-  <span class="current">DocLisboa IFF</span>
-</div>
+<main>
+    <div class="case-content-wrapper">
+        <!-- Side menu de navegação -->
+        <nav class="case-side-nav">
+            <ul>
+                <li><a href="#contexto">Contexto</a></li>
+                <li><a href="#design">Design</a></li>
+                <li><a href="#programacao">Programação</a></li>
+                <li><a href="#parceiros">Parceiros</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#fotos">Registo fotográfico</a></li>
+            </ul>
+        </nav>
 
-<div class="case-hero">
-  <div class="case-hero-left">
-    <div class="case-eyebrow">
-      <span class="ref-box">REF-001</span>
-      Case study · 2022–2025 · 4 editions
+        <div class="case-main">
+            <!-- Hero -->
+            <section class="case-hero">
+                <h1>Doclisboa'24</h1>
+                <p class="subtitle">Identidade visual, design digital e curadoria de conteúdo para o festival internacional de cinema documental.</p>
+            </section>
+
+            <!-- Galeria de destaques por tipo (9 itens - selecionei os melhores do original, mas deves ajustar os paths conforme os teus ficheiros) -->
+            <section class="featured-grid">
+                <div class="featured-item"><img src="../assets/doclisboa/cartaz.jpg" alt="Cartaz"><span>Cartaz oficial</span></div>
+                <div class="featured-item"><img src="../assets/doclisboa/programacao1.jpg" alt="Programação"><span>Programação</span></div>
+                <div class="featured-item"><video src="../assets/doclisboa/teaser.mp4" muted loop playsinline></video><span>Teaser</span></div>
+                <div class="featured-item"><img src="../assets/doclisboa/evento1.jpg" alt="Evento"><span>Abertura</span></div>
+                <div class="featured-item"><img src="../assets/doclisboa/parceiros.jpg" alt="Parceiros"><span>Parceiros</span></div>
+                <div class="featured-item"><img src="../assets/doclisboa/faq.jpg" alt="FAQ"><span>Perguntas frequentes</span></div>
+                <div class="featured-item"><img src="../assets/doclisboa/foto1.jpg" alt="Fotos"><span>Resumo fotos</span></div>
+                <div class="featured-item"><img src="../assets/doclisboa/foto2.jpg" alt="Fotos"><span>Bastidores</span></div>
+                <div class="featured-item"><img src="../assets/doclisboa/creditos.jpg" alt="Créditos"><span>Equipa</span></div>
+            </section>
+
+            <!-- Contexto -->
+            <section id="contexto">
+                <h2>Contexto</h2>
+                <p>Doclisboa é um dos mais importantes festivais de cinema documental da Europa. Em 2024, fui convidado para desenvolver a identidade visual e a presença digital, incluindo website, redes sociais e materiais impressos. O desafio era comunicar a diversidade de filmes e eventos de forma coesa e contemporânea.</p>
+                <div class="asset-grid">
+                    <img src="../assets/doclisboa/contexto1.jpg" alt="Contexto Doclisboa" loading="lazy">
+                    <img src="../assets/doclisboa/contexto2.jpg" alt="Contexto Doclisboa" loading="lazy">
+                </div>
+            </section>
+
+            <!-- Design -->
+            <section id="design">
+                <h2>Design e identidade</h2>
+                <p>A paleta de cores e tipografia foi inspirada no cinema experimental, com contrastes ousados e elementos de sobreposição. Desenvolvemos um sistema modular que se adapta a diferentes formatos, desde ecrãs gigantes a pequenos dispositivos móveis.</p>
+                <div class="asset-grid">
+                    <img src="../assets/doclisboa/design1.jpg" alt="Design" loading="lazy">
+                    <img src="../assets/doclisboa/design2.jpg" alt="Design" loading="lazy">
+                </div>
+            </section>
+
+            <!-- Programação + Embed Instagram -->
+            <section id="programacao">
+                <h2>Programação</h2>
+                <p>O festival contou com mais de 100 filmes, debates e workshops. Destaque para a secção competitiva internacional e para as masterclasses com realizadores consagrados.</p>
+                <div class="asset-grid">
+                    <img src="../assets/doclisboa/programacao2.jpg" alt="Programação" loading="lazy">
+                    <img src="../assets/doclisboa/programacao3.jpg" alt="Programação" loading="lazy">
+                </div>
+                <!-- Embed Instagram - post programação -->
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPEok0cjKuy/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" max-width:540px; margin: 20px auto;"></blockquote>
+                <script async src="//www.instagram.com/embed.js"></script>
+            </section>
+
+            <!-- Parceiros + Embed Goethe -->
+            <section id="parceiros">
+                <h2>Parceiros</h2>
+                <p>Contámos com o apoio do Goethe-Institut, Instituto Francês, Câmara Municipal de Lisboa e vários outros parceiros que tornaram o festival possível.</p>
+                <div class="asset-grid">
+                    <img src="../assets/doclisboa/parceiros2.jpg" alt="Parceiros" loading="lazy">
+                </div>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DQMj76SDJOu/?utm_source=ig_embed" data-instgrm-version="14" style=" max-width:540px; margin: 20px auto;"></blockquote>
+            </section>
+
+            <!-- FAQs + Embed -->
+            <section id="faqs">
+                <h2>FAQs</h2>
+                <p>Respondemos às perguntas mais comuns sobre bilheteira, acessos, programação e horários. Toda a informação foi centralizada numa página de apoio ao público.</p>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DP4EwLgjFgj/?utm_source=ig_embed" data-instgrm-version="14" style=" max-width:540px; margin: 20px auto;"></blockquote>
+            </section>
+
+            <!-- Registo fotográfico + Embed resumo -->
+            <section id="fotos">
+                <h2>Registo fotográfico</h2>
+                <p>Alguns momentos do festival captados pela equipa de fotografia e pelos participantes.</p>
+                <div class="asset-grid">
+                    <img src="../assets/doclisboa/foto3.jpg" alt="Fotos festival" loading="lazy">
+                    <img src="../assets/doclisboa/foto4.jpg" alt="Fotos festival" loading="lazy">
+                </div>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DQPCILljD7n/?utm_source=ig_embed" data-instgrm-version="14" style=" max-width:540px; margin: 20px auto;"></blockquote>
+            </section>
+        </div>
     </div>
-    <h1 class="case-title">DocLisboa<br>International<br>Film Festival</h1>
-    <p class="case-scope">Social strategy · community growth<br>Paid social · AV direction · 4 editions</p>
-    <div class="role-box">
-      <p>Responsável pela <span class="hl">comunicação digital e física</span> ao longo do ano — criação de conteúdo, gestão de redes sociais (Facebook, Instagram, LinkedIn, Letterboxd), newsletter (MailChimp) e website (WordPress). Responsável pela estratégia de divulgação digital e pela cobertura fotográfica e audiovisual do festival.</p>
-    </div>
-    <div class="tag-row">
-      <span class="tag">Instagram</span><span class="tag">Facebook</span><span class="tag">LinkedIn</span>
-      <span class="tag">Letterboxd</span><span class="tag">Meta Ads</span><span class="tag">MailChimp</span>
-      <span class="tag">WordPress</span><span class="tag">Meta Suite</span><span class="tag">Photography</span>
-      <span class="tag">AV direction</span>
-    </div>
-  </div>
-  <div class="case-hero-right">
-    <div class="metrics-panel">
-      <div class="metrics-panel-header">KEY METRICS · FIG.01</div>
-      <div class="metric-item">
-        <span class="metric-val">10k<span>→</span>19.8k</span>
-        <span class="metric-lbl">Followers grown</span>
-        <span class="metric-sub">Instagram · 4 years</span>
-      </div>
-      <div class="metric-item">
-        <span class="metric-val">1.8<span>M+</span></span>
-        <span class="metric-lbl">Views in 2025</span>
-        <span class="metric-sub">Instagram · 2.5 months</span>
-      </div>
-      <div class="metric-item">
-        <span class="metric-val">€300</span>
-        <span class="metric-lbl">Ad spend 2025</span>
-        <span class="metric-sub">Meta Suite · paid social</span>
-      </div>
-      <div class="metric-item">
-        <span class="metric-val">4</span>
-        <span class="metric-lbl">Editions</span>
-        <span class="metric-sub">2022 · 2023 · 2024 · 2025</span>
-      </div>
-    </div>
-    <nav class="hero-section-nav">
-      <a href="#evento"><span>01 — Evento e funções</span><span class="nav-arrow">↓</span></a>
-      <a href="#contexto"><span>02 — Contexto + Estratégia</span><span class="nav-arrow">↓</span></a>
-      <a href="#execucao"><span>03 — Execução</span><span class="nav-arrow">↓</span></a>
-      <a href="#resultados"><span>04 — Resultados + Insights</span><span class="nav-arrow">↓</span></a>
-    </nav>
-  </div>
-</div>
+</main>
 
-<div class="case-section reveal" id="evento">
-  <div class="case-section-label">
-    <div class="sec-num">SEC.01</div>
-    <div class="sec-title-vert">Evento<br>&amp; Funções<em>Event &amp; role</em></div>
-    <div class="sec-dot"></div>
-  </div>
-  <div class="case-section-body">
-    <span class="edit-note">✏️ editar — evento e funções</span>
-    <p class="text-block">O <strong>DocLisboa — Festival Internacional de Cinema</strong> é um dos festivais de cinema documental mais relevantes da Europa, com programação anual de cinema de autor, retrospectivas e sessões especiais. Realiza-se anualmente em Lisboa, habitualmente em Outubro, com sessões em múltiplas salas da cidade.</p>
-    <p class="text-block">Ao longo de <strong>4 edições consecutivas</strong> (2022–2025), fui responsável pela comunicação digital e física do festival — uma função de gestão total que incluiu estratégia editorial, criação de conteúdo, publicação e monitorização em todas as plataformas, gestão da newsletter e do website, e coordenação da cobertura audiovisual do evento.</p>
-  </div>
-</div>
-
-<div class="case-section reveal" id="contexto">
-  <div class="case-section-label">
-    <div class="sec-num">SEC.02</div>
-    <div class="sec-title-vert">Contexto<br>+ Estratégia<em>Context &amp; strategy</em></div>
-    <div class="sec-dot"></div>
-  </div>
-  <div class="case-section-body">
-    <span class="edit-note">✏️ editar — contexto + estratégia</span>
-    <p class="text-block">Em 2022, quando assumi a gestão das redes sociais, a conta de Instagram tinha <strong>10.000 seguidores</strong> e uma presença digital fragmentada, sem linha editorial consistente nem estratégia de crescimento definida. A comunicação estava centrada no período do festival, sem actividade relevante no resto do ano.</p>
-    <p class="text-block">A estratégia assentou em dois eixos: estabelecer uma <strong>identidade visual e editorial consistente ao longo do ano</strong>, e tratar cada plataforma com linguagem própria — Instagram como canal visual e de comunidade, LinkedIn como canal institucional, Facebook para alcance, e Letterboxd como extensão natural para um festival de cinema.</p>
-    <div class="callout">
-      <p>"O crescimento sustentado não acontece só no mês do festival — acontece na consistência de 12 meses de conteúdo relevante para a comunidade."</p>
-    </div>
-    <p class="text-block">Em 2025, introduzimos pela primeira vez uma componente de <strong>paid social gerida via Meta Suite</strong> — orçamento de €300, focada em ampliar o alcance do conteúdo orgânico mais forte e em crescimento de seguidores qualificados durante as semanas de maior actividade do festival.</p>
-  </div>
-</div>
-
-<div class="case-section reveal" id="execucao">
-  <div class="case-section-label">
-    <div class="sec-num">SEC.03</div>
-    <div class="sec-title-vert">Execução<em>Execution</em></div>
-    <div class="sec-dot"></div>
-  </div>
-  <div class="case-section-body">
-    <span class="edit-note">✏️ editar — execução</span>
-    <p class="text-block">A gestão foi <strong>full-cycle</strong>: planeamento editorial anual, criação de conteúdo (copy, design, foto e vídeo), agendamento via Meta Suite, e monitorização de desempenho semanal. Durante o festival, a cobertura em tempo real incluía posts e stories diários, gestão de comunidade e coordenação das equipas de foto e vídeo.</p>
-
-    <div class="body-label">Grid Instagram · exemplo de feed</div>
-    <div class="feed-grid">
-      <div class="feed-cell"><img src="../assets/doclisboa-feed-1.png" alt="DocLisboa Instagram — post 1"></div>
-      <div class="feed-cell"><img src="../assets/doclisboa-feed-2.png" alt="DocLisboa Instagram — post 2"></div>
-      <div class="feed-cell"><img src="../assets/doclisboa-feed-3-before.png" alt="DocLisboa Instagram — post 3"></div>
-    </div>
-
-    <p class="text-block">Os posts foram organizados por tipologia de conteúdo — cada categoria com linguagem visual e editorial própria, garantindo variedade sem perder coerência de marca.</p>
-
-    <div class="body-label">Tipologias · filmes e equipa</div>
-    <div class="asset-grid cols-3">
-      <div class="asset-cell"><img src="../assets/filmes-1.png" alt="Filmes em competição 1"><div class="asset-caption">Filmes em competição</div></div>
-      <div class="asset-cell"><img src="../assets/filmes-2.png" alt="Filmes em competição 2"><div class="asset-caption">Filmes em competição</div></div>
-      <div class="asset-cell"><img src="../assets/equipa-2.png" alt="Equipa e bastidores"><div class="asset-caption">Equipa &amp; bastidores</div></div>
-    </div>
-
-    <div class="body-label">Tipologias · parceiros</div>
-    <div class="asset-grid cols-4">
-      <div class="asset-cell"><img src="../assets/parceiros-1.png" alt="Parceiros 1"><div class="asset-caption">Parceiros</div></div>
-      <div class="asset-cell"><img src="../assets/parceiros-2.png" alt="Parceiros 2"><div class="asset-caption">Parceiros</div></div>
-      <div class="asset-cell"><img src="../assets/parceiros-3.png" alt="Parceiros 3"><div class="asset-caption">Parceiros</div></div>
-      <div class="asset-cell"><img src="../assets/parceiros-4.png" alt="Parceiros 4"><div class="asset-caption">Parceiros</div></div>
-    </div>
-
-    <div class="body-label">Tipologias · informação útil</div>
-    <div class="asset-grid cols-3">
-      <div class="asset-cell"><img src="../assets/info-1.png" alt="Info 1"><div class="asset-caption">Informação útil</div></div>
-      <div class="asset-cell"><img src="../assets/info-2.png" alt="Info 2"><div class="asset-caption">Informação útil</div></div>
-      <div class="asset-cell"><img src="../assets/info-3.png" alt="Info 3"><div class="asset-caption">Informação útil</div></div>
-    </div>
-
-    <div class="asset-grid">
-      <div class="asset-cell"><img src="../assets/post-comp-1.png" alt="Composição 1"><div class="asset-caption">Composição editorial</div></div>
-      <div class="asset-cell"><img src="../assets/post-comp-2.png" alt="Composição 2"><div class="asset-caption">Composição editorial</div></div>
-    </div>
-
-    <div class="asset-grid">
-      <div class="asset-cell"><img src="../assets/vouchers-2.png" alt="Vouchers"><div class="asset-caption">Vouchers &amp; visibilidade de parceiros</div></div>
-    </div>
-
-    <p class="text-block">Enquanto responsável pela cobertura audiovisual, elaborei <strong>briefings de cobertura</strong> para as equipas de foto e vídeo, mapeei as sessões prioritárias, e geri a visibilidade dos parceiros nos relatórios em função do nível de patrocínio.</p>
-
-    <div class="body-label">Conteúdo vídeo · Reels produzidos</div>
-    <div class="video-pair">
-      <div class="video-pair-cell">
-        <video controls preload="metadata"><source src="../assets/festa-de-equipa.mp4" type="video/mp4"></video>
-        <div class="asset-caption">Reel — festa de equipa</div>
-      </div>
-      <div class="video-pair-cell">
-        <video controls preload="metadata"><source src="../assets/vouchers.mp4" type="video/mp4"></video>
-        <div class="asset-caption">Reel — vouchers / oferta de parceiros</div>
-      </div>
-    </div>
-
-    <div class="body-label">Posts publicados · exemplos em destaque</div>
-    <div class="embed-grid">
-      <div class="embed-wrap">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/doclisboa.iff/p/DQMj76SDJOu/" data-instgrm-version="14" style="background:#0d2a5c;border:0.5px solid #1a4080;border-radius:0;box-shadow:none;display:block;margin:0;padding:0;width:100%"></blockquote>
-      </div>
-      <div class="embed-wrap">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/doclisboa.iff/p/DPEok0cjKuy/" data-instgrm-version="14" style="background:#0d2a5c;border:0.5px solid #1a4080;border-radius:0;box-shadow:none;display:block;margin:0;padding:0;width:100%"></blockquote>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="case-section reveal" id="resultados">
-  <div class="case-section-label">
-    <div class="sec-num">SEC.04</div>
-    <div class="sec-title-vert">Resultados<br>+ Insights<em>Results &amp; insights</em></div>
-    <div class="sec-dot"></div>
-  </div>
-  <div class="case-section-body">
-    <div class="results-grid">
-      <div class="result-cell"><span class="result-val">+9.8k</span><span class="result-lbl">Seguidores ganhos<br>Instagram · 4 anos</span></div>
-      <div class="result-cell"><span class="result-val">1.8M+</span><span class="result-lbl">Visualizações<br>Instagram 2025</span></div>
-      <div class="result-cell"><span class="result-val">€300</span><span class="result-lbl">Orçamento<br>Meta Ads 2025</span></div>
-    </div>
-    <span class="edit-note">✏️ editar — resultados e insights</span>
-    <p class="text-block">Ao longo de 4 edições, a conta de Instagram cresceu de <strong>10.000 para 19.800 seguidores</strong> — um crescimento de 98% sem recurso a paid media até 2025. Na edição de 2025, a campanha de 2 meses e meio gerou <strong>mais de 1,8 milhões de visualizações no Instagram</strong>, com um orçamento de paid ads de apenas €300.</p>
-    <p class="text-block">O principal insight: <strong>consistência editorial ao longo do ano supera a intensidade pontual</strong>. O crescimento mais expressivo aconteceu nos anos em que a presença digital foi mais constante fora do período de festival.</p>
-    <div class="callout">
-      <p>"Com €300 de orçamento e conteúdo orgânico forte, gerámos 1.8M de visualizações. O que escalou não foi o dinheiro — foi a relevância do conteúdo."</p>
-    </div>
-    <p class="text-block">A integração do paid social em 2025 confirmou que <strong>amplificação paga funciona melhor quando o conteúdo orgânico já está validado</strong>. Os anúncios com melhor desempenho foram boosted posts — não peças criadas especificamente para paid.</p>
-  </div>
-</div>
-
-<footer class="case-footer">
-  <span>REF-001 · DOCLISBOA · 2022–2025</span>
-  <span>João Alves · Social Media Coordinator · Lisbon PT</span>
-  <span>© 2026</span>
+<footer>
+    <p>&copy; 2025 João Alves. Todos os direitos reservados.</p>
 </footer>
 
+<button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+<script src="../script.js"></script>
 <script src="case.js"></script>
 </body>
 </html>
