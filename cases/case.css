@@ -1,0 +1,385 @@
+/* ═══════════════════════════════════════════════
+   PORTFOLIO — CASES/CASE.CSS
+   Styles specific to case study pages
+   All pages in /cases/ link to both ../style.css
+   and this file.
+   ═══════════════════════════════════════════════ */
+
+/* ── CASE HERO ── */
+.case-hero {
+  padding: 7rem 4rem 4rem;
+  border-bottom: var(--stroke) solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.case-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.case-eyebrow .ref {
+  border: var(--stroke) solid var(--line);
+  padding: 0.1rem 0.5rem;
+  font-size: 0.55rem;
+  color: var(--muted);
+}
+
+.case-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.case-subtitle {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 2rem;
+}
+
+/* ── ROLE BOX ── */
+.role-box {
+  border: var(--stroke) solid var(--line);
+  padding: 1.25rem;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.role-box::before {
+  content: 'PAPEL · ROLE';
+  position: absolute;
+  top: -0.55rem;
+  left: 1rem;
+  background: var(--blue);
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  color: var(--cyan);
+  padding: 0 0.5rem;
+  text-transform: uppercase;
+}
+.role-box p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.role-box p .hl { color: var(--paper); }
+
+/* ── TAG ROW ── */
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: var(--stroke) solid var(--line);
+  padding: 0.2rem 0.6rem;
+  color: var(--muted);
+}
+
+/* ── METRICS PANEL (sidebar) ── */
+.metrics-panel {
+  border: var(--stroke) solid var(--line);
+  position: sticky;
+  top: 5rem;
+}
+
+.metrics-panel-header {
+  padding: 0.75rem 1.25rem;
+  border-bottom: var(--stroke) solid var(--line);
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.metric-item {
+  padding: 1rem 1.25rem;
+  border-bottom: var(--stroke) solid var(--line);
+}
+.metric-item:last-child { border-bottom: none; }
+
+.metric-val {
+  font-family: var(--mono);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.03em;
+  display: block;
+  line-height: 1;
+}
+.metric-val span { color: var(--cyan); }
+
+.metric-lbl {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.metric-sub {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  color: var(--muted);
+  opacity: 0.7;
+  margin-top: 0.15rem;
+  display: block;
+}
+
+/* ── CASE BODY ── */
+.case-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+.case-section {
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: var(--stroke) solid var(--line);
+}
+.case-section:last-child { border-bottom: none; }
+
+.sec-label {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.sec-label .ref {
+  border: var(--stroke) solid var(--line);
+  padding: 0.1rem 0.5rem;
+  font-size: 0.55rem;
+  color: var(--muted);
+}
+
+.sec-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+/* ── EDITABLE TEXT BLOCKS ── */
+.text-block {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 1.25rem;
+}
+.text-block strong { color: var(--paper); font-weight: 500; }
+
+.edit-note {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  opacity: 0.5;
+  border: var(--stroke) dashed var(--line);
+  padding: 0.3rem 0.7rem;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+/* ── CALLOUT / PULL QUOTE ── */
+.callout {
+  border-left: 2px solid var(--cyan);
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  background: rgba(74, 158, 255, 0.05);
+}
+.callout p {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--paper);
+  line-height: 1.8;
+  font-style: italic;
+}
+
+/* ── RESULTS GRID ── */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--stroke);
+  background: var(--line);
+  margin: 2rem 0;
+}
+
+.result-cell {
+  background: var(--blue-mid);
+  padding: 1.5rem;
+}
+
+.result-val {
+  font-family: var(--mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: -0.03em;
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.result-lbl {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ── INSTAGRAM EMBEDS ── */
+.embed-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.embed-wrap {
+  display: flex;
+  justify-content: center;
+  background: var(--blue-mid);
+  border: var(--stroke) solid var(--line);
+  padding: 0.5rem;
+  overflow: hidden;
+}
+.embed-wrap .instagram-media {
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* ── ASSET GRIDS (images / videos) ── */
+.asset-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--stroke);
+  background: var(--line);
+  margin: 2rem 0;
+}
+
+.asset-grid.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.asset-grid.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.asset-cell {
+  background: var(--blue-mid);
+  overflow: hidden;
+  position: relative;
+}
+
+.asset-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 200px;
+}
+
+.asset-cell video {
+  width: 100%;
+  display: block;
+}
+
+.asset-cell.tall img { min-height: 320px; }
+
+/* Caption below an asset */
+.asset-caption {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0.5rem 0.75rem;
+  border-top: var(--stroke) solid var(--line);
+  background: var(--blue-mid);
+}
+
+/* Feed mockup: 3-col grid with square cells */
+.feed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin: 2rem 0;
+}
+
+.feed-cell {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--blue-mid);
+}
+
+.feed-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.2s;
+}
+.feed-cell img:hover { opacity: 0.85; }
+
+/* ── VIDEO PLAYER ── */
+.video-player {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: var(--blue-mid);
+  border: var(--stroke) solid var(--line);
+  margin: 2rem 0;
+}
+.video-player video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+/* Vertical video (Reels / TikTok ratio) */
+.video-player.vertical {
+  max-width: 360px;
+  padding-bottom: 0;
+  height: 640px;
+}
+.video-player.vertical video {
+  position: static;
+  width: 100%;
+  height: 100%;
+}
