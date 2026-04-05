@@ -570,23 +570,27 @@
   gap: var(--stroke);
   margin-bottom: 2rem;
   background: transparent;
-  align-items: center;
+  align-items: stretch; /* Alterado de 'center' para 'stretch' - força mesma altura */
 }
 
 .featured-post {
   background: var(--blue-mid);
   padding: 0.5rem;
-  /* sem borda */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ocupa toda a altura do grid */
 }
 
 .featured-post .instagram-media {
   min-width: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
+  height: 100% !important;
+  flex: 1; /* Ocupa espaço disponível */
 }
 
 .featured-copy {
-  background: rgba(255, 255, 255, 0.05); /* branco com transparência azulada */
+  background: rgba(255, 255, 255, 0.05);
   border: var(--stroke) solid var(--line);
   padding: 1.5rem;
   display: flex;
@@ -596,11 +600,12 @@
   font-size: 0.8rem;
   line-height: 1.6;
   color: var(--paper);
-  height: 100%;
+  height: 100%; /* Ocupa toda a altura do grid */
 }
 
 .featured-copy-text {
   margin-bottom: 1rem;
+  flex: 1;
 }
 
 .featured-copy .post-description {
@@ -614,12 +619,14 @@
   text-align: left;
 }
 
+/* Posts secundários - alinhamento das descrições */
 .secondary-posts-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--stroke);
   background: transparent;
   margin-bottom: 3rem;
+  align-items: stretch; /* Garante mesma altura entre os dois posts */
 }
 
 .secondary-post {
@@ -627,13 +634,14 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100%; /* Ocupa toda a altura do grid */
 }
 
 .secondary-post .instagram-media {
   min-width: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
+  flex: 1; /* Ocupa espaço disponível, empurrando descrição para baixo */
 }
 
 .post-description {
@@ -645,18 +653,7 @@
   padding: 0.6rem 0.75rem;
   border-top: var(--stroke) solid var(--line);
   text-align: center;
-}
-
-/* Responsividade */
-@media (max-width: 992px) {
-  .featured-post-row {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .secondary-posts-row {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+  margin-top: auto; /* Garante que fica no fundo */
 }
 
 /* ── BOTÃO BACK TO TOP ── */
