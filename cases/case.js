@@ -85,28 +85,5 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-   /* Ajuste de espaçamento no hero para aproximar métricas */
-.case-hero-left {
-  padding: 3rem 3rem 2rem 4rem;
-}
-
-.case-hero-right {
-  padding: 2rem 2rem 1rem 2rem;
-  gap: 1rem;
-  justify-content: flex-start;
-}
-
-.metrics-panel {
-  margin-top: 0;
-}
-
-@media (max-width: 992px) {
-  .case-hero-left {
-    padding: 3rem 2rem 2rem 2rem;
-  }
-  .case-hero-right {
-    padding: 2rem;
-    gap: 1rem;
-  }
-}
+ 
 });
