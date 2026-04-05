@@ -166,28 +166,15 @@
   display: block;
 }
 
-/* ── STICKY SIDE MENU (substitui hero-section-nav) ── */
-.case-layout {
-  display: flex;
-  gap: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 2rem 4rem;
-  position: relative;
-}
+/* ── STICKY SIDE MENU ── */
 .case-sticky-nav {
   position: sticky;
-  top: 100px;
-  width: 220px;
-  flex-shrink: 0;
-  align-self: flex-start;
+  top: 80px;
+  width: 100%;
   border: var(--stroke) solid var(--line);
   background: rgba(10, 31, 68, 0.9);
   backdrop-filter: blur(8px);
-}
-.case-main-content {
-  flex: 1;
-  min-width: 0;
+  margin-top: 1rem;
 }
 
 .case-sticky-nav a {
@@ -405,18 +392,22 @@
 /* ── INSTAGRAM EMBEDS ── */
 .embed-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--stroke);
-  background: var(--line);
-  margin: 2rem 0;
+  background: transparent;
+  margin: 1.5rem 0;
 }
+
 .embed-wrap {
   background: var(--blue-mid);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 0.5rem;
   overflow: hidden;
+  transition: all 0.2s ease;
 }
+
 .embed-wrap .instagram-media {
   min-width: 0 !important;
   width: 100% !important;
@@ -425,7 +416,7 @@
   box-shadow: none !important;
 }
 
-/* ── ASSET GRIDS (com redução de tamanho) ── */
+/* ── ASSET GRIDS ── */
 .asset-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -515,7 +506,79 @@
   opacity: 0.55;
 }
 
-/* ── BOTÃO BACK TO TOP (para páginas de caso) ── */
+/* ── LAYOUT CORRIGIDO PARA STICKY MENU ── */
+.case-layout {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  position: relative;
+}
+
+.case-main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── DESTAQUE DE POSTS COM COPY ── */
+.embed-wrap.highlight-copy {
+  position: relative;
+  border: 2px solid var(--cyan);
+  background: rgba(74, 158, 255, 0.08);
+  transition: all 0.2s ease;
+}
+
+.embed-wrap.highlight-copy:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(74, 158, 255, 0.2);
+}
+
+.embed-wrap.highlight-copy::before {
+  content: '⭐ COPY DESTAQUE';
+  position: absolute;
+  top: -12px;
+  left: 12px;
+  background: var(--cyan);
+  color: var(--blue);
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  z-index: 10;
+  font-weight: 700;
+  white-space: nowrap;
+  border: none;
+}
+
+.highlight-quote {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  border-left: 3px solid var(--cyan);
+  background: rgba(74, 158, 255, 0.08);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--paper);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.highlight-quote::before {
+  content: '“';
+  font-size: 1.1rem;
+  margin-right: 0.25rem;
+  color: var(--cyan);
+}
+
+.highlight-quote::after {
+  content: '”';
+  font-size: 1.1rem;
+  margin-left: 0.25rem;
+  color: var(--cyan);
+  vertical-align: top;
+}
+
+/* ── BOTÃO BACK TO TOP ── */
 .back-to-top {
   position: fixed;
   bottom: 24px;
@@ -546,10 +609,6 @@
 
 /* ── RESPONSIVIDADE ── */
 @media (max-width: 992px) {
-   .case-layout {
-    flex-direction: column;
-    padding: 1rem 2rem;
-  }
   .case-hero {
     grid-template-columns: 1fr;
   }
@@ -557,11 +616,19 @@
     border-right: none;
     border-bottom: var(--stroke) solid var(--line);
   }
+  .case-layout {
+    flex-direction: column;
+    padding: 1rem 2rem;
+  }
   .case-sticky-nav {
     position: relative;
     top: 0;
     width: 100%;
     margin-bottom: 2rem;
+  }
+  .embed-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -597,117 +664,14 @@
     padding: 0.4rem 0.8rem;
     font-size: 0.6rem;
   }
-   /* Tablet */
-@media (max-width: 992px) {
-  .case-hero {
-    grid-template-columns: 1fr;
+  .embed-wrap.highlight-copy::before {
+    font-size: 0.45rem;
+    top: -10px;
+    left: 8px;
+    padding: 0.15rem 0.4rem;
   }
-  .case-hero-left {
-    border-right: none;
-    border-bottom: var(--stroke) solid var(--line);
-  }
-  
-  /* Novo: layout do sticky menu em tablet */
-  .case-layout {
-    flex-direction: column;
-    padding: 1rem 2rem;
-  }
-  .case-sticky-nav {
-    position: relative;
-    top: 0;
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .case-section {
-    grid-template-columns: 1fr;
-  }
-  .case-section-label {
-    position: relative;
-    top: 0;
-    padding: 2rem;
-    border-right: none;
-    border-bottom: var(--stroke) solid var(--line);
-  }
-  .case-section-body {
-    padding: 2rem;
-  }
-  .asset-grid.cols-3,
-  .asset-grid.cols-4 {
-    grid-template-columns: 1fr 1fr;
-  }
-  .embed-grid {
-    grid-template-columns: 1fr;
-  }
-  .case-footer {
-    padding: 1rem;
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-  .back-to-top {
-    bottom: 16px;
-    right: 16px;
-    padding: 0.4rem 0.8rem;
+  .highlight-quote {
     font-size: 0.6rem;
+    padding: 0.4rem 0.6rem;
   }
-  
-  /* Novo: ajuste do layout do sticky menu em mobile */
-  .case-layout {
-    padding: 0 1rem;
-  }
-}
-   /* ── DESTAQUE DE COPIES ── */
-.highlight-copy {
-  position: relative;
-  border: 1px solid var(--cyan);
-  background: rgba(74, 158, 255, 0.08);
-  transition: all 0.2s ease;
-}
-
-.highlight-copy::before {
-  content: '⭐ COPY DESTAQUE';
-  position: absolute;
-  top: -10px;
-  left: 12px;
-  background: var(--cyan);
-  color: var(--blue);
-  font-family: var(--mono);
-  font-size: 0.55rem;
-  letter-spacing: 0.1em;
-  padding: 0.2rem 0.6rem;
-  z-index: 10;
-  border-radius: 0;
-  font-weight: 700;
-  pointer-events: none;
-}
-
-.highlight-quote {
-  margin-top: 0.75rem;
-  padding: 0.75rem 1rem;
-  border-left: 2px solid var(--cyan);
-  background: rgba(74, 158, 255, 0.04);
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--paper);
-  line-height: 1.5;
-  font-style: italic;
-}
-
-.highlight-quote::before {
-  content: '“';
-  font-size: 1.2rem;
-  margin-right: 0.25rem;
-  color: var(--cyan);
-}
-
-.highlight-quote::after {
-  content: '”';
-  font-size: 1.2rem;
-  margin-left: 0.25rem;
-  color: var(--cyan);
-  vertical-align: top;
 }
