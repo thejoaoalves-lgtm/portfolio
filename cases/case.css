@@ -563,17 +563,18 @@
   min-width: 0;
 }
 
+/* ── GRUPOS DE POSTS: LAYOUT DESTAQUE + SECUNDÁRIOS ── */
 .featured-post-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--stroke);
+  gap: 0;
   margin-bottom: 2rem;
-  background: transparent;
-  align-items: center; /* Alinha pelo topo - mais seguro */
+  background: rgba(255, 255, 255, 0.05); /* Fundo unificado para os dois lados */
+  border: var(--stroke) solid var(--line);
 }
 
 .featured-post {
-  background: var(--blue-mid);
+  background: transparent;
   padding: 0.5rem;
 }
 
@@ -584,12 +585,11 @@
 }
 
 .featured-copy {
-  background: rgba(255, 255, 255, 0.05);
-  border: var(--stroke) solid var(--line);
+  background: transparent;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   font-family: var(--mono);
   font-size: 0.8rem;
   line-height: 1.6;
@@ -615,17 +615,18 @@
 .secondary-posts-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--stroke);
-  background: transparent;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.03); /* Fundo unificado mais suave */
+  border: var(--stroke) solid var(--line);
   margin-bottom: 3rem;
-  align-items: center;
 }
 
 .secondary-post {
-  background: var(--blue-mid);
+  background: transparent;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding: 0.5rem;
 }
 
 .secondary-post .instagram-media {
@@ -643,7 +644,8 @@
   padding: 0.6rem 0.75rem;
   border-top: var(--stroke) solid var(--line);
   text-align: center;
-  background: var(--blue-mid);
+  background: transparent;
+  margin-top: 0.5rem;
 }
 
 /* ── BOTÃO BACK TO TOP ── */
@@ -706,7 +708,13 @@
   }
   .secondary-posts-row {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0;
+  }
+  .secondary-post {
+    border-bottom: var(--stroke) solid var(--line);
+  }
+  .secondary-post:last-child {
+    border-bottom: none;
   }
 }
 
