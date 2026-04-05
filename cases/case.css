@@ -170,19 +170,18 @@
 .case-sticky-nav {
   position: sticky;
   top: 80px;
-  align-self: flex-start;
-  margin-bottom: 2rem;
-  border: var(--stroke) solid var(--line);
-  background: rgba(10, 31, 68, 0.7);
-  backdrop-filter: blur(4px);
   width: 100%;
+  border: var(--stroke) solid var(--line);
+  background: rgba(10, 31, 68, 0.85);
+  backdrop-filter: blur(8px);
+  margin-top: 1rem;
 }
 
 .case-sticky-nav a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.65rem 1rem;
+  padding: 0.75rem 1rem;
   border-bottom: var(--stroke) solid var(--line);
   font-family: var(--mono);
   font-size: 0.58rem;
@@ -193,8 +192,8 @@
   transition: color 0.15s, background 0.15s;
 }
 .case-sticky-nav a:last-child { border-bottom: none; }
-.case-sticky-nav a:hover { color: var(--cyan); background: rgba(74,158,255,0.05); }
-.case-sticky-nav a .nav-arrow { opacity: 0.4; }
+.case-sticky-nav a:hover { color: var(--cyan); background: rgba(74,158,255,0.08); }
+.case-sticky-nav a .nav-arrow { opacity: 0.5; font-size: 0.7rem; }
 .case-sticky-nav a:hover .nav-arrow { opacity: 1; }
 
 /* ── SECTION PANELS (2-col: label | content) ── */
