@@ -1,37 +1,67 @@
+/* ============================================================
+   PORTFOLIO — SCRIPT.JS
+   1. Scroll reveal
+   2. Page transition on case card click
+   3. Social embed loader (Instagram + TikTok)
+   ============================================================ */
+
 document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('visible');
-        });
-    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Handle smooth transition to case studies
-    document.querySelectorAll('.case-card').forEach(card => {
-        card.addEventListener('click', (e) => {
-            const url = card.getAttribute('onclick').match(/'([^']+)'/)[1];
-            document.body.style.opacity = '0';
-            document.body.style.transition = '0.4s';
-            setTimeout(() => { window.location.href = url; }, 400);
-        });
+  /* ── 1. SCROLL REVEAL ── */
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, i * 80);
+        revealObserver.unobserve(entry.target);
+      }
     });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+
+  /* ── 2. PAGE TRANSITION ── */
+  // Fade out body before navigating to a case study page
+  document.querySelectorAll('a.case-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      const href = card.getAttribute('href');
+      if (!href || href.startsWith('#')) return;
+      e.preventDefault();
+      document.body.style.transition = 'opacity 0.3s ease';
+      document.body.style.opacity = '0';
+      setTimeout(() => {
+        window.location.href = href;
+      }, 300);
+    });
+  });
+
+  // Fade in on page load (for case study pages navigating back)
+  document.body.style.opacity = '0';
+  document.body.style.transition = 'opacity 0.4s ease';
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      document.body.style.opacity = '1';
+    });
+  });
+
+
+  /* ── 3. SOCIAL EMBED LOADER ── */
+  // Lazily inject platform SDKs only if embeds exist on the page
+
+  if (document.querySelector('.instagram-media')) {
+    const igScript = document.createElement('script');
+    igScript.async = true;
+    igScript.src = '//www.instagram.com/embed.js';
+    document.body.appendChild(igScript);
+  }
+
+  if (document.querySelector('.tiktok-embed')) {
+    const ttScript = document.createElement('script');
+    ttScript.async = true;
+    ttScript.src = 'https://www.tiktok.com/embed.js';
+    document.body.appendChild(ttScript);
+  }
+
 });
-
-// 2. SOCIAL MEDIA EMBED LOADERS
-// This dynamically loads the Instagram and TikTok SDKs only when needed
-function initSocialEmbeds() {
-    // Instagram
-    if (document.querySelector('.instagram-media')) {
-        const igScript = document.createElement('script');
-        igScript.async = true;
-        igScript.src = "//www.instagram.com/embed.js";
-        document.body.appendChild(igScript);
-    }
-
-    // TikTok
-    if (document.querySelector('.tiktok-embed')) {
-        const ttScript = document.createElement('script');
-        ttScript.async = true;
-        ttScript.src = "https://www.tiktok.com/embed.js";
-        document.body.appendChild(ttScript);

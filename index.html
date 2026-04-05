@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Alves – The Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>João Alves – Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
 </head>
 <body>
 
@@ -26,10 +27,11 @@
 <!-- ── HERO ── -->
 <div class="hero">
   <div class="hero-left">
-    <p class="spec-label">Document ref: SMC-LIS-001 · Social Media & Content Manager</p>
+    <p class="spec-label">Document ref: SMC-LIS-001 · Social Media &amp; Content Manager</p>
 
     <h1 class="hero-name">
-      João<span class="annotated">Alves</span>
+      João<br>
+      <span class="annotated">Alves</span>
     </h1>
 
     <p class="hero-subtitle" style="margin-top: 3rem;">
@@ -40,73 +42,53 @@
 
     <div class="callout-box">
       <p>
-        Responsible for social strategy, content creation, paid campaigns, and audiovisual briefings across <span class="hl">DocLisboa</span>, <span class="hl">Monstra</span>, <span class="hl">Festa do Cinema Italiano</span>, and <span class="hl">Cinema Fernando Lopes</span> — managing full-cycle communication from editorial planning to live coverage.
+        Responsible for social strategy, content creation, paid campaigns, and audiovisual briefings across
+        <span class="hl">DocLisboa</span>, <span class="hl">Monstra</span>,
+        <span class="hl">Festa do Cinema Italiano</span>, and <span class="hl">Cinema Fernando Lopes</span>
+        — managing full-cycle communication from editorial planning to live coverage.
       </p>
     </div>
 
-    <a href="#work" class="hero-cta">
-      View case studies →
-    </a>
+    <a href="#work" class="hero-cta">View case studies →</a>
   </div>
 
   <div class="hero-right">
-    <!-- Blueprint schematic of skill set -->
-    <svg class="schematic" viewBox="0 0 380 480" xmlns="http://www.w3.org/2000/svg" fill="none">
-      <!-- grid lines -->
-      <defs>
-        <pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse">
-          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1a4080" stroke-width="0.3"/>
-        </pattern>
-      </defs>
-      <rect width="380" height="480" fill="url(#g)" opacity="0.5"/>
-
-      <!-- main box -->
-      <rect x="40" y="60" width="300" height="360" stroke="#1a4080" stroke-width="0.8"/>
-
-      <!-- corner marks -->
-      <path d="M40 60 L55 60 M40 60 L40 75" stroke="#4a9eff" stroke-width="1"/>
-      <path d="M340 60 L325 60 M340 60 L340 75" stroke="#4a9eff" stroke-width="1"/>
-      <path d="M40 420 L55 420 M40 420 L40 405" stroke="#4a9eff" stroke-width="1"/>
-      <path d="M340 420 L325 420 M340 420 L340 405" stroke="#4a9eff" stroke-width="1"/>
-<! photo in the box>
     <svg class="schematic" viewBox="0 0 380 480" xmlns="http://www.w3.org/2000/svg" fill="none">
       <defs>
         <pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse">
           <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1a4080" stroke-width="0.3"/>
         </pattern>
-
         <clipPath id="photo-clip">
-          <rect x="80" y="90" width="220" height="180" rx="1" />
+          <rect x="80" y="90" width="220" height="180" rx="1"/>
         </clipPath>
       </defs>
 
+      <!-- Blueprint grid -->
       <rect width="380" height="480" fill="url(#g)" opacity="0.5"/>
+
+      <!-- Main bounding box -->
       <rect x="40" y="60" width="300" height="360" stroke="#1a4080" stroke-width="0.8"/>
 
-      <path d="M40 60 L55 60 M40 60 L40 75" stroke="#4a9eff" stroke-width="1"/>
+      <!-- Corner marks -->
+      <path d="M40 60 L55 60 M40 60 L40 75"   stroke="#4a9eff" stroke-width="1"/>
       <path d="M340 60 L325 60 M340 60 L340 75" stroke="#4a9eff" stroke-width="1"/>
-      <path d="M40 420 L55 420 M40 420 L40 405" stroke="#4a9eff" stroke-width="1"/>
+      <path d="M40 420 L55 420 M40 420 L40 405"  stroke="#4a9eff" stroke-width="1"/>
       <path d="M340 420 L325 420 M340 420 L340 405" stroke="#4a9eff" stroke-width="1"/>
 
-      <g>
-        <rect x="80" y="90" width="220" height="180" stroke="#1a4080" stroke-width="0.6" rx="1" fill="#0a1f44"/>
-        <image x="80" y="110" width="220" height="180" 
-               href="assets/photo.jpeg" 
-               preserveAspectRatio="xMidYMid slice" 
-               clip-path="url(#photo-clip)"
-               opacity="1" />
-          </g>
+      <!-- Profile photo clipped inside frame -->
+      <rect x="80" y="90" width="220" height="180" stroke="#1a4080" stroke-width="0.6" rx="1" fill="#0a1f44"/>
+      <image
+        x="80" y="90" width="220" height="180"
+        href="assets/photo.jpeg"
+        preserveAspectRatio="xMidYMid slice"
+        clip-path="url(#photo-clip)"/>
 
-      <line x1="300" y1="180" x2="345" y2="155" stroke="#2e6fcc" stroke-width="0.6" stroke-dasharray="3,2"/>
-      <text x="348" y="153" fill="#6a8cbc" font-family="Space Mono" font-size="7" letter-spacing="1">PROFILE</text>
-      <text x="348" y="163" fill="#6a8cbc" font-family="Space Mono" font-size="7" letter-spacing="1">IMAGE</text>
+      <!-- Annotation line — profile -->
+      <line x1="300" y1="150" x2="345" y2="130" stroke="#2e6fcc" stroke-width="0.6" stroke-dasharray="3,2"/>
+      <text x="348" y="128" fill="#6a8cbc" font-family="Space Mono" font-size="7" letter-spacing="1">PROFILE</text>
+      <text x="348" y="138" fill="#6a8cbc" font-family="Space Mono" font-size="7" letter-spacing="1">IMAGE</text>
 
-      <!-- annotation lines -->
-      <line x1="300" y1="180" x2="345" y2="155" stroke="#2e6fcc" stroke-width="0.6" stroke-dasharray="3,2"/>
-      <text x="348" y="153" fill="#6a8cbc" font-family="Space Mono" font-size="7" letter-spacing="1">PROFILE</text>
-      <text x="348" y="163" fill="#6a8cbc" font-family="Space Mono" font-size="7" letter-spacing="1">IMAGE</text> */
-
-      <!-- metrics band -->
+      <!-- Metrics band -->
       <rect x="60" y="290" width="260" height="60" stroke="#1a4080" stroke-width="0.6"/>
       <line x1="148" y1="290" x2="148" y2="350" stroke="#1a4080" stroke-width="0.6"/>
       <line x1="232" y1="290" x2="232" y2="350" stroke="#1a4080" stroke-width="0.6"/>
@@ -123,14 +105,14 @@
       <text x="276" y="333" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1.5">TOTAL AD</text>
       <text x="276" y="343" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1.5">SPEND</text>
 
-      <!-- annotation lines metrics -->
+      <!-- Annotation line — key metrics -->
       <line x1="60" y1="350" x2="30" y2="375" stroke="#2e6fcc" stroke-width="0.6" stroke-dasharray="3,2"/>
       <text x="6" y="371" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1">KEY</text>
       <text x="6" y="381" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1">METRICS</text>
 
-      <!-- tag row -->
-      <rect x="60" y="370" width="62" height="16" stroke="#1a4080" stroke-width="0.6"/>
-      <text x="91" y="381" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1">INSTAGRAM</text>
+      <!-- Platform tags -->
+      <rect x="60"  y="370" width="62" height="16" stroke="#1a4080" stroke-width="0.6"/>
+      <text x="91"  y="381" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1">INSTAGRAM</text>
       <rect x="126" y="370" width="50" height="16" stroke="#1a4080" stroke-width="0.6"/>
       <text x="151" y="381" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1">TIKTOK</text>
       <rect x="180" y="370" width="56" height="16" stroke="#1a4080" stroke-width="0.6"/>
@@ -138,13 +120,13 @@
       <rect x="240" y="370" width="60" height="16" stroke="#1a4080" stroke-width="0.6"/>
       <text x="270" y="381" text-anchor="middle" fill="#6a8cbc" font-family="Space Mono" font-size="6" letter-spacing="1">META ADS</text>
 
-      <!-- label top -->
+      <!-- Document ID label -->
       <rect x="120" y="52" width="140" height="16" fill="#0a1f44" stroke="#1a4080" stroke-width="0.8"/>
       <text x="190" y="63" text-anchor="middle" fill="#4a9eff" font-family="Space Mono" font-size="7" letter-spacing="2">SMC-LIS-001</text>
 
-      <!-- dimension lines -->
-      <line x1="40" y1="50" x2="340" y2="50" stroke="#1a4080" stroke-width="0.4"/>
-      <line x1="40" y1="46" x2="40" y2="54" stroke="#1a4080" stroke-width="0.8"/>
+      <!-- Dimension line -->
+      <line x1="40"  y1="50" x2="340" y2="50" stroke="#1a4080" stroke-width="0.4"/>
+      <line x1="40"  y1="46" x2="40"  y2="54" stroke="#1a4080" stroke-width="0.8"/>
       <line x1="340" y1="46" x2="340" y2="54" stroke="#1a4080" stroke-width="0.8"/>
       <text x="190" y="47" text-anchor="middle" fill="#2e6fcc" font-family="Space Mono" font-size="7">300px · FULL CAMPAIGN VIEW</text>
     </svg>
@@ -179,24 +161,15 @@
   <h2 class="sec-heading reveal">Campaigns that<br>moved the needle.</h2>
 
   <div class="case-grid reveal">
-    <!-- DocLisboa -->
-    <div class="case-card">
+
+    <a href="cases/doclisboa.html" class="case-card">
       <div class="case-ref">REF-001 · 2022 – 2025 · 4 editions</div>
       <h3 class="case-title">DocLisboa<br>International Film Festival</h3>
       <p class="case-sub">Social strategy · community growth · paid social</p>
       <div class="case-metrics">
-        <div class="case-metric">
-          <span class="metric-val">+9.8k</span>
-          <span class="metric-lbl">Followers</span>
-        </div>
-        <div class="case-metric">
-          <span class="metric-val">1.8M+</span>
-          <span class="metric-lbl">Views '25</span>
-        </div>
-        <div class="case-metric">
-          <span class="metric-val">€300</span>
-          <span class="metric-lbl">Ad spend</span>
-        </div>
+        <div class="case-metric"><span class="metric-val">+9.8k</span><span class="metric-lbl">Followers</span></div>
+        <div class="case-metric"><span class="metric-val">1.8M+</span><span class="metric-lbl">Views '25</span></div>
+        <div class="case-metric"><span class="metric-val">€300</span><span class="metric-lbl">Ad spend</span></div>
       </div>
       <div class="case-tags">
         <span class="case-tag">Instagram</span>
@@ -207,26 +180,16 @@
         <span class="case-tag">WordPress</span>
       </div>
       <div class="case-arrow">VIEW CASE STUDY →</div>
-    </div>
+    </a>
 
-    <!-- Monstra -->
-    <div class="case-card">
+    <a href="cases/monstra.html" class="case-card">
       <div class="case-ref">REF-002 · 2025 – 2026 · 2 editions</div>
       <h3 class="case-title">Monstra<br>Animation Festival</h3>
       <p class="case-sub">Campaign management · paid social · growth</p>
       <div class="case-metrics">
-        <div class="case-metric">
-          <span class="metric-val">2.5M+</span>
-          <span class="metric-lbl">Views</span>
-        </div>
-        <div class="case-metric">
-          <span class="metric-val">+3.5k</span>
-          <span class="metric-lbl">Followers</span>
-        </div>
-        <div class="case-metric">
-          <span class="metric-val">€300</span>
-          <span class="metric-lbl">Ad spend</span>
-        </div>
+        <div class="case-metric"><span class="metric-val">2.5M+</span><span class="metric-lbl">Views</span></div>
+        <div class="case-metric"><span class="metric-val">+3.5k</span><span class="metric-lbl">Followers</span></div>
+        <div class="case-metric"><span class="metric-val">€300</span><span class="metric-lbl">Ad spend</span></div>
       </div>
       <div class="case-tags">
         <span class="case-tag">Instagram</span>
@@ -236,26 +199,16 @@
         <span class="case-tag">WordPress</span>
       </div>
       <div class="case-arrow">VIEW CASE STUDY →</div>
-    </div>
+    </a>
 
-    <!-- Festa -->
-    <div class="case-card">
+    <a href="cases/festa-cinema-italiano.html" class="case-card">
       <div class="case-ref">REF-003 · Jan – Apr 2024</div>
       <h3 class="case-title">Festa do<br>Cinema Italiano</h3>
       <p class="case-sub">Multi-platform content · TikTok · design</p>
       <div class="case-metrics">
-        <div class="case-metric">
-          <span class="metric-val">5</span>
-          <span class="metric-lbl">Platforms</span>
-        </div>
-        <div class="case-metric">
-          <span class="metric-val">100%</span>
-          <span class="metric-lbl">Content owned</span>
-        </div>
-        <div class="case-metric">
-          <span class="metric-val">4mo</span>
-          <span class="metric-lbl">Duration</span>
-        </div>
+        <div class="case-metric"><span class="metric-val">5</span><span class="metric-lbl">Platforms</span></div>
+        <div class="case-metric"><span class="metric-val">100%</span><span class="metric-lbl">Content owned</span></div>
+        <div class="case-metric"><span class="metric-val">4mo</span><span class="metric-lbl">Duration</span></div>
       </div>
       <div class="case-tags">
         <span class="case-tag">TikTok</span>
@@ -264,26 +217,16 @@
         <span class="case-tag">Graphic design</span>
       </div>
       <div class="case-arrow">VIEW CASE STUDY →</div>
-    </div>
+    </a>
 
-    <!-- Cinema Fernando Lopes -->
-    <div class="case-card">
+    <a href="cases/cinema-fernando-lopes.html" class="case-card">
       <div class="case-ref">REF-004 · Sep – Dec 2024</div>
       <h3 class="case-title">Cinema<br>Fernando Lopes</h3>
       <p class="case-sub">Film release campaign · PR · brand identity</p>
       <div class="case-metrics">
-        <div class="case-metric">
-          <span class="metric-val">1</span>
-          <span class="metric-lbl">Film launch</span>
-        </div>
-        <div class="case-metric">
-          <span class="metric-val">3</span>
-          <span class="metric-lbl">Channels</span>
-        </div>
-        <div class="case-metric">
-          <span class="metric-val">1</span>
-          <span class="metric-lbl">Brand kit</span>
-        </div>
+        <div class="case-metric"><span class="metric-val">1</span><span class="metric-lbl">Film launch</span></div>
+        <div class="case-metric"><span class="metric-val">3</span><span class="metric-lbl">Channels</span></div>
+        <div class="case-metric"><span class="metric-val">1</span><span class="metric-lbl">Brand kit</span></div>
       </div>
       <div class="case-tags">
         <span class="case-tag">PR</span>
@@ -291,11 +234,12 @@
         <span class="case-tag">Brand identity</span>
       </div>
       <div class="case-arrow">VIEW CASE STUDY →</div>
-    </div>
+    </a>
+
   </div>
 </section>
 
-<!-- ── CONTENT ── -->
+<!-- ── CONTENT SHOWCASE ── -->
 <section id="content" style="background: var(--blue-mid);">
   <div class="sec-eyebrow">
     <span class="ref-num">SEC.02</span>
@@ -377,7 +321,7 @@
 <section class="photo-section" id="photography">
   <div class="sec-eyebrow">
     <span class="ref-num">SEC.03</span>
-    Photography & AV direction
+    Photography &amp; AV direction
   </div>
   <h2 class="sec-heading reveal">The eye behind<br>the briefing.</h2>
   <p class="reveal" style="font-family: var(--mono); font-size: 0.78rem; color: var(--muted); max-width: 520px; line-height: 1.9; margin-bottom: 0;">
@@ -385,13 +329,16 @@
   </p>
 
   <div class="photo-strip reveal">
-    <div class="photo-cell" data-label="FIG.A · ESTABLISHING">
+    <div class="photo-cell empty" data-label="FIG.A · ESTABLISHING">
+      <span class="photo-cell-fig">FIG.A · ESTABLISHING</span>
       <span class="photo-label">Your hero photo — DocLisboa 2025 · opening night</span>
     </div>
-    <div class="photo-cell" data-label="FIG.B · PORTRAIT">
+    <div class="photo-cell empty" data-label="FIG.B · PORTRAIT">
+      <span class="photo-cell-fig">FIG.B · PORTRAIT</span>
       <span class="photo-label">Monstra 2026</span>
     </div>
-    <div class="photo-cell" data-label="FIG.C · DETAIL">
+    <div class="photo-cell empty" data-label="FIG.C · DETAIL">
+      <span class="photo-cell-fig">FIG.C · DETAIL</span>
       <span class="photo-label">Cinema Fernando Lopes</span>
     </div>
   </div>
@@ -404,41 +351,17 @@
       <span class="ref-num">SEC.04</span>
       Technical specs
     </div>
-    <h2 class="sec-heading reveal" style="font-size: 1.8rem;">Skills &<br>tools</h2>
+    <h2 class="sec-heading reveal" style="font-size: 1.8rem;">Skills &amp;<br>tools</h2>
 
     <table class="skills-table reveal">
-      <tr>
-        <td>Content strategy</td>
-        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span></span></td>
-      </tr>
-      <tr>
-        <td>Instagram / Meta</td>
-        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span></span></td>
-      </tr>
-      <tr>
-        <td>TikTok</td>
-        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span><span class="level-pip"></span></span></td>
-      </tr>
-      <tr>
-        <td>Paid social (Meta Ads)</td>
-        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span><span class="level-pip"></span></span></td>
-      </tr>
-      <tr>
-        <td>Copywriting (PT / EN)</td>
-        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span></span></td>
-      </tr>
-      <tr>
-        <td>Analytics & reporting</td>
-        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span><span class="level-pip"></span></span></td>
-      </tr>
-      <tr>
-        <td>Photography / AV direction</td>
-        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span></span></td>
-      </tr>
-      <tr>
-        <td>Video editing</td>
-        <td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span><span class="level-pip"></span></span></td>
-      </tr>
+      <tr><td>Content strategy</td><td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span></span></td></tr>
+      <tr><td>Instagram / Meta</td><td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span></span></td></tr>
+      <tr><td>TikTok</td><td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span><span class="level-pip"></span></span></td></tr>
+      <tr><td>Paid social (Meta Ads)</td><td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span><span class="level-pip"></span></span></td></tr>
+      <tr><td>Copywriting (PT / EN)</td><td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span></span></td></tr>
+      <tr><td>Analytics &amp; reporting</td><td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span><span class="level-pip"></span></span></td></tr>
+      <tr><td>Photography / AV direction</td><td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span></span></td></tr>
+      <tr><td>Video editing</td><td><span class="level-bar"><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip on"></span><span class="level-pip"></span><span class="level-pip"></span></span></td></tr>
     </table>
 
     <div class="tools-list reveal">
@@ -489,7 +412,7 @@
       </div>
       <div class="spec-row">
         <span class="spec-key">CV</span>
-        <span class="spec-val"><a href="#" style="color: var(--cyan); text-decoration: none; font-family: var(--mono); font-size: 0.72rem;">DOWNLOAD PDF →</a></span>
+        <span class="spec-val"><a href="cv.pdf" target="_blank">DOWNLOAD PDF →</a></span>
       </div>
     </div>
   </div>
@@ -511,12 +434,14 @@
     Available for full-time roles · Based in Lisbon
   </p>
 
+  <!-- ✏️ Replace with your email -->
   <a href="mailto:your@email.com" class="contact-email-link reveal">your@email.com</a>
 
   <div class="contact-links reveal">
-    <a href="#" class="contact-link">LinkedIn</a>
-    <a href="#" class="contact-link">Instagram</a>
-    <a href="#" class="contact-link">Download CV</a>
+    <!-- ✏️ Replace with your URLs -->
+    <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank">LinkedIn</a>
+    <a href="https://instagram.com/yourhandle" class="contact-link" target="_blank">Instagram</a>
+    <a href="cv.pdf" class="contact-link" target="_blank">Download CV</a>
   </div>
 </section>
 
@@ -527,17 +452,6 @@
   <span>© 2026 · ALL RIGHTS RESERVED</span>
 </footer>
 
-<script>
-  const reveals = document.querySelectorAll('.reveal');
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('visible'), i * 80);
-        obs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.08 });
-  reveals.forEach(el => obs.observe(el));
-</script>
+<script src="script.js"></script>
 </body>
 </html>
