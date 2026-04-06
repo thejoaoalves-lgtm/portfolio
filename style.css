@@ -832,3 +832,17 @@ footer span {
     border-right: var(--stroke) solid var(--line);
   }
 }
+/* FORÇA LAYOUT HERO - SOBRESCREVE display: block */
+.hero {
+  display: grid !important;
+  grid-template-columns: 60% 40% !important;
+}
+
+.hero-right {
+  display: flex !important;
+  border-left: var(--stroke) solid var(--line);
+}
+
+.hero-left {
+  border-right: var(--stroke) solid var(--line);
+}
