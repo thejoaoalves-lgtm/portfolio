@@ -3,7 +3,7 @@
    Responsive breakpoints only
    ═══════════════════════════════════════════════ */
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
   /* NAV */
   nav { padding: 1rem 1.5rem; }
