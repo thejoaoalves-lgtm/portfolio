@@ -94,3 +94,16 @@
     gap: 1rem;
   }
 }
+/* Garantir que os cards ficam bem formatados em mobile */
+@media (max-width: 768px) {
+  .case-card {
+    padding-bottom: 1.5rem;
+  }
+
+  .case-arrow {
+    position: static;
+    margin-top: 1rem;
+    display: block;
+    text-align: right;
+  }
+}
