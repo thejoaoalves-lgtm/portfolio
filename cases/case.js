@@ -107,3 +107,16 @@ if (caseMobileMenuBtn && caseSubHeader) {
 
   // O menu NÃO fecha ao clicar nos links (só com CLOSE)
 }
+/* ── BOTÃO ALL CASE STUDIES (navegação com fade) ── */
+const navBackBtn = document.getElementById('navBackBtn');
+
+if (navBackBtn) {
+  navBackBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.body.style.transition = 'opacity 0.3s ease';
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+      window.location.href = '../index.html#work';
+    }, 300);
+  });
+}
