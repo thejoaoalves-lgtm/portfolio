@@ -87,3 +87,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
  
 });
+/* ── SUB-HEADER MOBILE PARA PÁGINAS DE CASO ── */
+const caseMobileMenuBtn = document.getElementById('caseMobileMenuBtn');
+const caseSubHeader = document.getElementById('caseSubHeader');
+
+if (caseMobileMenuBtn && caseSubHeader) {
+  let subHeaderVisible = false;
+
+  caseMobileMenuBtn.addEventListener('click', () => {
+    subHeaderVisible = !subHeaderVisible;
+    if (subHeaderVisible) {
+      caseSubHeader.classList.add('show');
+      caseMobileMenuBtn.textContent = '[ CLOSE ]';
+    } else {
+      caseSubHeader.classList.remove('show');
+      caseMobileMenuBtn.textContent = '[ MENU ]';
+    }
+  });
+
+  // O menu NÃO fecha ao clicar nos links (só com CLOSE)
+}
