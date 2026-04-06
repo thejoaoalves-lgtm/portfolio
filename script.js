@@ -87,6 +87,7 @@ const subHeader = document.getElementById('subHeader');
 if (mobileMenuBtn && subHeader) {
   let subHeaderVisible = false;
 
+  // Alterna o menu ao clicar no botão
   mobileMenuBtn.addEventListener('click', () => {
     subHeaderVisible = !subHeaderVisible;
     if (subHeaderVisible) {
@@ -98,12 +99,6 @@ if (mobileMenuBtn && subHeader) {
     }
   });
 
-  // Fecha o sub-header ao clicar num link
-  document.querySelectorAll('.nav-links-mobile a').forEach(link => {
-    link.addEventListener('click', () => {
-      subHeader.classList.remove('show');
-      subHeaderVisible = false;
-      mobileMenuBtn.textContent = '[ MENU ]';
-    });
-  });
+  // O menu NÃO fecha ao clicar nos links
+  // Os links já fazem scroll suave naturalmente
 }
