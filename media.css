@@ -10,15 +10,7 @@
   .nav-links,
   .nav-ref { display: none; }
 
-  /* HERO */
-  .hero { grid-template-columns: 1fr; }
-  .hero-right { display: flex; }  /* ALTERADO: de 'none' para 'flex' */
-  .hero-left {
-    padding: 5rem 2rem 3rem;
-    border-right: none;
-  }
-
-  /* STATS */
+   /* STATS */
   .stats { grid-template-columns: 1fr; }
   .stat { border-right: none; }
 
