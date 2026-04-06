@@ -807,3 +807,12 @@ footer span {
     gap: 1rem;
   }
 }
+@media (min-width: 901px) {
+  .hero {
+    display: grid !important;
+    grid-template-columns: 60% 40% !important;
+  }
+  .hero-right {
+    display: flex !important;
+  }
+}
