@@ -152,7 +152,6 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   background: rgba(74, 158, 255, 0.02);
   border-left: var(--stroke) solid var(--line);
   opacity: 0;
