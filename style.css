@@ -410,7 +410,7 @@ section {
 /* ── CONTENT GRID ── */
 .content-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 280px));
+  grid-template-columns: repeat(3, minmax(230px, 322px)); /* 280px + 15% = 322px */
   gap: var(--stroke);
   background: transparent;
   margin-top: 3rem;
@@ -421,7 +421,7 @@ section {
   background: var(--blue-mid);
   overflow: hidden;
   transition: background 0.2s;
-  max-width: 280px;
+  max-width: 322px; /* 280px + 15% */
   width: 100%;
   margin: 0 auto;
 }
