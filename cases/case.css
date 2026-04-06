@@ -156,7 +156,9 @@
 /* ── METRICS PANEL ── */
 .metrics-panel {
   border: var(--stroke) solid var(--line);
+  height: auto; /* garante que a altura é definida pelo conteúdo */
 }
+
 .metrics-panel-header {
   padding: 0.65rem 1.25rem;
   border-bottom: var(--stroke) solid var(--line);
@@ -168,34 +170,35 @@
 }
 
 .metric-item {
-  padding: 1rem 1.25rem;
+  padding: 0.85rem 1.25rem; /* reduzido de 1rem para 0.85rem */
   border-bottom: var(--stroke) solid var(--line);
 }
 .metric-item:last-child { border-bottom: none; }
 
 .metric-val {
   font-family: var(--mono);
-  font-size: 1.7rem;
+  font-size: 1.5rem; /* reduzido de 1.7rem */
   font-weight: 700;
   color: var(--white);
   letter-spacing: -0.04em;
-  line-height: 1;
+  line-height: 1.2;
   display: block;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem; /* reduzido de 0.3rem */
 }
 .metric-val span { color: var(--cyan); }
 
 .metric-lbl {
   font-family: var(--mono);
-  font-size: 0.56rem;
+  font-size: 0.54rem; /* ligeiramente reduzido */
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
   display: block;
 }
+
 .metric-sub {
   font-family: var(--mono);
-  font-size: 0.52rem;
+  font-size: 0.5rem;
   color: var(--muted);
   opacity: 0.6;
   margin-top: 0.1rem;
