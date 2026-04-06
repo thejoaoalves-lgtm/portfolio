@@ -831,3 +831,36 @@ footer span {
     border-right: none !important;
   }
 }
+/* ============================================
+   CORREÇÕES PARA MOBILE
+   ============================================ */
+
+/* 1. Ajuste dos cards na secção de case studies em mobile */
+@media (max-width: 768px) {
+  .case-card {
+    padding: 1.5rem;
+  }
+
+  .case-arrow {
+    position: static;
+    display: inline-block;
+    margin-top: 1rem;
+    text-align: right;
+  }
+
+  .case-tags {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* 2. Scroll padding para o header fixo não esconder as secções */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Ajuste específico para mobile (header mais pequeno) */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+}
