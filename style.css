@@ -131,7 +131,7 @@ nav {
 .hero {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 60% 40%; /* Antes: 1fr 480px */
+  grid-template-columns: 60% 40%;
   padding-top: 60px;
   border-bottom: var(--stroke) solid var(--line);
   padding-bottom: 3rem;
@@ -148,139 +148,26 @@ nav {
 }
 
 .hero-right {
-  padding: 4rem 2rem 2rem 2rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  animation: fadeIn 1s ease 0.4s forwards;
-  background: rgba(74, 158, 255, 0.02); /* Fundo muito sutil para destacar */
+  background: rgba(74, 158, 255, 0.02);
   border-left: var(--stroke) solid var(--line);
-}
-
-
-.spec-label {
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--cyan);
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.spec-label::before {
-  content: '';
-  display: block;
-  width: 24px;
-  height: var(--stroke);
-  background: var(--cyan);
-}
-
-.hero-name {
-  font-family: var(--sans);
-  font-size: clamp(2.8rem, 5vw, 4.5rem);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  color: var(--white);
-  margin-bottom: 0.3rem;
-}
-
-.hero-name .annotated {
-  color: var(--cyan);
-  position: relative;
-  display: inline-block;
-}
-.hero-name .annotated::after {
-  content: '▸ social media manager';
-  position: absolute;
-  bottom: -1.4rem;
-  left: 0;
-  font-family: var(--mono);
-  font-size: 0.6rem;
-  font-weight: 400;
-  color: var(--muted);
-  letter-spacing: 0.1em;
-  white-space: nowrap;
-}
-
-.hero-subtitle {
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  letter-spacing: 0.04em;
-  max-width: 440px;
-  line-height: 1.9;
-}
-.hero-subtitle .hl { color: var(--paper); }
-
-.callout-box {
-  border: var(--stroke) solid var(--line);
-  padding: 1.5rem;
-  max-width: 440px;
-  margin-bottom: 2.5rem;
-  position: relative;
-}
-.callout-box::before {
-  content: 'CANDIDATE BRIEF';
-  position: absolute;
-  top: -0.55rem;
-  left: 1rem;
-  background: var(--blue);
-  font-family: var(--mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.14em;
-  color: var(--cyan);
-  padding: 0 0.5rem;
-  text-transform: uppercase;
-}
-.callout-box p {
-  font-size: 0.85rem;
-  color: var(--muted);
-  line-height: 1.8;
-}
-.callout-box p .hl { color: var(--paper); }
-
-.hero-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: transparent;
-  color: var(--cyan);
-  border: var(--stroke) solid var(--cyan);
-  text-decoration: none;
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.85rem 1.6rem;
-  transition: background 0.2s, color 0.2s;
-  width: fit-content;
-}
-.hero-cta:hover { background: var(--cyan); color: var(--blue); }
-
-.hero-right {
-  padding: 4rem 3rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   opacity: 0;
   animation: fadeIn 1s ease 0.4s forwards;
 }
 
 .schematic {
   width: 100%;
-  max-width: 100%; /* Antes: 380px - agora ocupa toda a largura disponível */
+  max-width: 100%;
   height: auto;
+  max-height: 100%;
+  object-fit: contain;
 }
 
-/* ── STATS (padding reduzido) ── */
+/* ── STATS ── */
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -337,7 +224,7 @@ nav {
   opacity: 0.7;
 }
 
-/* ── SECTIONS (padding reduzido) ── */
+/* ── SECTIONS ── */
 section {
   padding: 4rem 4rem;
   border-bottom: var(--stroke) solid var(--line);
@@ -497,20 +384,20 @@ section {
 /* ── CONTENT GRID ── */
 .content-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 280px)); /* Largura máxima de 280px por card */
+  grid-template-columns: repeat(3, minmax(200px, 280px));
   gap: var(--stroke);
   background: transparent;
   margin-top: 3rem;
-  justify-content: center; /* Centraliza o grid */
+  justify-content: center;
 }
 
 .content-card {
   background: var(--blue-mid);
   overflow: hidden;
   transition: background 0.2s;
-  max-width: 280px; /* Limita a largura máxima */
+  max-width: 280px;
   width: 100%;
-  margin: 0 auto; /* Centraliza cada card */
+  margin: 0 auto;
 }
 
 .content-card:hover {
@@ -528,6 +415,7 @@ section {
   position: relative;
   overflow: hidden;
 }
+
 .content-card-img::before {
   content: '';
   position: absolute;
@@ -537,6 +425,7 @@ section {
     linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
 .content-card-img::after {
   content: '';
   position: absolute;
@@ -633,76 +522,6 @@ section {
   width: 100% !important;
   max-width: 100% !important;
   border-radius: 0 !important;
-}
-
-/* ── PHOTOGRAPHY ── */
-.photo-section { background: var(--blue-mid); }
-
-.photo-strip {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: var(--stroke);
-  background: var(--line);
-  margin-top: 3rem;
-}
-
-.photo-cell {
-  min-height: 300px;
-  background: var(--blue);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-end;
-  padding: 1rem;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Blueprint grid overlay on empty cells */
-.photo-cell.empty::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 32px 32px;
-  opacity: 0.5;
-}
-
-/* Gradient overlay for legibility when cell has a photo */
-.photo-cell::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(transparent 40%, rgba(10, 31, 68, 0.75));
-  z-index: 1;
-  pointer-events: none;
-}
-
-.photo-cell-fig {
-  position: absolute;
-  top: 1rem; left: 1rem;
-  font-family: var(--mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--cyan);
-  opacity: 0.8;
-  z-index: 2;
-}
-
-.photo-label {
-  font-family: var(--mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  background: rgba(10, 31, 68, 0.85);
-  border: var(--stroke) solid var(--line);
-  padding: 0.3rem 0.6rem;
-  z-index: 3;
-  position: relative;
 }
 
 /* ── ABOUT ── */
@@ -882,7 +701,7 @@ footer span {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  background: transparent;
+  background: rgba(10, 31, 68, 0.85);
   color: var(--cyan);
   border: var(--stroke) solid var(--cyan);
   font-family: var(--mono);
@@ -894,16 +713,13 @@ footer span {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s, background 0.2s, color 0.2s;
-  z-index: 1000;
+  z-index: 9999;
   backdrop-filter: blur(4px);
-  background-color: rgba(10, 31, 68, 0.8);
 }
-
 .back-to-top.show {
   opacity: 1;
   visibility: visible;
 }
-
 .back-to-top:hover {
   background: var(--cyan);
   color: var(--blue);
@@ -924,9 +740,9 @@ footer span {
   opacity: 1;
   transform: none;
 }
+
 /* ── LAYOUT CENTRALIZADO PARA ECRÃS GRANDES (4K+) ── */
 @media (min-width: 1600px) {
-  /* Container principal para todos os conteúdos */
   .hero,
   .stats,
   section,
@@ -936,37 +752,31 @@ footer span {
     margin-right: auto;
   }
 
-  /* Ajuste específico para o hero (mantém grid proporcional) */
   .hero {
     max-width: 1400px;
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
-  /* Stats mantém largura controlada */
   .stats {
     max-width: 1400px;
   }
 
-  /* Secções com padding lateral extra */
   section {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
-  /* Grid de cases centralizado */
   .case-grid {
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* Grid de conteúdo centralizado */
   .content-grid {
     justify-content: center;
   }
 
-  /* Footer centralizado */
   footer {
     max-width: 1400px;
     margin-left: auto;
@@ -974,13 +784,27 @@ footer span {
   }
 }
 
-/* Para ecrãs ultra-largos (4K, 2560px+) */
 @media (min-width: 2000px) {
   .hero,
   .stats,
   section,
   footer,
   .case-grid {
-    max-width: 1200px; /* Ainda mais estreito para concentrar conteúdo */
+    max-width: 1200px;
+  }
+}
+
+/* Responsividade para a content grid */
+@media (max-width: 992px) {
+  .content-grid {
+    grid-template-columns: repeat(2, minmax(200px, 260px));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: minmax(200px, 280px);
+    gap: 1rem;
   }
 }
