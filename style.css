@@ -924,3 +924,63 @@ footer span {
   opacity: 1;
   transform: none;
 }
+/* ── LAYOUT CENTRALIZADO PARA ECRÃS GRANDES (4K+) ── */
+@media (min-width: 1600px) {
+  /* Container principal para todos os conteúdos */
+  .hero,
+  .stats,
+  section,
+  footer {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Ajuste específico para o hero (mantém grid proporcional) */
+  .hero {
+    max-width: 1400px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* Stats mantém largura controlada */
+  .stats {
+    max-width: 1400px;
+  }
+
+  /* Secções com padding lateral extra */
+  section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* Grid de cases centralizado */
+  .case-grid {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Grid de conteúdo centralizado */
+  .content-grid {
+    justify-content: center;
+  }
+
+  /* Footer centralizado */
+  footer {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Para ecrãs ultra-largos (4K, 2560px+) */
+@media (min-width: 2000px) {
+  .hero,
+  .stats,
+  section,
+  footer,
+  .case-grid {
+    max-width: 1200px; /* Ainda mais estreito para concentrar conteúdo */
+  }
+}
