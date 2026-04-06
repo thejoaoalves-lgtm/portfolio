@@ -157,6 +157,7 @@ nav {
   opacity: 0;
   animation: fadeIn 1s ease 0.4s forwards;
 }
+
 .hero-name {
   font-family: var(--sans);
   font-size: clamp(2.8rem, 5vw, 4.5rem);
@@ -185,6 +186,7 @@ nav {
   letter-spacing: 0.1em;
   white-space: nowrap;
 }
+
 .schematic {
   width: 100%;
   max-width: 380px;
@@ -806,42 +808,20 @@ footer span {
     gap: 1rem;
   }
 }
-@media (min-width: 901px) {
-  .hero {
-    display: grid !important;
-    grid-template-columns: 60% 40% !important;
-  }
-  .hero-right {
-    display: flex !important;
-  }
-}
+
 /* ============================================
-   FORÇAR LAYOUT HERO (DESKTOP)
+   FORÇAR LAYOUT HERO (DESKTOP APENAS)
    ============================================ */
 @media (min-width: 769px) {
   .hero {
-    display: grid !important;
-    grid-template-columns: 60% 40% !important;
+    display: grid;
+    grid-template-columns: 60% 40%;
   }
   .hero-right {
-    display: flex !important;
+    display: flex;
     border-left: var(--stroke) solid var(--line);
   }
   .hero-left {
     border-right: var(--stroke) solid var(--line);
   }
-}
-/* FORÇA LAYOUT HERO - SOBRESCREVE display: block */
-.hero {
-  display: grid !important;
-  grid-template-columns: 60% 40% !important;
-}
-
-.hero-right {
-  display: flex !important;
-  border-left: var(--stroke) solid var(--line);
-}
-
-.hero-left {
-  border-right: var(--stroke) solid var(--line);
 }
