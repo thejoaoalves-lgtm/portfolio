@@ -689,4 +689,41 @@
     padding: 0.4rem 0.8rem;
     font-size: 0.6rem;
   }
+     /* CORREÇÕES PARA TEXTO NÃO SAIR FORA DO ECRÃ */
+  .text-block {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .callout {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .callout p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .role-box ul {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding-right: 1rem;
+  }
+
+  .featured-copy {
+    padding: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .featured-copy-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .case-section-body {
+    overflow-x: hidden;
+  }
 }
