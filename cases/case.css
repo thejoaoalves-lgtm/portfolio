@@ -3,7 +3,32 @@
    Blueprint design — case study pages
    Inherits tokens from ../style.css
    ═══════════════════════════════════════════════ */
+/* ── BOTÃO ALL CASE STUDIES (estilo blueprint) ── */
+.nav-back-btn {
+  background: transparent;
+  border: var(--stroke) solid var(--cyan);
+  color: var(--cyan);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
 
+.nav-back-btn:hover {
+  background: var(--cyan);
+  color: var(--blue);
+}
+
+/* Em mobile, ajusta o tamanho do botão */
+@media (max-width: 768px) {
+  .nav-back-btn {
+    font-size: 0.55rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
 /* ── BREADCRUMB STRIP ── */
 .case-breadcrumb {
   display: flex;
