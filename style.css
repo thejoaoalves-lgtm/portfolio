@@ -810,18 +810,24 @@ footer span {
 }
 
 /* ============================================
-   FORÇAR LAYOUT HERO (DESKTOP APENAS)
+   LAYOUT HERO - REGRA FINAL E DEFINITIVA
    ============================================ */
-@media (min-width: 769px) {
+.hero {
+  display: grid !important;
+  grid-template-columns: 60% 40% !important;
+}
+
+/* Em mobile, desfaz o grid */
+@media (max-width: 768px) {
   .hero {
-    display: grid;
-    grid-template-columns: 60% 40%;
+    display: block !important;
+    grid-template-columns: 1fr !important;
   }
   .hero-right {
-    display: flex;
-    border-left: var(--stroke) solid var(--line);
+    display: flex !important;
+    margin-top: 2rem;
   }
   .hero-left {
-    border-right: var(--stroke) solid var(--line);
+    border-right: none !important;
   }
 }
