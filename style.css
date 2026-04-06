@@ -161,10 +161,8 @@ nav {
 
 .schematic {
   width: 100%;
-  max-width: 100%;
+  max-width: 380px;
   height: auto;
-  max-height: 100%;
-  object-fit: contain;
 }
 
 /* ── STATS ── */
@@ -482,16 +480,6 @@ section {
   z-index: 4;
 }
 
-.img-placeholder-text {
-  font-family: var(--mono);
-  font-size: 0.6rem;
-  color: var(--muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.5;
-  z-index: 3;
-}
-
 .content-card-body {
   padding: 1rem 1.25rem;
 }
@@ -506,22 +494,6 @@ section {
   font-size: 0.6rem;
   color: var(--muted);
   letter-spacing: 0.04em;
-}
-
-/* Instagram embed cells in content grid */
-.ig-embed-cell {
-  background: var(--blue-mid);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0.5rem;
-  overflow: hidden;
-}
-.ig-embed-cell .instagram-media {
-  min-width: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  border-radius: 0 !important;
 }
 
 /* ── ABOUT ── */
