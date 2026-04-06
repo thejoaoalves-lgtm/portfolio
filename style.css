@@ -797,14 +797,14 @@ footer span {
 /* Responsividade para a content grid */
 @media (max-width: 992px) {
   .content-grid {
-    grid-template-columns: repeat(2, minmax(200px, 260px));
+    grid-template-columns: repeat(2, minmax(230px, 322px));
     gap: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .content-grid {
-    grid-template-columns: minmax(200px, 280px);
+    grid-template-columns: minmax(230px, 322px);
     gap: 1rem;
   }
 }
