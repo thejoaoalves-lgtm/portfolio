@@ -727,3 +727,105 @@
     overflow-x: hidden;
   }
 }
+/* ============================================
+   SUB-HEADER MOBILE PARA PÁGINAS DE CASO
+   ============================================ */
+
+/* Botão do menu mobile (aparece apenas em mobile) */
+.case-mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: var(--stroke) solid var(--cyan);
+  color: var(--cyan);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+  margin-left: auto;
+}
+
+.case-mobile-menu-btn:hover {
+  background: var(--cyan);
+  color: var(--blue);
+}
+
+/* Sub-header mobile (aparece abaixo do nav) */
+.case-sub-header {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: rgba(10, 31, 68, 0.95);
+  border-bottom: var(--stroke) solid var(--line);
+  backdrop-filter: blur(8px);
+  padding: 0.75rem;
+  z-index: 99;
+  transform: translateY(-100%);
+  transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.case-sub-header.show {
+  transform: translateY(0);
+}
+
+.case-sub-header .nav-links-mobile {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.case-sub-header .nav-links-mobile a {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+  white-space: nowrap;
+}
+
+.case-sub-header .nav-links-mobile a::before {
+  content: '[ ';
+  opacity: 0.5;
+}
+
+.case-sub-header .nav-links-mobile a::after {
+  content: ' ]';
+  opacity: 0.5;
+}
+
+.case-sub-header .nav-links-mobile a:hover {
+  color: var(--cyan);
+}
+
+/* Esconder sticky menu em mobile e mostrar botão */
+@media (max-width: 768px) {
+  .case-sticky-nav {
+    display: none;
+  }
+
+  .case-mobile-menu-btn {
+    display: block;
+  }
+
+  /* Ajuste do scroll para o sub-header */
+  html {
+    scroll-padding-top: 120px;
+  }
+}
+
+/* Garantir que em desktop o sub-header não aparece */
+@media (min-width: 769px) {
+  .case-sub-header {
+    display: none;
+  }
+}
