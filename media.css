@@ -12,7 +12,7 @@
 
   /* HERO */
   .hero { grid-template-columns: 1fr; }
-  .hero-right { display: none; }
+  .hero-right { display: flex; }  /* ALTERADO: de 'none' para 'flex' */
   .hero-left {
     padding: 5rem 2rem 3rem;
     border-right: none;
@@ -88,6 +88,7 @@
   .case-footer { padding: 1.25rem 1.5rem; flex-direction: column; gap: 0.4rem; text-align: center; }
 
 }
+
 @media (max-width: 992px) {
   .content-grid {
     grid-template-columns: repeat(2, minmax(200px, 260px));
