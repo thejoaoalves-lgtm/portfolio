@@ -497,22 +497,29 @@ section {
 /* ── CONTENT GRID ── */
 .content-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(200px, 280px)); /* Largura máxima de 280px por card */
   gap: var(--stroke);
-  background: var(--line);
+  background: transparent;
   margin-top: 3rem;
+  justify-content: center; /* Centraliza o grid */
 }
 
 .content-card {
   background: var(--blue-mid);
   overflow: hidden;
   transition: background 0.2s;
+  max-width: 280px; /* Limita a largura máxima */
+  width: 100%;
+  margin: 0 auto; /* Centraliza cada card */
 }
-.content-card:hover { background: rgba(20, 50, 110, 0.95); }
+
+.content-card:hover {
+  background: rgba(20, 50, 110, 0.95);
+}
 
 .content-card-img {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
   background: rgba(10, 31, 68, 0.8);
   display: flex;
   align-items: center;
