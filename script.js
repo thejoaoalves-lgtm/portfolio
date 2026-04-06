@@ -80,3 +80,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+/* ── SUB-HEADER MOBILE ── */
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const subHeader = document.getElementById('subHeader');
+
+if (mobileMenuBtn && subHeader) {
+  let subHeaderVisible = false;
+
+  mobileMenuBtn.addEventListener('click', () => {
+    subHeaderVisible = !subHeaderVisible;
+    if (subHeaderVisible) {
+      subHeader.classList.add('show');
+      mobileMenuBtn.textContent = '[ CLOSE ]';
+    } else {
+      subHeader.classList.remove('show');
+      mobileMenuBtn.textContent = '[ MENU ]';
+    }
+  });
+
+  // Fecha o sub-header ao clicar num link
+  document.querySelectorAll('.nav-links-mobile a').forEach(link => {
+    link.addEventListener('click', () => {
+      subHeader.classList.remove('show');
+      subHeaderVisible = false;
+      mobileMenuBtn.textContent = '[ MENU ]';
+    });
+  });
+}
