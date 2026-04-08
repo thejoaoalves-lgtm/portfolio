@@ -126,6 +126,7 @@ const translations = {
     availability_val: "Immediate",
     cv_label: "CV",
     cv_link: "DOWNLOAD PDF →",
+    cv_link_url: "JoaoAlves_CV2026-EN.pdf",
 
     // INDEX CONTACT (SEC.06)
     sec06_eyebrow: "SEC.05",
@@ -385,6 +386,7 @@ const translations = {
     availability_val: "Imediata",
     cv_label: "CV",
     cv_link: "DESCARREGAR PDF →",
+    cv_link_url: "JoaoAlves_CV2026-PT.pdf",
 
     // INDEX CONTACT (SEC.05)
     sec06_eyebrow: "SEC.05",
@@ -696,7 +698,10 @@ function applyTranslations() {
   setText('availability_val', t.availability_val);
   setText('cv_label', t.cv_label);
   const cvLink = document.getElementById('cv_link');
-  if (cvLink) cvLink.textContent = t.cv_link;
+  if (cvLink) {
+    cvLink.textContent = t.cv_link;
+    cvLink.href = t.cv_link_url;
+  }
 
   // INDEX CONTACT (SEC.06)
   setText('sec06_eyebrow', t.sec06_eyebrow);
