@@ -982,3 +982,22 @@ html {
   background: var(--cyan);
   color: var(--blue);
 }
+
+/* Botão all case studies */
+.nav-back-btn {
+  background: transparent;
+  border: var(--stroke) solid var(--cyan);
+  color: var(--cyan);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-back-btn:hover {
+  background: var(--cyan);
+  color: var(--blue);
+}
