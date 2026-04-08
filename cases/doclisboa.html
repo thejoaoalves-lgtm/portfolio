@@ -9,46 +9,44 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../media.css">
   <link rel="stylesheet" href="case.css">
-  <script src="i18n.js"></script>
 </head>
 <body>
 
 <nav>
-  <a href="../index.html" class="nav-logo">João Alves</a>
-  <button class="nav-back-btn" id="navBackBtn">[ ALL CASE STUDIES ]</button>
-  <span class="nav-ref">REF-001 · DOCLISBOA · 2022–2025</span>
-  <button class="case-mobile-menu-btn" id="caseMobileMenuBtn">[ MENU ]</button>
-  <button id="langToggle" class="lang-toggle" data-i18n="lang_btn">PT</button>
+  <a href="../index.html" class="nav-logo" id="nav_logo">João Alves</a>
+  <button class="nav-back-btn" id="nav_back_btn">[ ALL CASE STUDIES ]</button>
+  <span class="nav-ref" id="nav_ref">REF-001 · DOCLISBOA · 2022–2025</span>
+  <button id="langToggle" class="lang-toggle" id="lang_btn">PT</button>
 </nav>
-  
-  <div class="case-sub-header" id="caseSubHeader">
+
+<div class="case-sub-header" id="caseSubHeader">
   <ul class="nav-links-mobile">
-    <li><a href="#contexto">Context + Strategy</a></li>
-    <li><a href="#execucao">Execution</a></li>
-    <li><a href="#resultados">Results + Insights</a></li>
+    <li><a href="#contexto" id="sticky_context">01 — Context + Strategy</a></li>
+    <li><a href="#execucao" id="sticky_execution">02 — Execution</a></li>
+    <li><a href="#resultados" id="sticky_results">03 — Results + Insights</a></li>
   </ul>
 </div>
-  
+
 <div class="case-breadcrumb" style="margin-top: 60px;">
-  <a href="../index.html">Portfolio</a>
+  <a href="../index.html" id="bc_portfolio">Portfolio</a>
   <span class="sep">/</span>
-  <a href="../index.html#work">Case studies</a>
+  <a href="../index.html#work" id="bc_casestudies">Case studies</a>
   <span class="sep">/</span>
-  <span class="current">Doclisboa IFF</span>
+  <span class="current" id="bc_doclisboa">Doclisboa IFF</span>
 </div>
 
 <div class="case-hero">
   <div class="case-hero-left">
     <div class="case-eyebrow">
-      <span class="ref-box">REF-001</span>
-      Case study · 2022–2025 · 4 editions
+      <span class="ref-box" id="case_ref">REF-001</span>
+      <span id="case_dates">Case study · 2022–2025 · 4 editions</span>
     </div>
-    <h1 class="case-title">Doclisboa<br>International<br>Film Festival</h1>
-    <p class="case-scope">Social strategy · community growth<br>Paid social · AV direction · 4 editions</p>
+    <h1 class="case-title" id="case_title">Doclisboa<br>International<br>Film Festival</h1>
+    <p class="case-scope" id="case_scope">Social strategy · community growth<br>Paid social · AV direction · 4 editions</p>
     <div class="role-box">
-      <p>Responsible for the festival's <span class="hl">digital and physical communication</span> throughout the year. The communication campaign runs over 3 months.</p>
-      <p><strong>Key responsibilities:</strong></p>
-      <ul style="margin-left: 1.25rem; margin-top: 0.5rem; margin-bottom: 0.5rem; color: var(--muted); font-size: 0.85rem; line-height: 1.7;">
+      <p id="role_intro">Responsible for the festival's <span class="hl">digital and physical communication</span> throughout the year. The communication campaign runs over 3 months.</p>
+      <p><strong id="role_subtitle">Key responsibilities:</strong></p>
+      <ul id="role_items" style="margin-left: 1.25rem; margin-top: 0.5rem; margin-bottom: 0.5rem; color: var(--muted); font-size: 0.85rem; line-height: 1.7;">
         <li>Content creation and management across <strong>Facebook, Instagram, LinkedIn, and Letterboxd</strong></li>
         <li>Newsletter management (<strong>MailChimp</strong>) and website (<strong>WordPress</strong>)</li>
         <li>Led the <strong>website redesign</strong> for the 2025 edition</li>
@@ -57,7 +55,7 @@
         <li>Managed a <strong>€300 paid social campaign</strong> on Meta Suite (2.5 months)</li>
       </ul>
     </div>
-    <div class="tag-row">
+    <div class="tag-row" id="case_tags">
       <span class="tag">Instagram</span><span class="tag">Facebook</span><span class="tag">LinkedIn</span>
       <span class="tag">Letterboxd</span><span class="tag">Meta Ads</span><span class="tag">MailChimp</span>
       <span class="tag">WordPress</span><span class="tag">Meta Suite</span><span class="tag">Photography</span>
@@ -66,26 +64,26 @@
   </div>
   <div class="case-hero-right">
     <div class="metrics-panel">
-      <div class="metrics-panel-header">KEY METRICS · FIG.01</div>
+      <div class="metrics-panel-header" id="metrics_header">KEY METRICS · FIG.01</div>
       <div class="metric-item">
-        <span class="metric-val">10k<span>→</span>19.8k</span>
-        <span class="metric-lbl">Followers grown</span>
-        <span class="metric-sub">Instagram · 4 years</span>
+        <span class="metric-val" id="metric1_val">10k<span>→</span>19.8k</span>
+        <span class="metric-lbl" id="metric1_lbl">Followers grown</span>
+        <span class="metric-sub" id="metric1_sub">Instagram · 4 years</span>
       </div>
       <div class="metric-item">
-        <span class="metric-val">1.8<span>M+</span></span>
-        <span class="metric-lbl">Views in 2025</span>
-        <span class="metric-sub">Instagram · 2.5 months</span>
+        <span class="metric-val" id="metric2_val">1.8<span>M+</span></span>
+        <span class="metric-lbl" id="metric2_lbl">Views in 2025</span>
+        <span class="metric-sub" id="metric2_sub">Instagram · 2.5 months</span>
       </div>
       <div class="metric-item">
-        <span class="metric-val">€300</span>
-        <span class="metric-lbl">Ad spend 2025</span>
-        <span class="metric-sub">Meta Suite · paid social</span>
+        <span class="metric-val" id="metric3_val">€300</span>
+        <span class="metric-lbl" id="metric3_lbl">Ad spend 2025</span>
+        <span class="metric-sub" id="metric3_sub">Meta Suite · paid social</span>
       </div>
       <div class="metric-item">
-        <span class="metric-val">4</span>
-        <span class="metric-lbl">Editions</span>
-        <span class="metric-sub">2022 · 2023 · 2024 · 2025</span>
+        <span class="metric-val" id="metric4_val">4</span>
+        <span class="metric-lbl" id="metric4_lbl">Editions</span>
+        <span class="metric-sub" id="metric4_sub">2022 · 2023 · 2024 · 2025</span>
       </div>
     </div>
   </div>
@@ -93,9 +91,9 @@
 
 <div class="case-layout">
   <aside class="case-sticky-nav">
-    <a href="#contexto"><span>01 — Context + Strategy</span><span class="nav-arrow">↓</span></a>
-    <a href="#execucao"><span>02 — Execution</span><span class="nav-arrow">↓</span></a>
-    <a href="#resultados"><span>03 — Results + Insights</span><span class="nav-arrow">↓</span></a>
+    <a href="#contexto"><span id="sticky_context_link">01 — Context + Strategy</span><span class="nav-arrow">↓</span></a>
+    <a href="#execucao"><span id="sticky_execution_link">02 — Execution</span><span class="nav-arrow">↓</span></a>
+    <a href="#resultados"><span id="sticky_results_link">03 — Results + Insights</span><span class="nav-arrow">↓</span></a>
   </aside>
 
   <main class="case-main-content">
@@ -103,32 +101,32 @@
     <!-- SECÇÃO: CONTEXTO + ESTRATÉGIA -->
     <div class="case-section reveal" id="contexto">
       <div class="case-section-label">
-        <div class="sec-num">SEC.01</div>
-        <div class="sec-title-vert">Context<br>+ Strategy<em>Contexto + estratégia</em></div>
+        <div class="sec-num" id="sec01_label">SEC.01</div>
+        <div class="sec-title-vert"><span id="sec01_title_main">Context</span><br>+ <span id="sec01_title_sub">Strategy</span><em id="sec01_title_em">Contexto + estratégia</em></div>
         <div class="sec-dot"></div>
       </div>
       <div class="case-section-body">
-        <p class="text-block">In 2022, when I took over social media management, the Instagram account had <strong>10,000 followers</strong> and a fragmented digital presence, with no consistent editorial line or defined growth strategy. Communication was centered on the festival period, with little relevant activity throughout the rest of the year.</p>
-        <p class="text-block">The strategy was built on two pillars: establishing a <strong>consistent visual and editorial identity throughout the year</strong>, and treating each platform with its own language — Instagram as a visual and community channel, LinkedIn as an institutional channel, Facebook for reach, and Letterboxd as a natural extension for a film festival.</p>
+        <p class="text-block" id="context_text1">In 2022, when I took over social media management, the Instagram account had <strong>10,000 followers</strong> and a fragmented digital presence, with no consistent editorial line or defined growth strategy. Communication was centered on the festival period, with little relevant activity throughout the rest of the year.</p>
+        <p class="text-block" id="context_text2">The strategy was built on two pillars: establishing a <strong>consistent visual and editorial identity throughout the year</strong>, and treating each platform with its own language — Instagram as a visual and community channel, LinkedIn as an institutional channel, Facebook for reach, and Letterboxd as a natural extension for a film festival.</p>
         <div class="callout">
-          <p>"Sustainable growth doesn't happen only during the festival month — it happens through 12 months of consistent, relevant content for the community."</p>
+          <p id="callout_context">"Sustainable growth doesn't happen only during the festival month — it happens through 12 months of consistent, relevant content for the community."</p>
         </div>
-        <p class="text-block">In 2025, the strategy included a <strong>paid social component managed via Meta Suite</strong>, with a budget of just €300 — which generated over 1.8 million views in 2.5 months. The boosting strategy focused on amplifying the best-performing organic content — not on creating exclusive paid pieces — during the festival's peak activity weeks.</p>
+        <p class="text-block" id="context_text3">In 2025, the strategy included a <strong>paid social component managed via Meta Suite</strong>, with a budget of just €300 — which generated over 1.8 million views in 2.5 months. The boosting strategy focused on amplifying the best-performing organic content — not on creating exclusive paid pieces — during the festival's peak activity weeks.</p>
       </div>
     </div>
 
     <!-- SECÇÃO: EXECUÇÃO -->
     <div class="case-section reveal" id="execucao">
       <div class="case-section-label">
-        <div class="sec-num">SEC.02</div>
-        <div class="sec-title-vert">Execution<em>Execução</em></div>
+        <div class="sec-num" id="sec02_label">SEC.02</div>
+        <div class="sec-title-vert"><span id="sec02_title_main">Execution</span><em id="sec02_title_em">Execução</em></div>
         <div class="sec-dot"></div>
       </div>
       <div class="case-section-body">
-        <p class="text-block">Management was <strong>full-cycle</strong>: monthly content planning over a three-month campaign, content creation (copy, design, photo, and video), scheduling via Meta Suite, and weekly performance monitoring. During the festival, real-time coverage included daily posts and stories, community management, and coordination of photo and video teams.</p>
+        <p class="text-block" id="exec_text1">Management was <strong>full-cycle</strong>: monthly content planning over a three-month campaign, content creation (copy, design, photo, and video), scheduling via Meta Suite, and weekly performance monitoring. During the festival, real-time coverage included daily posts and stories, community management, and coordination of photo and video teams.</p>
 
         <!-- GRUPO 1: PARCEIROS E APOIOS INSTITUCIONAIS -->
-        <div class="body-label">🤝 Partners & institutional support</div>
+        <div class="body-label" id="exec_partners_label">🤝 Partners & institutional support</div>
         
         <div class="featured-post-row">
           <div class="featured-post">
@@ -137,30 +135,30 @@
           <div class="featured-copy">
             <div class="featured-copy-text">
               🇵🇹 <em>Originally in Portuguese / Traduzido</em><br><br>
-              <strong>JUMPGATE</strong><br><br>
-              Jumpgate is a space dedicated to European producers from different backgrounds and levels of experience in film production. Its main goal is to promote the exchange of professional experiences, inspire new ideas and practices, and encourage collaborative projects and co-productions.<br><br>
-              <!-- Around 20 producers from Benelux countries, France, and Portugal gathered at @goetheinstitut_portugal on October 20–21 to share their experiences and reflections on working practices, laying the groundwork for future collaborations.<br><br>
-              We want to thank all participants and our partners who made Jumpgate possible: @europacriativa_pt, @portugalfilmcommission, @ifportugal, and @goetheinstitut_portugal.<br><br> -->
-              (...) Jumpgate is supported by the Ministère de l’Europe et des Affaires étrangères and the Institut Français as part of the international promotion strategy for cultural and creative industries through the PICC program.<br><br>
-              #institutfrançais #ICC #IndustriesCulturellesetCréatives
+              <strong id="jumpgate_title">JUMPGATE</strong><br><br>
+              <span id="jumpgate_text1">Jumpgate is a space dedicated to European producers from different backgrounds and levels of experience in film production. Its main goal is to promote the exchange of professional experiences, inspire new ideas and practices, and encourage collaborative projects and co-productions.</span><br><br>
+              <span id="jumpgate_text2">Around 20 producers from Benelux countries, France, and Portugal gathered at @goetheinstitut_portugal on October 20–21 to share their experiences and reflections on working practices, laying the groundwork for future collaborations.</span><br><br>
+              <span id="jumpgate_text3">We want to thank all participants and our partners who made Jumpgate possible: @europacriativa_pt, @portugalfilmcommission, @ifportugal, and @goetheinstitut_portugal.</span><br><br>
+              <span id="jumpgate_text4">Jumpgate is supported by the Ministère de l’Europe et des Affaires étrangères and the Institut Français as part of the international promotion strategy for cultural and creative industries through the PICC program.</span><br><br>
+              <span id="jumpgate_hashtags">#institutfrançais #ICC #IndustriesCulturellesetCréatives</span>
             </div>
-            <div class="post-description">🇵🇹 Jumpgate – industry meeting for European cooperation, supported by Institut Français au Portugal</div>
+            <div class="post-description" id="jumpgate_desc">🇵🇹 Jumpgate – industry meeting for European cooperation, supported by Institut Français au Portugal</div>
           </div>
         </div>
         
         <div class="secondary-posts-row">
           <div class="secondary-post">
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DQHEiGYDKHq/" data-instgrm-version="14" style="background:#0d2a5c;border:0.5px solid #1a4080;border-radius:0;box-shadow:none;display:block;margin:0;padding:0;width:100%"></blockquote>
-            <div class="post-description">🚘 Toyota – official festival vehicle</div>
+            <div class="post-description" id="toyota_desc">🚘 Toyota – official festival vehicle</div>
           </div>
           <div class="secondary-post">
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DP6rJeMDHHM/" data-instgrm-version="14" style="background:#0d2a5c;border:0.5px solid #1a4080;border-radius:0;box-shadow:none;display:block;margin:0;padding:0;width:100%"></blockquote>
-            <div class="post-description">🏆 Jury & awards – institutional partner visibility</div>
+            <div class="post-description" id="jury_desc">🏆 Jury & awards – institutional partner visibility</div>
           </div>
         </div>
 
         <!-- GRUPO 2: BASTIDORES E VIDA DO FESTIVAL -->
-        <div class="body-label">🎬 Behind the scenes & festival life</div>
+        <div class="body-label" id="exec_bts_label">🎬 Behind the scenes & festival life</div>
         
         <div class="featured-post-row">
           <div class="featured-post">
@@ -169,29 +167,29 @@
           <div class="featured-copy">
             <div class="featured-copy-text">
               🇵🇹 <em>Originally in Portuguese / Traduzido</em><br><br>
-              💙 <strong>DOCLISBOA TEAM</strong><br><br>
-              We spend a lot of time talking about the films, guests, debates, and everything that can fit in Lisbon in October. But we rarely see the faces and the people who make the festival happen.<br><br>
-              Today is the team party, with "A Banda Sonora das Nossas Vidas". Come celebrate cinema with us.<br><br>
-              📍 In October, the whole world fits in Lisbon. Tickets and full program available at doclisboa.org<br><br>
-              #doclisboa25 #doclisboa2025 #doclisboa #cinema
+              💙 <strong id="team_title">DOCLISBOA TEAM</strong><br><br>
+              <span id="team_text1">We spend a lot of time talking about the films, guests, debates, and everything that can fit in Lisbon in October. But we rarely see the faces and the people who make the festival happen.</span><br><br>
+              <span id="team_text2">Today is the team party, with "A Banda Sonora das Nossas Vidas". Come celebrate cinema with us.</span><br><br>
+              <span id="team_text3">📍 In October, the whole world fits in Lisbon. Tickets and full program available at doclisboa.org</span><br><br>
+              <span id="team_hashtags">#doclisboa25 #doclisboa2025 #doclisboa #cinema</span>
             </div>
-            <div class="post-description">🎉 Team party – internal recognition and human tone</div>
+            <div class="post-description" id="team_desc">🎉 Team party – internal recognition and human tone</div>
           </div>
         </div>
         
         <div class="secondary-posts-row">
           <div class="secondary-post">
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DQFGz0ZDHEP/" data-instgrm-version="14" style="background:#0d2a5c;border:0.5px solid #1a4080;border-radius:0;box-shadow:none;display:block;margin:0;padding:0;width:100%"></blockquote>
-            <div class="post-description">📸 Photo recap – festival moments</div>
+            <div class="post-description" id="photoday_desc">📸 Photo recap – festival moments</div>
           </div>
           <div class="secondary-post">
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DP6MHUYDAKi/" data-instgrm-version="14" style="background:#0d2a5c;border:0.5px solid #1a4080;border-radius:0;box-shadow:none;display:block;margin:0;padding:0;width:100%"></blockquote>
-            <div class="post-description">🎬 Opening night – sold out at Cinema São Jorge</div>
+            <div class="post-description" id="openingnight_desc">🎬 Opening night – sold out at Cinema São Jorge</div>
           </div>
         </div>
 
         <!-- GRUPO 3: PROGRAMAÇÃO E INFORMAÇÕES ÚTEIS -->
-        <div class="body-label">📢 Programming & useful information</div>
+        <div class="body-label" id="exec_programming_label">📢 Programming & useful information</div>
         
         <div class="featured-post-row">
           <div class="featured-post">
@@ -200,25 +198,25 @@
           <div class="featured-copy">
             <div class="featured-copy-text">
               🇵🇹 <em>Originally in Portuguese / Traduzido</em><br><br>
-              ℹ️ <strong>USEFUL INFORMATION</strong><br><br>
-              The day has arrived when everything begins, at Culturgest, Cinema São Jorge, Cinemateca Portuguesa, and Cinema Ideal.<br><br>
-              To ensure you have the best possible festival experience, we've created this guide with some information we consider essential.<br><br>
-              To book parking at @telpark_pt, just follow the link to the FAQs on our website — link in bio 🔗<br><br>
-              📍 In October, the whole world fits in Lisbon. Tickets and full program available at doclisboa.org<br><br>
-              #doclisboa25 #doclisboa2025 #doclisboa #cinema
+              ℹ️ <strong id="info_title">USEFUL INFORMATION</strong><br><br>
+              <span id="info_text1">The day has arrived when everything begins, at Culturgest, Cinema São Jorge, Cinemateca Portuguesa, and Cinema Ideal.</span><br><br>
+              <span id="info_text2">To ensure you have the best possible festival experience, we've created this guide with some information we consider essential.</span><br><br>
+              <span id="info_text3">To book parking at @telpark_pt, just follow the link to the FAQs on our website — link in bio 🔗</span><br><br>
+              <span id="info_text4">📍 In October, the whole world fits in Lisbon. Tickets and full program available at doclisboa.org</span><br><br>
+              <span id="info_hashtags">#doclisboa25 #doclisboa2025 #doclisboa #cinema</span>
             </div>
-            <div class="post-description">📋 Useful information guide – FAQ & Telpark partnership</div>
+            <div class="post-description" id="info_desc">📋 Useful information guide – FAQ & Telpark partnership</div>
           </div>
         </div>
         
         <div class="secondary-posts-row">
           <div class="secondary-post">
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPynxHFjKOf/" data-instgrm-version="14" style="background:#0d2a5c;border:0.5px solid #1a4080;border-radius:0;box-shadow:none;display:block;margin:0;padding:0;width:100%"></blockquote>
-            <div class="post-description">🪑 Constelações – industry program talks</div>
+            <div class="post-description" id="constelacoes_desc">🪑 Constelações – industry program talks</div>
           </div>
           <div class="secondary-post">
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DQFn9M5DLPH/" data-instgrm-version="14" style="background:#0d2a5c;border:0.5px solid #1a4080;border-radius:0;box-shadow:none;display:block;margin:0;padding:0;width:100%"></blockquote>
-            <div class="post-description">🟦 Film recommendations – what's still showing at the festival</div>
+            <div class="post-description" id="films_desc">🟦 Film recommendations – what's still showing at the festival</div>
           </div>
         </div>
 
@@ -228,22 +226,22 @@
     <!-- SECÇÃO: RESULTADOS + INSIGHTS -->
     <div class="case-section reveal" id="resultados">
       <div class="case-section-label">
-        <div class="sec-num">SEC.03</div>
-        <div class="sec-title-vert">Results<br>+ Insights<em>Resultados + insights</em></div>
+        <div class="sec-num" id="sec03_label">SEC.03</div>
+        <div class="sec-title-vert"><span id="sec03_title_main">Results</span><br>+ <span id="sec03_title_sub">Insights</span><em id="sec03_title_em">Resultados + insights</em></div>
         <div class="sec-dot"></div>
       </div>
       <div class="case-section-body">
         <div class="results-grid">
-          <div class="result-cell"><span class="result-val">+9.8k</span><span class="result-lbl">Followers gained<br>Instagram · 4 years</span></div>
-          <div class="result-cell"><span class="result-val">1.8M+</span><span class="result-lbl">Views<br>Instagram 2025</span></div>
-          <div class="result-cell"><span class="result-val">€300</span><span class="result-lbl">Budget<br>Meta Ads 2025</span></div>
+          <div class="result-cell"><span class="result-val" id="result1_val">+9.8k</span><span class="result-lbl" id="result1_lbl">Followers gained<br>Instagram · 4 years</span></div>
+          <div class="result-cell"><span class="result-val" id="result2_val">1.8M+</span><span class="result-lbl" id="result2_lbl">Views<br>Instagram 2025</span></div>
+          <div class="result-cell"><span class="result-val" id="result3_val">€300</span><span class="result-lbl" id="result3_lbl">Budget<br>Meta Ads 2025</span></div>
         </div>
-        <p class="text-block">Over 4 editions, the Instagram account grew from <strong>10,000 to 19,800 followers</strong> — a 98% growth with no paid media until 2025. In the 2025 edition, the 2.5-month campaign generated <strong>over 1.8 million views on Instagram</strong>, with a paid ads budget of just €300.</p>
-        <p class="text-block">The main insight: <strong>editorial consistency throughout the year outperforms short-term intensity</strong>. The most significant growth happened in years when the digital presence was most consistent outside the festival period.</p>
+        <p class="text-block" id="results_text1">Over 4 editions, the Instagram account grew from <strong>10,000 to 19,800 followers</strong> — a 98% growth with no paid media until 2025. In the 2025 edition, the 2.5-month campaign generated <strong>over 1.8 million views on Instagram</strong>, with a paid ads budget of just €300.</p>
+        <p class="text-block" id="results_text2">The main insight: <strong>editorial consistency throughout the year outperforms short-term intensity</strong>. The most significant growth happened in years when the digital presence was most consistent outside the festival period.</p>
         <div class="callout">
-          <p>"With €300 and strong organic content, we generated 1.8M views. What scaled wasn't the money — it was the relevance of the content."</p>
+          <p id="callout_results">"With €300 and strong organic content, we generated 1.8M views. What scaled wasn't the money — it was the relevance of the content."</p>
         </div>
-        <p class="text-block">The integration of paid social in 2025 confirmed that <strong>paid amplification works best when organic content is already validated</strong>. The best-performing ads were boosted posts — not pieces created specifically for paid campaigns.</p>
+        <p class="text-block" id="results_text3">The integration of paid social in 2025 confirmed that <strong>paid amplification works best when organic content is already validated</strong>. The best-performing ads were boosted posts — not pieces created specifically for paid campaigns.</p>
       </div>
     </div>
 
@@ -251,13 +249,14 @@
 </div>
 
 <footer class="case-footer">
-  <span>REF-001 · DOCLISBOA · 2022–2025</span>
-  <span>João Alves · Social Media Coordinator · Lisbon PT</span>
-  <span>© 2026</span>
+  <span id="case_footer_left">REF-001 · DOCLISBOA · 2022–2025</span>
+  <span id="case_footer_mid">João Alves · Social Media Coordinator · Lisbon PT</span>
+  <span id="case_footer_right">© 2026</span>
 </footer>
 
-<button id="backToTop" class="back-to-top">↑ back to the top</button>
+<button id="backToTop" class="back-to-top" id="back_to_top">↑ back to the top</button>
 
+<script src="../i18n.js"></script>
 <script src="case.js"></script>
 </body>
 </html>
