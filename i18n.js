@@ -1,21 +1,23 @@
 // i18n.js - Sistema de tradução PT/EN
-
 const translations = {
   en: {
-    // NAV
+    // Nav (comum)
+    nav_logo: "João Alves",
     nav_work: "Work",
     nav_content: "Content",
     nav_av: "AV",
     nav_specs: "Specs",
     nav_contact: "Contact",
-    // HERO
+    nav_ref: "REF-2026 · PORTFOLIO v1.0",
+    lang_btn: "PT",
+    // Index hero
     spec_label: "Document ref: SMC-LIS-001 · Social Media & Content Manager",
     hero_name: "João",
     hero_name_annotated: "Alves",
     hero_subtitle: "<span class='hl'>4+ years</span> building digital audiences<br>for international cultural events.<br><span class='hl'>Lisbon-based.</span> Platform-native. Fluent EN/PT.",
     callout: "Responsible for social strategy, content creation, paid campaigns, and audiovisual briefings across <span class='hl'>Doclisboa</span>, <span class='hl'>MONSTRA</span>, <span class='hl'>Festa do Cinema Italiano</span>, and <span class='hl'>Cinema Fernando Lopes</span> — managing full-cycle communication from editorial planning to live coverage.",
     hero_cta: "View case studies →",
-    // STATS
+    // Index stats
     stat1_num: "4.3<span class='unit'>M+</span>",
     stat1_label: "Impressions driven",
     stat1_detail: "Doclisboa + MONSTRA · 2025–26",
@@ -25,10 +27,9 @@ const translations = {
     stat3_num: "14.2k<span class='unit'>→</span>17.7k",
     stat3_label: "Followers grown",
     stat3_detail: "MONSTRA Instagram · 3 months, 2026",
-    // CASE STUDIES SECTION
+    // Index case studies section
     sec01_eyebrow: "SEC.01",
     sec01_title: "Campaigns that<br>moved the needle.",
-    // Case cards
     doclisboa_ref: "REF-001 · 2022 – 2025 · 4 editions",
     doclisboa_title: "Doclisboa<br>International Film Festival",
     doclisboa_sub: "Social strategy · community growth · paid social",
@@ -70,19 +71,26 @@ const translations = {
     fernando_metric3: "1",
     fernando_metric3_lbl: "Brand kit",
     fernando_tags: ["PR","Campaign","Brand identity"],
-    // CONTENT SHOWCASE (Sec.02)
+    // Index content showcase (sec02) - títulos e metadados
     sec02_eyebrow: "SEC.02",
     sec02_title: "Platform-native<br>storytelling.",
-    // items (serão preenchidos dinamicamente, mas podemos manter os textos fixos em inglês/português)
-    // PHOTOGRAPHY (comentado, mas manter)
+    content_card1_title: "The festival (highlights video)",
+    content_card1_meta: "Doclisboa 2024 · Reel · AV coverage coordinator",
+    content_card2_title: "Partner spotlight · Toyota",
+    content_card2_meta: "MONSTRA 2026 · Reel · Product placement",
+    content_card3_title: "Premiere and award protocol",
+    content_card3_meta: "Doclisboa 2025 · Post · AV Coverage Coordinator",
+    content_card4_title: "Long Shorts Competition · 12 films",
+    content_card4_meta: "MONSTRA 2026 · Post · powered by Filmin",
+    content_card5_title: "Festival atmosphere",
+    content_card5_meta: "MONSTRA 2025 · Reel · Top 3 animation films",
+    content_card6_title: "Campaign creation",
+    content_card6_meta: "Festa do Cinema Italiano · Post · Backstage",
+    // Index about section
     sec03_eyebrow: "SEC.03",
-    sec03_title: "The eye behind<br>the briefing.",
-    sec03_text: "Trained photographer. I draft AV briefings, map sessions to cover, and align partner visibility with sponsorship agreements — from both sides of the lens.",
-    // ABOUT (Sec.04 e Sec.05)
-    sec04_eyebrow: "SEC.03",
-    sec04_title: "Skills &amp;<br>tools",
-    sec05_eyebrow: "SEC.04",
-    sec05_title: "The person<br>behind it.",
+    sec03_title: "Skills &amp;<br>tools",
+    sec04_eyebrow: "SEC.04",
+    sec04_title: "The person<br>behind it.",
     about_desc1: "Four years at the intersection of <span class='hl'>culture, storytelling, and social media</span> — managing the digital presence of Lisbon's most respected international film festivals.",
     about_desc2: "Background as a <span class='hl'>photographer</span> shapes everything: how I brief creative teams, how I think about partner visibility, and how I approach content that needs to feel real rather than manufactured.",
     about_desc3: "Drawn to organisations with a <span class='hl'>global community</span> at their core — where the content has real stakes and the audience is genuinely paying attention.",
@@ -96,32 +104,113 @@ const translations = {
     availability_val: "Immediate",
     cv_label: "CV",
     cv_link: "DOWNLOAD PDF →",
-    // CONTACT
+    // Index contact
     sec06_eyebrow: "SEC.06",
     contact_title: "Let's make<br>something great.",
     contact_sub: "Available for full-time roles on-site, hybrid or remote · Based in Lisbon",
-    // FOOTER
+    // Footer
     footer_left: "REF-2026 · PORTFOLIO v1.0 · SMC-LIS-001",
     footer_mid: "João Alves · Social Media Coordinator · Lisbon PT",
     footer_right: "© 2026 · ALL RIGHTS RESERVED",
-    // BOTÃO LÍNGUA
-    lang_btn: "PT"
+    // DOCLISBOA.HTML (strings específicas)
+    case_breadcrumb_portfolio: "Portfolio",
+    case_breadcrumb_cases: "Case studies",
+    case_breadcrumb_current: "Doclisboa IFF",
+    case_eyebrow_ref: "REF-001",
+    case_eyebrow_text: "Case study · 2022–2025 · 4 editions",
+    case_title: "Doclisboa<br>International<br>Film Festival",
+    case_scope: "Social strategy · community growth<br>Paid social · AV direction · 4 editions",
+    role_box_text1: "Responsible for the festival's <span class='hl'>digital and physical communication</span> throughout the year. The communication campaign runs over 3 months.",
+    role_box_text2: "<strong>Key responsibilities:</strong>",
+    role_resp1: "Content creation and management across <strong>Facebook, Instagram, LinkedIn, and Letterboxd</strong>",
+    role_resp2: "Newsletter management (<strong>MailChimp</strong>) and website (<strong>WordPress</strong>)",
+    role_resp3: "Led the <strong>website redesign</strong> for the 2025 edition",
+    role_resp4: "Coordinated graphic materials across venues and partners (program, posters, distribution)",
+    role_resp5: "Planned <strong>photographic and audiovisual coverage</strong>, including opening night protocol, session mapping, and partner visibility according to sponsorship level",
+    role_resp6: "Managed a <strong>€300 paid social campaign</strong> on Meta Suite (2.5 months)",
+    tag_instagram: "Instagram",
+    tag_facebook: "Facebook",
+    tag_linkedin: "LinkedIn",
+    tag_letterboxd: "Letterboxd",
+    tag_meta_ads: "Meta Ads",
+    tag_mailchimp: "MailChimp",
+    tag_wordpress: "WordPress",
+    tag_meta_suite: "Meta Suite",
+    tag_photography: "Photography",
+    tag_av_direction: "AV direction",
+    metrics_header: "KEY METRICS · FIG.01",
+    metric_followers_grown: "Followers grown",
+    metric_followers_sub: "Instagram · 4 years",
+    metric_views: "Views in 2025",
+    metric_views_sub: "Instagram · 2.5 months",
+    metric_ad_spend: "Ad spend 2025",
+    metric_ad_spend_sub: "Meta Suite · paid social",
+    metric_editions: "Editions",
+    metric_editions_sub: "2022 · 2023 · 2024 · 2025",
+    sticky_nav_context: "01 — Context + Strategy",
+    sticky_nav_execution: "02 — Execution",
+    sticky_nav_results: "03 — Results + Insights",
+    sec_context_label: "SEC.01",
+    sec_context_title: "Context<br>+ Strategy",
+    sec_context_em: "Contexto + estratégia",
+    context_text1: "In 2022, when I took over social media management, the Instagram account had <strong>10,000 followers</strong> and a fragmented digital presence, with no consistent editorial line or defined growth strategy. Communication was centered on the festival period, with little relevant activity throughout the rest of the year.",
+    context_text2: "The strategy was built on two pillars: establishing a <strong>consistent visual and editorial identity throughout the year</strong>, and treating each platform with its own language — Instagram as a visual and community channel, LinkedIn as an institutional channel, Facebook for reach, and Letterboxd as a natural extension for a film festival.",
+    context_callout: "\"Sustainable growth doesn't happen only during the festival month — it happens through 12 months of consistent, relevant content for the community.\"",
+    context_text3: "In 2025, the strategy included a <strong>paid social component managed via Meta Suite</strong>, with a budget of just €300 — which generated over 1.8 million views in 2.5 months. The boosting strategy focused on amplifying the best-performing organic content — not on creating exclusive paid pieces — during the festival's peak activity weeks.",
+    sec_execution_label: "SEC.02",
+    sec_execution_title: "Execution",
+    sec_execution_em: "Execução",
+    execution_text: "Management was <strong>full-cycle</strong>: monthly content planning over a three-month campaign, content creation (copy, design, photo, and video), scheduling via Meta Suite, and weekly performance monitoring. During the festival, real-time coverage included daily posts and stories, community management, and coordination of photo and video teams.",
+    partners_label: "🤝 Partners & institutional support",
+    jumpgate_copy: "JUMPGATE<br><br>Jumpgate is a space dedicated to European producers from different backgrounds and levels of experience in film production. Its main goal is to promote the exchange of professional experiences, inspire new ideas and practices, and encourage collaborative projects and co-productions.<br><br>Cerca de 20 produtores provenientes dos países do Benelux, de França e de Portugal estiveram reunidos no @goetheinstitut_portugal, entre os dias 20 e 21 de Outubro, para partilharem as suas experiências e reflexões sobre práticas de trabalho, lançando as bases para futuras colaborações.<br><br>Queremos agradecer a participação de todos e dos nossos parceiros que tornaram o Jumpgate possível: @europacriativa_pt, @portugalfilmcommission, @ifportugal e @goetheinstitut_portugal.<br><br>Jumpgate is supported by the Ministère de l’Europe et des Affaires étrangères and the Institut Français as part of the international promotion strategy for cultural and creative industries through the PICC program.<br><br>#institutfrançais #ICC #IndustriesCulturellesetCréatives",
+    jumpgate_desc: "Jumpgate – industry meeting for European cooperation, supported by Institut Français au Portugal",
+    toyota_desc: "🚘 Toyota – official festival vehicle",
+    jury_desc: "🏆 Jury & awards – institutional partner visibility",
+    behind_scenes_label: "🎬 Behind the scenes & festival life",
+    team_copy: "💙 <strong>DOCLISBOA TEAM</strong><br><br>We spend a lot of time talking about the films, guests, debates, and everything that can fit in Lisbon in October. But we rarely see the faces and the people who make the festival happen.<br><br>Today is the team party, with \"A Banda Sonora das Nossas Vidas\". Come celebrate cinema with us.<br><br>📍 In October, the whole world fits in Lisbon. Tickets and full program available at doclisboa.org<br><br>#doclisboa25 #doclisboa2025 #doclisboa #cinema",
+    team_desc: "🎉 Team party – internal recognition and human tone",
+    photoday_desc: "📸 Photo recap – festival moments",
+    opening_desc: "🎬 Opening night – sold out at Cinema São Jorge",
+    programming_label: "📢 Programming & useful information",
+    useful_copy: "ℹ️ <strong>USEFUL INFORMATION</strong><br><br>The day has arrived when everything begins, at Culturgest, Cinema São Jorge, Cinemateca Portuguesa, and Cinema Ideal.<br><br>To ensure you have the best possible festival experience, we've created this guide with some information we consider essential.<br><br>To book parking at @telpark_pt, just follow the link to the FAQs on our website — link in bio 🔗<br><br>📍 In October, the whole world fits in Lisbon. Tickets and full program available at doclisboa.org<br><br>#doclisboa25 #doclisboa2025 #doclisboa #cinema",
+    useful_desc: "📋 Useful information guide – FAQ & Telpark partnership",
+    constelacoes_desc: "🪑 Constelações – industry program talks",
+    films_desc: "🟦 Film recommendations – what's still showing at the festival",
+    sec_results_label: "SEC.03",
+    sec_results_title: "Results<br>+ Insights",
+    sec_results_em: "Resultados + insights",
+    result_followers: "+9.8k",
+    result_followers_lbl: "Followers gained<br>Instagram · 4 years",
+    result_views: "1.8M+",
+    result_views_lbl: "Views<br>Instagram 2025",
+    result_budget: "€300",
+    result_budget_lbl: "Budget<br>Meta Ads 2025",
+    results_text1: "Over 4 editions, the Instagram account grew from <strong>10,000 to 19,800 followers</strong> — a 98% growth with no paid media until 2025. In the 2025 edition, the 2.5-month campaign generated <strong>over 1.8 million views on Instagram</strong>, with a paid ads budget of just €300.",
+    results_callout: "\"With €300 and strong organic content, we generated 1.8M views. What scaled wasn't the money — it was the relevance of the content.\"",
+    results_text2: "The integration of paid social in 2025 confirmed that <strong>paid amplification works best when organic content is already validated</strong>. The best-performing ads were boosted posts — not pieces created specifically for paid campaigns.",
+    case_footer_ref: "REF-001 · DOCLISBOA · 2022–2025",
+    case_footer_name: "João Alves · Social Media Coordinator · Lisbon PT",
+    case_footer_year: "© 2026",
+    back_to_top: "↑ back to the top"
   },
   pt: {
-    // NAV
+    // Nav
+    nav_logo: "João Alves",
     nav_work: "Trabalho",
     nav_content: "Conteúdo",
     nav_av: "AV",
     nav_specs: "Especificações",
     nav_contact: "Contacto",
-    // HERO
+    nav_ref: "REF-2026 · PORTFOLIO v1.0",
+    lang_btn: "EN",
+    // Index hero
     spec_label: "Documento ref: SMC-LIS-001 · Social Media & Content Manager",
     hero_name: "João",
     hero_name_annotated: "Alves",
     hero_subtitle: "<span class='hl'>Mais de 4 anos</span> a construir audiências digitais<br>para eventos culturais internacionais.<br><span class='hl'>Lisboa.</span> Platform-native. Fluente EN/PT.",
     callout: "Responsável pela estratégia social, criação de conteúdo, campanhas pagas e briefings audiovisuais para <span class='hl'>Doclisboa</span>, <span class='hl'>MONSTRA</span>, <span class='hl'>Festa do Cinema Italiano</span> e <span class='hl'>Cinema Fernando Lopes</span> — gestão completa da comunicação, do planeamento editorial à cobertura ao vivo.",
     hero_cta: "Ver casos de estudo →",
-    // STATS
+    // Index stats
     stat1_num: "4,3<span class='unit'>M+</span>",
     stat1_label: "Impressões geradas",
     stat1_detail: "Doclisboa + MONSTRA · 2025–26",
@@ -131,10 +220,9 @@ const translations = {
     stat3_num: "14,2k<span class='unit'>→</span>17,7k",
     stat3_label: "Seguidores ganhos",
     stat3_detail: "Instagram MONSTRA · 3 meses, 2026",
-    // CASE STUDIES SECTION
+    // Index case studies
     sec01_eyebrow: "SEC.01",
     sec01_title: "Campanhas que<br>fizeram a diferença.",
-    // Case cards
     doclisboa_ref: "REF-001 · 2022 – 2025 · 4 edições",
     doclisboa_title: "Doclisboa<br>Festival Internacional de Cinema",
     doclisboa_sub: "Estratégia social · crescimento de comunidade · paid social",
@@ -176,18 +264,26 @@ const translations = {
     fernando_metric3: "1",
     fernando_metric3_lbl: "Kit de marca",
     fernando_tags: ["RP","Campanha","Identidade de marca"],
-    // CONTENT SHOWCASE (Sec.02)
+    // Index content showcase
     sec02_eyebrow: "SEC.02",
     sec02_title: "Storytelling<br>nativo de cada plataforma.",
-    // PHOTOGRAPHY
+    content_card1_title: "O festival (vídeo de destaques)",
+    content_card1_meta: "Doclisboa 2024 · Reel · coordenador de cobertura AV",
+    content_card2_title: "Destaque de parceiro · Toyota",
+    content_card2_meta: "MONSTRA 2026 · Reel · Product placement",
+    content_card3_title: "Protocolo de estreia e prémios",
+    content_card3_meta: "Doclisboa 2025 · Post · coordenador de cobertura AV",
+    content_card4_title: "Competição Long Shorts · 12 filmes",
+    content_card4_meta: "MONSTRA 2026 · Post · powered by Filmin",
+    content_card5_title: "Ambiente do festival",
+    content_card5_meta: "MONSTRA 2025 · Reel · Top 3 filmes de animação",
+    content_card6_title: "Criação da campanha",
+    content_card6_meta: "Festa do Cinema Italiano · Post · Bastidores",
+    // Index about
     sec03_eyebrow: "SEC.03",
-    sec03_title: "O olho por detrás<br>do briefing.",
-    sec03_text: "Fotógrafo de formação. Elaboro briefings AV, mapeio as sessões a cobrir e alinho a visibilidade dos parceiros com os acordos de patrocínio — de ambos os lados da lente.",
-    // ABOUT
-    sec04_eyebrow: "SEC.03",
-    sec04_title: "Competências &amp;<br>ferramentas",
-    sec05_eyebrow: "SEC.04",
-    sec05_title: "A pessoa<br>por detrás disto.",
+    sec03_title: "Competências &amp;<br>ferramentas",
+    sec04_eyebrow: "SEC.04",
+    sec04_title: "A pessoa<br>por detrás disto.",
     about_desc1: "Quatro anos na intersecção entre <span class='hl'>cultura, storytelling e redes sociais</span> — a gerir a presença digital dos festivais de cinema mais respeitados de Lisboa.",
     about_desc2: "A formação como <span class='hl'>fotógrafo</span> molda tudo: a forma como preparo as equipas criativas, penso a visibilidade dos parceiros e abordo o conteúdo que precisa de parecer real em vez de fabricado.",
     about_desc3: "Atraído por organizações com uma <span class='hl'>comunidade global</span> no seu centro — onde o conteúdo tem verdadeiro impacto e o público está genuinamente atento.",
@@ -201,16 +297,94 @@ const translations = {
     availability_val: "Imediata",
     cv_label: "CV",
     cv_link: "DESCARREGAR PDF →",
-    // CONTACT
+    // Index contact
     sec06_eyebrow: "SEC.06",
     contact_title: "Vamos fazer<br>algo grande.",
     contact_sub: "Disponível para funções presenciais, híbridas ou remotas · Baseado em Lisboa",
-    // FOOTER
+    // Footer
     footer_left: "REF-2026 · PORTFOLIO v1.0 · SMC-LIS-001",
     footer_mid: "João Alves · Social Media Coordinator · Lisboa PT",
     footer_right: "© 2026 · TODOS OS DIREITOS RESERVADOS",
-    // BOTÃO LÍNGUA
-    lang_btn: "EN"
+    // DOCLISBOA.HTML
+    case_breadcrumb_portfolio: "Portfólio",
+    case_breadcrumb_cases: "Casos de estudo",
+    case_breadcrumb_current: "Doclisboa IFF",
+    case_eyebrow_ref: "REF-001",
+    case_eyebrow_text: "Caso de estudo · 2022–2025 · 4 edições",
+    case_title: "Doclisboa<br>Festival Internacional<br>de Cinema",
+    case_scope: "Estratégia social · crescimento de comunidade<br>Paid social · direção AV · 4 edições",
+    role_box_text1: "Responsável pela <span class='hl'>comunicação digital e física</span> do festival ao longo do ano. A campanha de comunicação decorre ao longo de 3 meses.",
+    role_box_text2: "<strong>Principais responsabilidades:</strong>",
+    role_resp1: "Criação e gestão de conteúdo para <strong>Facebook, Instagram, LinkedIn e Letterboxd</strong>",
+    role_resp2: "Gestão da newsletter (<strong>MailChimp</strong>) e do website (<strong>WordPress</strong>)",
+    role_resp3: "Liderança da <strong>reformulação do website</strong> para a edição de 2025",
+    role_resp4: "Coordenação de materiais gráficos por salas e parceiros (programa, cartazes, distribuição)",
+    role_resp5: "Planeamento da <strong>cobertura fotográfica e audiovisual</strong>, incluindo protocolo de estreia, mapeamento de sessões e visibilidade de parceiros conforme nível de patrocínio",
+    role_resp6: "Gestão de uma <strong>campanha paid social de 300€</strong> na Meta Suite (2,5 meses)",
+    tag_instagram: "Instagram",
+    tag_facebook: "Facebook",
+    tag_linkedin: "LinkedIn",
+    tag_letterboxd: "Letterboxd",
+    tag_meta_ads: "Meta Ads",
+    tag_mailchimp: "MailChimp",
+    tag_wordpress: "WordPress",
+    tag_meta_suite: "Meta Suite",
+    tag_photography: "Fotografia",
+    tag_av_direction: "Direção AV",
+    metrics_header: "MÉTRICAS PRINCIPAIS · FIG.01",
+    metric_followers_grown: "Seguidores ganhos",
+    metric_followers_sub: "Instagram · 4 anos",
+    metric_views: "Visualizações em 2025",
+    metric_views_sub: "Instagram · 2,5 meses",
+    metric_ad_spend: "Gastos em anúncios 2025",
+    metric_ad_spend_sub: "Meta Suite · paid social",
+    metric_editions: "Edições",
+    metric_editions_sub: "2022 · 2023 · 2024 · 2025",
+    sticky_nav_context: "01 — Contexto + Estratégia",
+    sticky_nav_execution: "02 — Execução",
+    sticky_nav_results: "03 — Resultados + Insights",
+    sec_context_label: "SEC.01",
+    sec_context_title: "Contexto<br>+ Estratégia",
+    sec_context_em: "Context + Strategy",
+    context_text1: "Em 2022, quando assumi a gestão das redes sociais, a conta de Instagram tinha <strong>10.000 seguidores</strong> e uma presença digital fragmentada, sem linha editorial consistente nem estratégia de crescimento definida. A comunicação estava centrada no período do festival, sem actividade relevante no resto do ano.",
+    context_text2: "A estratégia assentou em dois eixos: estabelecer uma <strong>identidade visual e editorial consistente ao longo do ano</strong>, e tratar cada plataforma com linguagem própria — Instagram como canal visual e de comunidade, LinkedIn como canal institucional, Facebook para alcance, e Letterboxd como extensão natural para um festival de cinema.",
+    context_callout: "\"O crescimento sustentado não acontece só no mês do festival — acontece na consistência de 12 meses de conteúdo relevante para a comunidade.\"",
+    context_text3: "Em 2025, a estratégia incluiu uma componente de <strong>paid social gerida via Meta Suite</strong>, com um orçamento de apenas €300 — que gerou mais de 1,8 milhões de visualizações em 2,5 meses. A estratégia de boosting focou-se em ampliar o alcance do conteúdo orgânico com melhor desempenho — não na criação de peças exclusivas para paid — durante as semanas de maior actividade do festival.",
+    sec_execution_label: "SEC.02",
+    sec_execution_title: "Execução",
+    sec_execution_em: "Execution",
+    execution_text: "A gestão foi <strong>full-cycle</strong>: planeamento de conteúdos mensal, numa campanha de três meses, criação de conteúdo (copy, design, foto e vídeo), agendamento via Meta Suite, e monitorização de desempenho semanal. Durante o festival, a cobertura em tempo real incluía posts e stories diários, gestão de comunidade, e coordenação das equipas de foto e vídeo.",
+    partners_label: "🤝 Parceiros e apoios institucionais",
+    jumpgate_copy: "JUMPGATE<br><br>O Jumpgate é um espaço dedicado a produtores europeus com diferentes origens e níveis de experiência em produção cinematográfica. O seu principal objectivo é promover a troca de experiências profissionais, inspirar novas ideias e práticas e estimular projectos colaborativos e co-produções.<br><br>Cerca de 20 produtores provenientes dos países do Benelux, de França e de Portugal estiveram reunidos no @goetheinstitut_portugal, entre os dias 20 e 21 de Outubro, para partilharem as suas experiências e reflexões sobre práticas de trabalho, lançando as bases para futuras colaborações.<br><br>Queremos agradecer a participação de todos e dos nossos parceiros que tornaram o Jumpgate possível: @europacriativa_pt, @portugalfilmcommission, @ifportugal e @goetheinstitut_portugal.<br><br>O Jumpgate é uma operação apoiada pelo Ministère de l’Europe et des Affaires etrangères e pelo Institut Français no âmbito da estratégia de promoção internacional das indústrias culturais e criativas através do dispositivo PICC.<br><br>#institutfrançais #ICC #IndustriesCulturellesetCréatives",
+    jumpgate_desc: "Jumpgate – encontro de Indústria para cooperação europeia, com o apoio do Institut Français au Portugal",
+    toyota_desc: "🚘 Toyota – viatura oficial do festival",
+    jury_desc: "🏆 Júri e prémios – visibilidade a parceiros institucionais",
+    behind_scenes_label: "🎬 Bastidores e vida do festival",
+    team_copy: "💙 <strong>EQUIPA DOCLISBOA</strong><br><br>Passamos muito tempo a falar sobre os filmes, convidados, debates e tudo o que consegue caber, em Outubro, na cidade de Lisboa. Mas raramente vemos os rostos e as pessoas que fazem acontecer o festival.<br><br>Hoje, há festa de equipa, com A Banda Sonora das Nossas Vidas. Venham celebrar o cinema connosco.<br><br>📍 Em Outubro, o mundo inteiro cabe em Lisboa. Bilhetes e programação completa disponíveis em doclisboa.org<br><br>#doclisboa25 #doclisboa2025 #doclisboa #cinema",
+    team_desc: "🎉 Festa de equipa – reconhecimento interno e tom humano",
+    photoday_desc: "📸 Registo fotográfico – momentos do festival",
+    opening_desc: "🎬 Sessão de abertura – casa cheia no Cinema São Jorge",
+    programming_label: "📢 Programação e informações úteis",
+    useful_copy: "ℹ️ <strong>INFORMAÇÕES ÚTEIS</strong><br><br>Chegámos ao dia em que tudo começa, na Culturgest, Cinema São Jorge, Cinemateca Portuguesa e Cinema Ideal.<br><br>Para garantir que têm a melhor experiência de festival possível, criámos este guia com algumas informações que considerámos essenciais.<br><br>Para efectuarem a reserva nos parques @telpark_pt só têm de seguir o link para os FAQs no nosso site — link na bio 🔗<br><br>📍 Em Outubro, o mundo inteiro cabe em Lisboa. Bilhetes e programação completa disponíveis em doclisboa.org<br><br>#doclisboa25 #doclisboa2025 #doclisboa #cinema",
+    useful_desc: "📋 Guia de informações úteis – FAQ e parceria com Telpark",
+    constelacoes_desc: "🪑 Constelações – Ciclo de conversas do programa de indústria",
+    films_desc: "🟦 Recomendações de filmes que ainda não passaram no festival",
+    sec_results_label: "SEC.03",
+    sec_results_title: "Resultados<br>+ Insights",
+    sec_results_em: "Results + insights",
+    result_followers: "+9,8k",
+    result_followers_lbl: "Seguidores ganhos<br>Instagram · 4 anos",
+    result_views: "1,8M+",
+    result_views_lbl: "Visualizações<br>Instagram 2025",
+    result_budget: "300€",
+    result_budget_lbl: "Orçamento<br>Meta Ads 2025",
+    results_text1: "Ao longo de 4 edições, a conta de Instagram cresceu de <strong>10.000 para 19.800 seguidores</strong> — um crescimento de 98% sem recurso a paid media até 2025. Na edição de 2025, a campanha de 2 meses e meio gerou <strong>mais de 1,8 milhões de visualizações no Instagram</strong>, com um orçamento de paid ads de apenas €300.",
+    results_callout: "\"Com €300 de orçamento e conteúdo orgânico forte, gerámos 1.8M de visualizações. O que escalou não foi o dinheiro — foi a relevância do conteúdo.\"",
+    results_text2: "A integração do paid social em 2025 confirmou que <strong>amplificação paga funciona melhor quando o conteúdo orgânico já está validado</strong>. Os anúncios com melhor desempenho foram boosted posts — não peças criadas especificamente para paid.",
+    case_footer_ref: "REF-001 · DOCLISBOA · 2022–2025",
+    case_footer_name: "João Alves · Social Media Coordinator · Lisboa PT",
+    case_footer_year: "© 2026",
+    back_to_top: "↑ voltar ao topo"
   }
 };
 
@@ -226,139 +400,42 @@ function applyTranslations() {
   const t = translations[currentLang];
   if (!t) return;
 
-  // NAV
-  document.querySelectorAll('[data-i18n="nav_work"]').forEach(el => el.innerHTML = t.nav_work);
-  document.querySelectorAll('[data-i18n="nav_content"]').forEach(el => el.innerHTML = t.nav_content);
-  document.querySelectorAll('[data-i18n="nav_av"]').forEach(el => el.innerHTML = t.nav_av);
-  document.querySelectorAll('[data-i18n="nav_specs"]').forEach(el => el.innerHTML = t.nav_specs);
-  document.querySelectorAll('[data-i18n="nav_contact"]').forEach(el => el.innerHTML = t.nav_contact);
-  document.querySelectorAll('[data-i18n="lang_btn"]').forEach(el => el.innerHTML = t.lang_btn);
+  // Elementos com data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) {
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = t[key];
+      } else {
+        el.innerHTML = t[key];
+      }
+    }
+  });
 
-  // HERO
-  document.querySelectorAll('[data-i18n="spec_label"]').forEach(el => el.innerHTML = t.spec_label);
-  document.querySelectorAll('[data-i18n="hero_name"]').forEach(el => el.innerHTML = t.hero_name);
-  document.querySelectorAll('[data-i18n="hero_name_annotated"]').forEach(el => el.innerHTML = t.hero_name_annotated);
-  document.querySelectorAll('[data-i18n="hero_subtitle"]').forEach(el => el.innerHTML = t.hero_subtitle);
-  document.querySelectorAll('[data-i18n="callout"]').forEach(el => el.innerHTML = t.callout);
-  document.querySelectorAll('[data-i18n="hero_cta"]').forEach(el => el.innerHTML = t.hero_cta);
-
-  // STATS
-  document.querySelectorAll('[data-i18n="stat1_num"]').forEach(el => el.innerHTML = t.stat1_num);
-  document.querySelectorAll('[data-i18n="stat1_label"]').forEach(el => el.innerHTML = t.stat1_label);
-  document.querySelectorAll('[data-i18n="stat1_detail"]').forEach(el => el.innerHTML = t.stat1_detail);
-  document.querySelectorAll('[data-i18n="stat2_num"]').forEach(el => el.innerHTML = t.stat2_num);
-  document.querySelectorAll('[data-i18n="stat2_label"]').forEach(el => el.innerHTML = t.stat2_label);
-  document.querySelectorAll('[data-i18n="stat2_detail"]').forEach(el => el.innerHTML = t.stat2_detail);
-  document.querySelectorAll('[data-i18n="stat3_num"]').forEach(el => el.innerHTML = t.stat3_num);
-  document.querySelectorAll('[data-i18n="stat3_label"]').forEach(el => el.innerHTML = t.stat3_label);
-  document.querySelectorAll('[data-i18n="stat3_detail"]').forEach(el => el.innerHTML = t.stat3_detail);
-
-  // SEC.01
-  document.querySelectorAll('[data-i18n="sec01_eyebrow"]').forEach(el => el.innerHTML = t.sec01_eyebrow);
-  document.querySelectorAll('[data-i18n="sec01_title"]').forEach(el => el.innerHTML = t.sec01_title);
-  // Case cards (campos específicos)
-  document.querySelectorAll('[data-i18n="doclisboa_ref"]').forEach(el => el.innerHTML = t.doclisboa_ref);
-  document.querySelectorAll('[data-i18n="doclisboa_title"]').forEach(el => el.innerHTML = t.doclisboa_title);
-  document.querySelectorAll('[data-i18n="doclisboa_sub"]').forEach(el => el.innerHTML = t.doclisboa_sub);
-  document.querySelectorAll('[data-i18n="doclisboa_metric1"]').forEach(el => el.innerHTML = t.doclisboa_metric1);
-  document.querySelectorAll('[data-i18n="doclisboa_metric1_lbl"]').forEach(el => el.innerHTML = t.doclisboa_metric1_lbl);
-  document.querySelectorAll('[data-i18n="doclisboa_metric2"]').forEach(el => el.innerHTML = t.doclisboa_metric2);
-  document.querySelectorAll('[data-i18n="doclisboa_metric2_lbl"]').forEach(el => el.innerHTML = t.doclisboa_metric2_lbl);
-  document.querySelectorAll('[data-i18n="doclisboa_metric3"]').forEach(el => el.innerHTML = t.doclisboa_metric3);
-  document.querySelectorAll('[data-i18n="doclisboa_metric3_lbl"]').forEach(el => el.innerHTML = t.doclisboa_metric3_lbl);
-  document.querySelectorAll('[data-i18n="doclisboa_arrow"]').forEach(el => el.innerHTML = t.doclisboa_arrow);
-  // Repetir para MONSTRA, Festa, Fernando Lopes (similar)
-  // Para as tags, como são arrays, precisamos de uma função auxiliar (será aplicada após carregamento)
-  applyTags('doclisboa_tags', t.doclisboa_tags);
-  applyTags('monstra_tags', t.monstra_tags);
-  applyTags('festa_tags', t.festa_tags);
-  applyTags('fernando_tags', t.fernando_tags);
-
-  document.querySelectorAll('[data-i18n="monstra_ref"]').forEach(el => el.innerHTML = t.monstra_ref);
-  document.querySelectorAll('[data-i18n="monstra_title"]').forEach(el => el.innerHTML = t.monstra_title);
-  document.querySelectorAll('[data-i18n="monstra_sub"]').forEach(el => el.innerHTML = t.monstra_sub);
-  document.querySelectorAll('[data-i18n="monstra_metric1"]').forEach(el => el.innerHTML = t.monstra_metric1);
-  document.querySelectorAll('[data-i18n="monstra_metric1_lbl"]').forEach(el => el.innerHTML = t.monstra_metric1_lbl);
-  document.querySelectorAll('[data-i18n="monstra_metric2"]').forEach(el => el.innerHTML = t.monstra_metric2);
-  document.querySelectorAll('[data-i18n="monstra_metric2_lbl"]').forEach(el => el.innerHTML = t.monstra_metric2_lbl);
-  document.querySelectorAll('[data-i18n="monstra_metric3"]').forEach(el => el.innerHTML = t.monstra_metric3);
-  document.querySelectorAll('[data-i18n="monstra_metric3_lbl"]').forEach(el => el.innerHTML = t.monstra_metric3_lbl);
-
-  document.querySelectorAll('[data-i18n="festa_ref"]').forEach(el => el.innerHTML = t.festa_ref);
-  document.querySelectorAll('[data-i18n="festa_title"]').forEach(el => el.innerHTML = t.festa_title);
-  document.querySelectorAll('[data-i18n="festa_sub"]').forEach(el => el.innerHTML = t.festa_sub);
-  document.querySelectorAll('[data-i18n="festa_metric1"]').forEach(el => el.innerHTML = t.festa_metric1);
-  document.querySelectorAll('[data-i18n="festa_metric1_lbl"]').forEach(el => el.innerHTML = t.festa_metric1_lbl);
-  document.querySelectorAll('[data-i18n="festa_metric2"]').forEach(el => el.innerHTML = t.festa_metric2);
-  document.querySelectorAll('[data-i18n="festa_metric2_lbl"]').forEach(el => el.innerHTML = t.festa_metric2_lbl);
-  document.querySelectorAll('[data-i18n="festa_metric3"]').forEach(el => el.innerHTML = t.festa_metric3);
-  document.querySelectorAll('[data-i18n="festa_metric3_lbl"]').forEach(el => el.innerHTML = t.festa_metric3_lbl);
-
-  document.querySelectorAll('[data-i18n="fernando_ref"]').forEach(el => el.innerHTML = t.fernando_ref);
-  document.querySelectorAll('[data-i18n="fernando_title"]').forEach(el => el.innerHTML = t.fernando_title);
-  document.querySelectorAll('[data-i18n="fernando_sub"]').forEach(el => el.innerHTML = t.fernando_sub);
-  document.querySelectorAll('[data-i18n="fernando_metric1"]').forEach(el => el.innerHTML = t.fernando_metric1);
-  document.querySelectorAll('[data-i18n="fernando_metric1_lbl"]').forEach(el => el.innerHTML = t.fernando_metric1_lbl);
-  document.querySelectorAll('[data-i18n="fernando_metric2"]').forEach(el => el.innerHTML = t.fernando_metric2);
-  document.querySelectorAll('[data-i18n="fernando_metric2_lbl"]').forEach(el => el.innerHTML = t.fernando_metric2_lbl);
-  document.querySelectorAll('[data-i18n="fernando_metric3"]').forEach(el => el.innerHTML = t.fernando_metric3);
-  document.querySelectorAll('[data-i18n="fernando_metric3_lbl"]').forEach(el => el.innerHTML = t.fernando_metric3_lbl);
-
-  // SEC.02
-  document.querySelectorAll('[data-i18n="sec02_eyebrow"]').forEach(el => el.innerHTML = t.sec02_eyebrow);
-  document.querySelectorAll('[data-i18n="sec02_title"]').forEach(el => el.innerHTML = t.sec02_title);
-
-  // SEC.03 (photography - se não estiver comentado)
-  document.querySelectorAll('[data-i18n="sec03_eyebrow"]').forEach(el => el.innerHTML = t.sec03_eyebrow);
-  document.querySelectorAll('[data-i18n="sec03_title"]').forEach(el => el.innerHTML = t.sec03_title);
-  document.querySelectorAll('[data-i18n="sec03_text"]').forEach(el => el.innerHTML = t.sec03_text);
-
-  // ABOUT
-  document.querySelectorAll('[data-i18n="sec04_eyebrow"]').forEach(el => el.innerHTML = t.sec04_eyebrow);
-  document.querySelectorAll('[data-i18n="sec04_title"]').forEach(el => el.innerHTML = t.sec04_title);
-  document.querySelectorAll('[data-i18n="sec05_eyebrow"]').forEach(el => el.innerHTML = t.sec05_eyebrow);
-  document.querySelectorAll('[data-i18n="sec05_title"]').forEach(el => el.innerHTML = t.sec05_title);
-  document.querySelectorAll('[data-i18n="about_desc1"]').forEach(el => el.innerHTML = t.about_desc1);
-  document.querySelectorAll('[data-i18n="about_desc2"]').forEach(el => el.innerHTML = t.about_desc2);
-  document.querySelectorAll('[data-i18n="about_desc3"]').forEach(el => el.innerHTML = t.about_desc3);
-  document.querySelectorAll('[data-i18n="location_label"]').forEach(el => el.innerHTML = t.location_label);
-  document.querySelectorAll('[data-i18n="location_val"]').forEach(el => el.innerHTML = t.location_val);
-  document.querySelectorAll('[data-i18n="languages_label"]').forEach(el => el.innerHTML = t.languages_label);
-  document.querySelectorAll('[data-i18n="languages_val"]').forEach(el => el.innerHTML = t.languages_val);
-  document.querySelectorAll('[data-i18n="experience_label"]').forEach(el => el.innerHTML = t.experience_label);
-  document.querySelectorAll('[data-i18n="experience_val"]').forEach(el => el.innerHTML = t.experience_val);
-  document.querySelectorAll('[data-i18n="availability_label"]').forEach(el => el.innerHTML = t.availability_label);
-  document.querySelectorAll('[data-i18n="availability_val"]').forEach(el => el.innerHTML = t.availability_val);
-  document.querySelectorAll('[data-i18n="cv_label"]').forEach(el => el.innerHTML = t.cv_label);
-  document.querySelectorAll('[data-i18n="cv_link"]').forEach(el => el.innerHTML = t.cv_link);
-
-  // CONTACT
-  document.querySelectorAll('[data-i18n="sec06_eyebrow"]').forEach(el => el.innerHTML = t.sec06_eyebrow);
-  document.querySelectorAll('[data-i18n="contact_title"]').forEach(el => el.innerHTML = t.contact_title);
-  document.querySelectorAll('[data-i18n="contact_sub"]').forEach(el => el.innerHTML = t.contact_sub);
-
-  // FOOTER
-  document.querySelectorAll('[data-i18n="footer_left"]').forEach(el => el.innerHTML = t.footer_left);
-  document.querySelectorAll('[data-i18n="footer_mid"]').forEach(el => el.innerHTML = t.footer_mid);
-  document.querySelectorAll('[data-i18n="footer_right"]').forEach(el => el.innerHTML = t.footer_right);
+  // Caso especial para tags (lists)
+  applyTags('doclisboa-tags', t.doclisboa_tags);
+  applyTags('monstra-tags', t.monstra_tags);
+  applyTags('festa-tags', t.festa_tags);
+  applyTags('fernando-tags', t.fernando_tags);
 }
 
 function applyTags(className, tagsArray) {
   const containers = document.querySelectorAll(`.${className}`);
   containers.forEach(container => {
-    container.innerHTML = '';
-    tagsArray.forEach(tag => {
-      const span = document.createElement('span');
-      span.className = 'case-tag';
-      span.textContent = tag;
-      container.appendChild(span);
-    });
+    if (tagsArray && tagsArray.length) {
+      container.innerHTML = '';
+      tagsArray.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = 'case-tag';
+        span.textContent = tag;
+        container.appendChild(span);
+      });
+    }
   });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   applyTranslations();
-  // Adiciona evento ao botão de língua
   const langBtn = document.getElementById('langToggle');
   if (langBtn) {
     langBtn.addEventListener('click', () => {
