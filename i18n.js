@@ -128,7 +128,7 @@ const translations = {
     cv_link: "DOWNLOAD PDF →",
 
     // INDEX CONTACT (SEC.06)
-    sec06_eyebrow: "SEC.06",
+    sec06_eyebrow: "SEC.05",
     sec06_title: "Get in touch",
     contact_title_heading: "Let's make<br>something great.",
     contact_sub: "Available for full-time roles on-site, hybrid or remote · Based in Lisbon",
@@ -389,6 +389,7 @@ const translations = {
     // INDEX CONTACT (SEC.05)
     sec06_eyebrow: "SEC.05",
     sec06_title: "Contacto",
+    contact_title_heading: "Let's make<br>something great.",
     contact_sub: "Disponível para funções presenciais, híbridas ou remotas · Baseado em Lisboa",
 
     // FOOTER
