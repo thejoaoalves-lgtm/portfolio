@@ -108,7 +108,7 @@ if (caseMobileMenuBtn && caseSubHeader) {
   // O menu NÃO fecha ao clicar nos links (só com CLOSE)
 }
 /* ── BOTÃO ALL CASE STUDIES (navegação com fade) ── */
-const navBackBtn = document.getElementById('navBackBtn');
+const navBackBtn = document.getElementById('nav_back_btn');
 
 if (navBackBtn) {
   navBackBtn.addEventListener('click', (e) => {
