@@ -131,7 +131,7 @@ nav {
 .hero {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 55% 45%; /* Antes: 60% 40% - mais espaço para a imagem */
   padding-top: 60px;
   border-bottom: var(--stroke) solid var(--line);
   padding-bottom: 3rem;
@@ -189,8 +189,9 @@ nav {
 
 .schematic {
   width: 100%;
-  max-width: 380px;
+  max-width: 100%; /* Antes: 380px - agora ocupa toda a largura disponível */
   height: auto;
+}
 }
 
 /* ── STATS ── */
