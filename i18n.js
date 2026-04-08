@@ -9,9 +9,9 @@ const translations = {
     nav_specs: "Specs",
     nav_contact: "Contact",
     nav_ref: "REF-2026 · PORTFOLIO v1.0",
-    lang_btn: "PT",
+    lang_btn: "PT",  // Mostra PT quando está em EN
 
-    // INDEX.HERO
+    // INDEX.HERO (textos do SVG não são traduzidos via i18n, mantêm-se em EN)
     spec_label: "Document ref: SMC-LIS-001 · Social Media & Content Manager",
     hero_name_first: "João",
     hero_name_last: "Alves",
@@ -32,8 +32,10 @@ const translations = {
 
     // INDEX CASE STUDIES (SEC.01)
     sec01_eyebrow: "SEC.01",
-    sec01_title: "Campaigns that<br>moved the needle.",
+    sec01_title: "Case studies",
+    sec01_title_heading: "Campaigns that<br>moved the needle.",
 
+    // Case cards
     doclisboa_ref: "REF-001 · 2022 – 2025 · 4 editions",
     doclisboa_title: "Doclisboa<br>International Film Festival",
     doclisboa_sub: "Social strategy · community growth · paid social",
@@ -84,13 +86,16 @@ const translations = {
 
     // INDEX CONTENT SHOWCASE (SEC.02)
     sec02_eyebrow: "SEC.02",
-    sec02_title: "Platform-native<br>storytelling.",
+    sec02_title: "Content showcase",
+    sec02_title_heading: "Platform-native<br>storytelling.",
 
     // INDEX ABOUT (SEC.03 e SEC.04)
     sec03_eyebrow: "SEC.03",
-    sec03_title: "Skills &amp;<br>tools",
+    sec03_title: "Technical specs",
+    sec03_title_heading: "Skills &amp;<br>tools",
     sec04_eyebrow: "SEC.04",
-    sec04_title: "The person<br>behind it.",
+    sec04_title: "Background",
+    sec04_title_heading: "The person<br>behind it.",
     about_desc1: "Four years at the intersection of <span class='hl'>culture, storytelling, and social media</span> — managing the digital presence of Lisbon's most respected international film festivals.",
     about_desc2: "Background as a <span class='hl'>photographer</span> shapes everything: how I brief creative teams, how I think about partner visibility, and how I approach content that needs to feel real rather than manufactured.",
     about_desc3: "Drawn to organisations with a <span class='hl'>global community</span> at their core — where the content has real stakes and the audience is genuinely paying attention.",
@@ -124,7 +129,8 @@ const translations = {
 
     // INDEX CONTACT (SEC.06)
     sec06_eyebrow: "SEC.06",
-    contact_title: "Let's make<br>something great.",
+    sec06_title: "Get in touch",
+    contact_title_heading: "Let's make<br>something great.",
     contact_sub: "Available for full-time roles on-site, hybrid or remote · Based in Lisbon",
 
     // FOOTER
@@ -132,7 +138,7 @@ const translations = {
     footer_mid: "João Alves · Social Media Coordinator · Lisbon PT",
     footer_right: "© 2026 · ALL RIGHTS RESERVED",
 
-    // BOTÃO BACK TO TOP
+    // BACK TO TOP
     back_to_top: "↑ back to the top",
 
     // ========== DOCLISBOA CASE STUDY ==========
@@ -143,7 +149,7 @@ const translations = {
 
     // Case hero
     case_ref: "REF-001",
-    case_dates: "2022–2025 · 4 editions",
+    case_dates: "Case study · 2022–2025 · 4 editions",
     case_title: "Doclisboa<br>International<br>Film Festival",
     case_scope: "Social strategy · community growth<br>Paid social · AV direction · 4 editions",
     role_intro: "Responsible for the festival's <span class='hl'>digital and physical communication</span> throughout the year. The communication campaign runs over 3 months.",
@@ -249,7 +255,10 @@ const translations = {
     // Case footer
     case_footer_left: "REF-001 · DOCLISBOA · 2022–2025",
     case_footer_mid: "João Alves · Social Media Coordinator · Lisbon PT",
-    case_footer_right: "© 2026"
+    case_footer_right: "© 2026",
+
+    // Sub-header button
+    all_case_studies: "[ ALL CASE STUDIES ]"
   },
 
   pt: {
@@ -260,7 +269,7 @@ const translations = {
     nav_specs: "Especificações",
     nav_contact: "Contacto",
     nav_ref: "REF-2026 · PORTFOLIO v1.0",
-    lang_btn: "EN",
+    lang_btn: "EN",  // Mostra EN quando está em PT
 
     // INDEX.HERO
     spec_label: "Documento ref: SMC-LIS-001 · Social Media & Content Manager",
@@ -283,7 +292,8 @@ const translations = {
 
     // INDEX CASE STUDIES (SEC.01)
     sec01_eyebrow: "SEC.01",
-    sec01_title: "Campanhas que<br>fizeram a diferença.",
+    sec01_title: "Casos de estudo",
+    sec01_title_heading: "Campanhas que<br>fizeram a diferença.",
 
     doclisboa_ref: "REF-001 · 2022 – 2025 · 4 edições",
     doclisboa_title: "Doclisboa<br>Festival Internacional de Cinema",
@@ -335,13 +345,16 @@ const translations = {
 
     // INDEX CONTENT SHOWCASE (SEC.02)
     sec02_eyebrow: "SEC.02",
-    sec02_title: "Storytelling<br>nativo de cada plataforma.",
+    sec02_title: "Conteúdo em destaque",
+    sec02_title_heading: "Storytelling<br>nativo de cada plataforma.",
 
     // INDEX ABOUT (SEC.03 e SEC.04)
     sec03_eyebrow: "SEC.03",
-    sec03_title: "Competências &amp;<br>ferramentas",
+    sec03_title: "Especificações técnicas",
+    sec03_title_heading: "Competências &amp;<br>ferramentas",
     sec04_eyebrow: "SEC.04",
-    sec04_title: "A pessoa<br>por detrás disto.",
+    sec04_title: "Antecedentes",
+    sec04_title_heading: "A pessoa<br>por detrás disto.",
     about_desc1: "Quatro anos na intersecção entre <span class='hl'>cultura, storytelling e redes sociais</span> — a gerir a presença digital dos festivais de cinema mais respeitados de Lisboa.",
     about_desc2: "A formação como <span class='hl'>fotógrafo</span> molda tudo: a forma como preparo as equipas criativas, penso a visibilidade dos parceiros e abordo o conteúdo que precisa de parecer real em vez de fabricado.",
     about_desc3: "Atraído por organizações com uma <span class='hl'>comunidade global</span> no seu centro — onde o conteúdo tem verdadeiro impacto e o público está genuinamente atento.",
@@ -375,7 +388,8 @@ const translations = {
 
     // INDEX CONTACT (SEC.06)
     sec06_eyebrow: "SEC.06",
-    contact_title: "Vamos fazer<br>algo grande.",
+    sec06_title: "Contacto",
+    contact_title_heading: "Vamos fazer<br>algo grande.",
     contact_sub: "Disponível para funções presenciais, híbridas ou remotas · Baseado em Lisboa",
 
     // FOOTER
@@ -383,7 +397,7 @@ const translations = {
     footer_mid: "João Alves · Social Media Coordinator · Lisboa PT",
     footer_right: "© 2026 · TODOS OS DIREITOS RESERVADOS",
 
-    // BOTÃO BACK TO TOP
+    // BACK TO TOP
     back_to_top: "↑ voltar ao topo",
 
     // ========== DOCLISBOA CASE STUDY ==========
@@ -394,7 +408,7 @@ const translations = {
 
     // Case hero
     case_ref: "REF-001",
-    case_dates: "2022–2025 · 4 edições",
+    case_dates: "Caso de estudo · 2022–2025 · 4 edições",
     case_title: "Doclisboa<br>Festival<br>Internacional de Cinema",
     case_scope: "Estratégia social · crescimento de comunidade<br>Paid social · Direção AV · 4 edições",
     role_intro: "Responsável pela <span class='hl'>comunicação digital e física</span> do festival ao longo do ano. A campanha de comunicação decorre ao longo de 3 meses.",
@@ -500,7 +514,10 @@ const translations = {
     // Case footer
     case_footer_left: "REF-001 · DOCLISBOA · 2022–2025",
     case_footer_mid: "João Alves · Social Media Coordinator · Lisboa PT",
-    case_footer_right: "© 2026"
+    case_footer_right: "© 2026",
+
+    // Sub-header button
+    all_case_studies: "[ TODOS OS CASOS ]"
   }
 };
 
@@ -510,6 +527,36 @@ function setLanguage(lang) {
   currentLang = lang;
   localStorage.setItem('siteLang', lang);
   applyTranslations();
+  updateLangButton();
+}
+
+function updateLangButton() {
+  const langBtn = document.getElementById('langToggle');
+  if (langBtn) {
+    langBtn.textContent = translations[currentLang].lang_btn;
+  }
+}
+
+function setText(id, text) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = text;
+}
+
+function setHtml(id, html) {
+  const el = document.getElementById(id);
+  if (el) el.innerHTML = html;
+}
+
+function applyTags(containerId, tagsArray) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.innerHTML = '';
+  tagsArray.forEach(tag => {
+    const span = document.createElement('span');
+    span.className = 'case-tag';
+    span.textContent = tag;
+    container.appendChild(span);
+  });
 }
 
 function applyTranslations() {
@@ -523,7 +570,6 @@ function applyTranslations() {
   setText('nav_specs', t.nav_specs);
   setText('nav_contact', t.nav_contact);
   setText('nav_ref', t.nav_ref);
-  setText('lang_btn', t.lang_btn);
 
   // INDEX.HERO
   setText('spec_label', t.spec_label);
@@ -546,7 +592,8 @@ function applyTranslations() {
 
   // INDEX CASE STUDIES (SEC.01)
   setText('sec01_eyebrow', t.sec01_eyebrow);
-  setHtml('sec01_title', t.sec01_title);
+  setText('sec01_title', t.sec01_title);
+  setHtml('sec01_title_heading', t.sec01_title_heading);
 
   setText('doclisboa_ref', t.doclisboa_ref);
   setHtml('doclisboa_title', t.doclisboa_title);
@@ -596,38 +643,34 @@ function applyTranslations() {
   applyTags('fernando_tags', t.fernando_tags);
   setText('fernando_arrow', t.fernando_arrow);
 
-  // INDEX CONTENT SHOWCASE (SEC.02) - textos fixos
+  // INDEX CONTENT SHOWCASE (SEC.02)
   setText('sec02_eyebrow', t.sec02_eyebrow);
-  setHtml('sec02_title', t.sec02_title);
+  setText('sec02_title', t.sec02_title);
+  setHtml('sec02_title_heading', t.sec02_title_heading);
 
   // INDEX ABOUT (SEC.03 e SEC.04)
   setText('sec03_eyebrow', t.sec03_eyebrow);
-  setHtml('sec03_title', t.sec03_title);
+  setText('sec03_title', t.sec03_title);
+  setHtml('sec03_title_heading', t.sec03_title_heading);
   setText('sec04_eyebrow', t.sec04_eyebrow);
-  setHtml('sec04_title', t.sec04_title);
+  setText('sec04_title', t.sec04_title);
+  setHtml('sec04_title_heading', t.sec04_title_heading);
   setHtml('about_desc1', t.about_desc1);
   setHtml('about_desc2', t.about_desc2);
   setHtml('about_desc3', t.about_desc3);
 
   // Skills table
-  const skillRows = [
-    { key: 'content_strategy', level: 5 },
-    { key: 'instagram_meta', level: 5 },
-    { key: 'tiktok', level: 3 },
-    { key: 'paid_social', level: 3 },
-    { key: 'copywriting', level: 4 },
-    { key: 'analytics', level: 3 },
-    { key: 'photography', level: 5 },
-    { key: 'video_editing', level: 3 }
-  ];
-  skillRows.forEach((skill, idx) => {
+  const skillKeys = ['content_strategy', 'instagram_meta', 'tiktok', 'paid_social', 'copywriting', 'analytics', 'photography', 'video_editing'];
+  skillKeys.forEach((key, idx) => {
     const skillEl = document.getElementById(`skill_${idx}`);
-    if (skillEl) skillEl.textContent = t.skills[skill.key];
+    if (skillEl) skillEl.textContent = t.skills[key];
     const levelEl = document.getElementById(`level_${idx}`);
     if (levelEl) {
-      if (skill.level === 5) levelEl.textContent = t.level_5;
-      else if (skill.level === 4) levelEl.textContent = t.level_4;
-      else levelEl.textContent = t.level_3;
+      const parent = levelEl.parentElement;
+      const skillLevel = [5,5,3,3,4,3,5,3][idx];
+      if (skillLevel === 5) parent.innerHTML = t.level_5;
+      else if (skillLevel === 4) parent.innerHTML = t.level_4;
+      else parent.innerHTML = t.level_3;
     }
   });
 
@@ -652,11 +695,13 @@ function applyTranslations() {
   setText('availability_label', t.availability_label);
   setText('availability_val', t.availability_val);
   setText('cv_label', t.cv_label);
-  setText('cv_link', t.cv_link);
+  const cvLink = document.getElementById('cv_link');
+  if (cvLink) cvLink.textContent = t.cv_link;
 
   // INDEX CONTACT (SEC.06)
   setText('sec06_eyebrow', t.sec06_eyebrow);
-  setHtml('contact_title', t.contact_title);
+  setText('sec06_title', t.sec06_title);
+  setHtml('contact_title_heading', t.contact_title_heading);
   setText('contact_sub', t.contact_sub);
 
   // FOOTER
@@ -665,15 +710,14 @@ function applyTranslations() {
   setText('footer_right', t.footer_right);
 
   // BACK TO TOP
-  setText('back_to_top', t.back_to_top);
+  const backBtn = document.getElementById('back_to_top');
+  if (backBtn) backBtn.textContent = t.back_to_top;
 
   // ========== DOCLISBOA PAGE (se existir) ==========
-  // Breadcrumb
   setText('bc_portfolio', t.bc_portfolio);
   setText('bc_casestudies', t.bc_casestudies);
   setText('bc_doclisboa', t.bc_doclisboa);
 
-  // Case hero
   setText('case_ref', t.case_ref);
   setText('case_dates', t.case_dates);
   setHtml('case_title', t.case_title);
@@ -691,7 +735,6 @@ function applyTranslations() {
   }
   applyTags('case_tags', t.case_tags);
 
-  // Metrics panel
   setText('metrics_header', t.metrics_header);
   setHtml('metric1_val', t.metric1_val);
   setText('metric1_lbl', t.metric1_lbl);
@@ -706,12 +749,13 @@ function applyTranslations() {
   setText('metric4_lbl', t.metric4_lbl);
   setText('metric4_sub', t.metric4_sub);
 
-  // Sticky nav
   setText('sticky_context', t.sticky_context);
   setText('sticky_execution', t.sticky_execution);
   setText('sticky_results', t.sticky_results);
+  setText('sticky_context_link', t.sticky_context);
+  setText('sticky_execution_link', t.sticky_execution);
+  setText('sticky_results_link', t.sticky_results);
 
-  // Context section
   setText('sec01_label', t.sec01_label);
   setHtml('sec01_title_main', t.sec01_title_main);
   setHtml('sec01_title_sub', t.sec01_title_sub);
@@ -721,7 +765,6 @@ function applyTranslations() {
   setHtml('callout_context', t.callout_context);
   setHtml('context_text3', t.context_text3);
 
-  // Execution section
   setText('sec02_label', t.sec02_label);
   setHtml('sec02_title_main', t.sec02_title_main);
   setText('sec02_title_em', t.sec02_title_em);
@@ -763,7 +806,6 @@ function applyTranslations() {
   setText('constelacoes_desc', t.constelacoes_desc);
   setText('films_desc', t.films_desc);
 
-  // Results section
   setText('sec03_label', t.sec03_label);
   setHtml('sec03_title_main', t.sec03_title_main);
   setHtml('sec03_title_sub', t.sec03_title_sub);
@@ -779,36 +821,17 @@ function applyTranslations() {
   setHtml('callout_results', t.callout_results);
   setHtml('results_text3', t.results_text3);
 
-  // Case footer
   setText('case_footer_left', t.case_footer_left);
   setText('case_footer_mid', t.case_footer_mid);
   setText('case_footer_right', t.case_footer_right);
-}
 
-function setText(id, text) {
-  const el = document.getElementById(id);
-  if (el) el.textContent = text;
-}
-
-function setHtml(id, html) {
-  const el = document.getElementById(id);
-  if (el) el.innerHTML = html;
-}
-
-function applyTags(containerId, tagsArray) {
-  const container = document.getElementById(containerId);
-  if (!container) return;
-  container.innerHTML = '';
-  tagsArray.forEach(tag => {
-    const span = document.createElement('span');
-    span.className = 'case-tag';
-    span.textContent = tag;
-    container.appendChild(span);
-  });
+  const allCaseStudiesBtn = document.getElementById('nav_back_btn');
+  if (allCaseStudiesBtn) allCaseStudiesBtn.textContent = t.all_case_studies;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   applyTranslations();
+  updateLangButton();
   const langBtn = document.getElementById('langToggle');
   if (langBtn) {
     langBtn.addEventListener('click', () => {
