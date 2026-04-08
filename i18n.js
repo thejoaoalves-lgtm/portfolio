@@ -135,7 +135,7 @@ const translations = {
 
     // FOOTER
     footer_left: "REF-2026 · PORTFOLIO v1.0 · SMC-LIS-001",
-    footer_mid: "João Alves · Social Media Coordinator · Lisbon PT",
+    footer_mid: "João Alves · Social Media & Content Manager · Lisbon PT",
     footer_right: "© 2026 · ALL RIGHTS RESERVED",
 
     // BACK TO TOP
@@ -254,7 +254,7 @@ const translations = {
 
     // Case footer
     case_footer_left: "REF-001 · DOCLISBOA · 2022–2025",
-    case_footer_mid: "João Alves · Social Media Coordinator · Lisbon PT",
+    case_footer_mid: "João Alves · Social Media & Content Manager · Lisbon PT",
     case_footer_right: "© 2026",
 
     // Sub-header button
@@ -386,15 +386,14 @@ const translations = {
     cv_label: "CV",
     cv_link: "DESCARREGAR PDF →",
 
-    // INDEX CONTACT (SEC.06)
-    sec06_eyebrow: "SEC.06",
+    // INDEX CONTACT (SEC.05)
+    sec06_eyebrow: "SEC.05",
     sec06_title: "Contacto",
-    contact_title_heading: "Vamos fazer<br>algo grande.",
     contact_sub: "Disponível para funções presenciais, híbridas ou remotas · Baseado em Lisboa",
 
     // FOOTER
     footer_left: "REF-2026 · PORTFOLIO v1.0 · SMC-LIS-001",
-    footer_mid: "João Alves · Social Media Coordinator · Lisboa PT",
+    footer_mid: "João Alves · Social Media & Content Manager · Lisboa PT",
     footer_right: "© 2026 · TODOS OS DIREITOS RESERVADOS",
 
     // BACK TO TOP
@@ -513,7 +512,7 @@ const translations = {
 
     // Case footer
     case_footer_left: "REF-001 · DOCLISBOA · 2022–2025",
-    case_footer_mid: "João Alves · Social Media Coordinator · Lisboa PT",
+    case_footer_mid: "João Alves · Social Media & Content Manager · Lisboa PT",
     case_footer_right: "© 2026",
 
     // Sub-header button
