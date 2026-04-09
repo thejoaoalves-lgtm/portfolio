@@ -386,7 +386,7 @@ const translations = {
     availability_val: "Imediata",
     cv_label: "CV",
     cv_link: "DESCARREGAR PDF →",
-    cv_link_url: "assets/JoaoAlves_CV2026-PT.pdf",
+    cv_link_url: "assets/JoaoAlves_CV-2026.pdf",
 
     // INDEX CONTACT (SEC.05)
     sec06_eyebrow: "SEC.05",
