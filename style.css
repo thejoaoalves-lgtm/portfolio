@@ -134,8 +134,7 @@ nav {
   grid-template-columns: 55% 45%; /* Antes: 60% 40% - mais espaço para a imagem */
   padding-top: 60px;
   border-bottom: var(--stroke) solid var(--line);
-  padding-bottom: 3rem;
-}
+ }
 
 .hero-left {
   padding: 4rem 3rem 2rem 4rem;
