@@ -572,6 +572,10 @@
   margin-bottom: 3rem;
 }
 
+.secondary-posts-row.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .secondary-post {
   background: transparent;
   overflow: hidden;
@@ -580,8 +584,8 @@
   padding: 0.75rem;
 }
 
-/* Linha divisória vertical entre os dois posts */
-.secondary-post:first-child {
+/* Divisória vertical entre posts */
+.secondary-post:not(:last-child) {
   border-right: var(--stroke) solid var(--line);
 }
 
