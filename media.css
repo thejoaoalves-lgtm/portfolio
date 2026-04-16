@@ -1,16 +1,46 @@
 /* ═══════════════════════════════════════════════
    PORTFOLIO — MEDIA.CSS
-   Responsive breakpoints only
+   All responsive breakpoints for index + cases
    ═══════════════════════════════════════════════ */
 
+/* ── LARGE SCREENS (4K+) ── */
+@media (min-width: 1600px) {
+  .hero, .stats, section, .case-grid, footer {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero, section { padding-left: 2rem; padding-right: 2rem; }
+  .content-grid { justify-content: center; }
+}
+
+@media (min-width: 2000px) {
+  .hero, .stats, section, .case-grid, footer { max-width: 1200px; }
+}
+
+/* ── TABLET ── */
+@media (max-width: 992px) {
+  .content-grid {
+    grid-template-columns: repeat(2, minmax(200px, 260px));
+    gap: 1rem;
+  }
+  .case-hero-left { padding: 3rem 2rem 2rem; }
+  .case-hero-right { padding: 2rem; gap: 1rem; }
+}
+
+/* ── MOBILE ── */
 @media (max-width: 768px) {
 
   /* NAV */
-  nav { padding: 1rem 1.5rem; }
-  .nav-links,
-  .nav-ref { display: none; }
+  nav { padding: 0.8rem 1.5rem; }
+  .nav-links, .nav-ref { display: none; }
+  .mobile-menu-btn { display: block; }
+  .sub-header { display: block; }
 
-   /* STATS */
+  /* Scroll padding accounts for nav + sub-header */
+  html { scroll-padding-top: 120px; }
+
+  /* STATS */
   .stats { grid-template-columns: 1fr; }
   .stat { border-right: none; }
 
@@ -18,11 +48,15 @@
   section { padding: 4rem 2rem; }
 
   /* GRIDS */
-  .case-grid,
-  .content-grid { grid-template-columns: 1fr; }
+  .case-grid { grid-template-columns: 1fr; }
+  .content-grid {
+    grid-template-columns: minmax(200px, 280px);
+    gap: 1rem;
+  }
 
-  /* PHOTO STRIP */
-  .photo-strip { grid-template-columns: 1fr 1fr; }
+  /* CASE CARDS */
+  .case-card { padding: 1.5rem 1.5rem 4rem; }
+  .case-arrow { position: absolute; bottom: 1.5rem; right: 1.5rem; }
 
   /* ABOUT */
   .about { grid-template-columns: 1fr; }
@@ -44,31 +78,32 @@
     text-align: center;
   }
 
-  /* CASE STUDY PAGES */
-  .case-hero {
-    grid-template-columns: 1fr;
-    padding: 6rem 2rem 3rem;
-  }
-  .metrics-panel {
-    position: static;
-    margin-top: 2rem;
-  }
-  .case-body { padding: 3rem 2rem; }
-  .results-grid { grid-template-columns: 1fr 1fr; }
-  .embed-grid { grid-template-columns: 1fr; }
-  .asset-grid { grid-template-columns: 1fr 1fr; }
-  .asset-grid.cols-3 { grid-template-columns: 1fr 1fr; }
-
-
   /* ── CASE STUDY PAGES ── */
   .case-breadcrumb { padding: 0.75rem 1.5rem; }
-  .case-hero { grid-template-columns: 1fr; min-height: auto; }
-  .case-hero-left { padding: 5rem 2rem 2.5rem; border-right: none; border-bottom: var(--stroke) solid var(--line); }
-  .case-hero-right { padding: 2rem; flex-direction: row; flex-wrap: wrap; gap: 1.5rem; }
+  .case-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .case-hero-left {
+    padding: 5rem 2rem 2.5rem;
+    border-right: none;
+    border-bottom: var(--stroke) solid var(--line);
+  }
+  .case-hero-right {
+    padding: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
   .metrics-panel { flex: 1; min-width: 240px; }
   .hero-section-nav { flex: 1; min-width: 200px; }
   .case-section { grid-template-columns: 1fr; }
-  .case-section-label { position: static; padding: 2.5rem 2rem 1rem; border-right: none; border-bottom: var(--stroke) solid var(--line); }
+  .case-section-label {
+    position: static;
+    padding: 2.5rem 2rem 1rem;
+    border-right: none;
+    border-bottom: var(--stroke) solid var(--line);
+  }
   .case-section-body { padding: 2rem; }
   .sec-dot { display: none; }
   .results-grid { grid-template-columns: 1fr 1fr; }
@@ -77,33 +112,16 @@
   .asset-grid.cols-3 { grid-template-columns: 1fr 1fr; }
   .asset-grid.cols-4 { grid-template-columns: 1fr 1fr; }
   .video-pair { grid-template-columns: 1fr; }
-  .case-footer { padding: 1.25rem 1.5rem; flex-direction: column; gap: 0.4rem; text-align: center; }
-
+  .case-footer {
+    padding: 1.25rem 1.5rem;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+  }
+  .nav-back-btn { font-size: 0.55rem; padding: 0.3rem 0.6rem; }
 }
 
-@media (max-width: 992px) {
-  .content-grid {
-    grid-template-columns: repeat(2, minmax(200px, 260px));
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .content-grid {
-    grid-template-columns: minmax(200px, 280px);
-    gap: 1rem;
-  }
-}
-/* Garantir que os cards ficam bem formatados em mobile */
-@media (max-width: 768px) {
-  .case-card {
-    padding-bottom: 1.5rem;
-  }
-
-  .case-arrow {
-    position: static;
-    margin-top: 1rem;
-    display: block;
-    text-align: right;
-  }
+/* ── HIDE sub-header on desktop ── */
+@media (min-width: 769px) {
+  .sub-header { display: none; }
 }
