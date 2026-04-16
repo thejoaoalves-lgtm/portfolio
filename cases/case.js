@@ -1,122 +1,41 @@
-/* ═══════════════════════════════════════════════
+/* ============================================================
    PORTFOLIO — CASES/CASE.JS
-   Shared JS for all case study pages
-   ═══════════════════════════════════════════════ */
+   Case study pages — uses ../utils.js
+   ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── SCROLL REVEAL ── */
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
+  initPageFade();
+  initScrollReveal();
+  initBackToTop('backToTop');
+  initMobileMenu('caseMobileMenuBtn', 'caseSubHeader');
+  initSocialEmbeds();
 
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-  /* ── PAGE ENTER FADE ── */
-  document.body.style.opacity = '0';
-  document.body.style.transition = 'opacity 0.35s ease';
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      document.body.style.opacity = '1';
-    });
-  });
-
-  /* ── BACK LINK FADE OUT ── */
+  /* ── BACK LINK FADE ── */
   const backLink = document.querySelector('.nav-back');
   if (backLink) {
     backLink.addEventListener('click', (e) => {
       e.preventDefault();
-      const url = backLink.getAttribute('href');
-      document.body.style.opacity = '0';
-      setTimeout(() => { window.location.href = url; }, 360);
+      fadeOut(backLink.getAttribute('href'));
     });
   }
 
-  /* ── SOCIAL EMBED LOADERS ── */
-  if (document.querySelector('.instagram-media')) {
-    const igScript = document.createElement('script');
-    igScript.async = true;
-    igScript.src = '//www.instagram.com/embed.js';
-    document.body.appendChild(igScript);
-  }
-
-  if (document.querySelector('.tiktok-embed')) {
-    const ttScript = document.createElement('script');
-    ttScript.async = true;
-    ttScript.src = 'https://www.tiktok.com/embed.js';
-    document.body.appendChild(ttScript);
-  }
-
-  /* ── SMOOTH SCROLL PARA STICKY MENU ── */
-  const stickyLinks = document.querySelectorAll('.case-sticky-nav a');
-  if (stickyLinks.length) {
-    stickyLinks.forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const target = document.getElementById(targetId);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
+  /* ── ALL CASE STUDIES BUTTON FADE ── */
+  const navBackBtn = document.getElementById('nav_back_btn');
+  if (navBackBtn) {
+    navBackBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      fadeOut('../index.html#work');
     });
   }
 
-  /* ── BACK TO TOP BUTTON (para páginas de caso) ── */
-  const backToTopBtn = document.getElementById('backToTop');
-  if (backToTopBtn) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        backToTopBtn.classList.add('show');
-      } else {
-        backToTopBtn.classList.remove('show');
-      }
+  /* ── SMOOTH SCROLL FOR STICKY NAV ── */
+  document.querySelectorAll('.case-sticky-nav a').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.getElementById(anchor.getAttribute('href').substring(1));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+  });
 
-    backToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  }
- 
 });
-/* ── SUB-HEADER MOBILE PARA PÁGINAS DE CASO ── */
-const caseMobileMenuBtn = document.getElementById('caseMobileMenuBtn');
-const caseSubHeader = document.getElementById('caseSubHeader');
-
-if (caseMobileMenuBtn && caseSubHeader) {
-  let subHeaderVisible = false;
-
-  caseMobileMenuBtn.addEventListener('click', () => {
-    subHeaderVisible = !subHeaderVisible;
-    if (subHeaderVisible) {
-      caseSubHeader.classList.add('show');
-      caseMobileMenuBtn.textContent = '[ CLOSE ]';
-    } else {
-      caseSubHeader.classList.remove('show');
-      caseMobileMenuBtn.textContent = '[ MENU ]';
-    }
-  });
-
-  // O menu NÃO fecha ao clicar nos links (só com CLOSE)
-}
-/* ── BOTÃO ALL CASE STUDIES (navegação com fade) ── */
-const navBackBtn = document.getElementById('nav_back_btn');
-
-if (navBackBtn) {
-  navBackBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    document.body.style.transition = 'opacity 0.3s ease';
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-      window.location.href = '../index.html#work';
-    }, 300);
-  });
-}

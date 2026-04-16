@@ -1,34 +1,8 @@
 /* ═══════════════════════════════════════════════
    PORTFOLIO — CASES/CASE.CSS
    Blueprint design — case study pages
-   Inherits tokens from ../style.css
+   Inherits tokens + shared rules from ../style.css
    ═══════════════════════════════════════════════ */
-/* ── BOTÃO ALL CASE STUDIES (estilo blueprint) ── */
-.nav-back-btn {
-  background: transparent;
-  border: var(--stroke) solid var(--cyan);
-  color: var(--cyan);
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  padding: 0.4rem 0.8rem;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background 0.2s, color 0.2s;
-}
-
-.nav-back-btn:hover {
-  background: var(--cyan);
-  color: var(--blue);
-}
-
-/* Em mobile, ajusta o tamanho do botão */
-@media (max-width: 768px) {
-  .nav-back-btn {
-    font-size: 0.55rem;
-    padding: 0.3rem 0.6rem;
-  }
-}
 /* ── BREADCRUMB STRIP ── */
 .case-breadcrumb {
   display: flex;
@@ -628,34 +602,6 @@
   background: transparent;
 }
 
-/* ── BOTÃO BACK TO TOP ── */
-.back-to-top {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background: rgba(10, 31, 68, 0.85);
-  color: var(--cyan);
-  border: var(--stroke) solid var(--cyan);
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.6rem 1rem;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s, background 0.2s, color 0.2s;
-  z-index: 9999;
-  backdrop-filter: blur(4px);
-}
-.back-to-top.show {
-  opacity: 1;
-  visibility: visible;
-}
-.back-to-top:hover {
-  background: var(--cyan);
-  color: var(--blue);
-}
 
 /* ── RESPONSIVIDADE ── */
 @media (max-width: 992px) {
@@ -712,12 +658,6 @@
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
-  }
-  .back-to-top {
-    bottom: 16px;
-    right: 16px;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.6rem;
   }
      /* CORREÇÕES PARA TEXTO NÃO SAIR FORA DO ECRÃ */
   .text-block {
@@ -847,10 +787,7 @@
     display: block;
   }
 
-  /* Ajuste do scroll para o sub-header */
-  html {
-    scroll-padding-top: 120px;
-  }
+
 }
 
 /* Garantir que em desktop o sub-header não aparece */
