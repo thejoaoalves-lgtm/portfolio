@@ -225,6 +225,8 @@
   display: grid;
   grid-template-columns: 220px 1fr;
   border-bottom: var(--stroke) solid var(--line);
+  width: 100%;
+  min-width: 0;
 }
 
 .case-section-label {
@@ -287,6 +289,8 @@
 
 .case-section-body {
   padding: 4rem;
+  min-width: 0;
+  overflow: hidden;
 }
 
 /* ── TEXT ── */
@@ -570,6 +574,8 @@
   background: rgba(255, 255, 255, 0.04);
   border: var(--stroke) solid var(--line);
   margin-bottom: 3rem;
+  width: 100%;
+  min-width: 0;
 }
 
 .secondary-posts-row.cols-3 {
